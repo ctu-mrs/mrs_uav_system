@@ -2,10 +2,12 @@
 
 This repository is the main entry point to the MRS UAV system.
 
-### Status Ros Melodic
-uav_core repo [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core)
+### Build Status
 
-simulation repo  [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation) 
+| Repo | Ubuntu | Status |
+|---|---|---|
+| [uav_core](https://github.com/ctu-mrs/uav_core) | Melodic | [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core) |
+| [simulation](https://github.com/ctu-mrs/simulation) | Melodic | [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation) |
 
 # Installation
 
