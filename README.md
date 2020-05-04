@@ -20,7 +20,7 @@ As the part of the automated installation, we
 * added configuration lines into your *~/.bashrc*.
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**.
-You might be prompted a few times to confirm something by pressing enter.
+You might be prompted a few times to confirm something by pressing enter, but most of the choice have an automatic default answer.
 ```bash
 cd /tmp
 echo 'mkdir -p ~/git
