@@ -9,7 +9,7 @@ Following options are provided, depending on who you are and what you want to do
 ## I have a fresh Ubuntu 18.04 and want it quick and easy
 
 In this case we provide with installation scripts that set up everything for you.
-As the part of the installation, we
+As the part of the automated installation, we
 * install Robot Operating System (ROS),
 * install other dependencies such *git*, *gitman*,
 * clone [uav_core](https://github.com/ctu-mrs/uav_core), [simulation](https://github.com/ctu-mrs/simulation), [example_ros_packages](https://github.com/ctu-mrs/example_ros_packages) into *~/git*,
@@ -19,7 +19,8 @@ As the part of the installation, we
 * compile the workspace,
 * added configuration lines into your *~/.bashrc*.
 
-To start the automatic installation, please paste the following code into your terminal and press **enter**
+To start the automatic installation, please paste the following code into your terminal and press **enter**.
+You might be prompted a few times to confirm something by pressing enter.
 ```bash
 cd /tmp
 echo 'mkdir -p ~/git
@@ -47,3 +48,21 @@ Please follow its README for further instructions on how to install its particul
 
 The [simulation](https://github.com/ctu-mrs/simulation) repository provides resources for *Gazebo/ROS* simulation, including px4 Simulation-in-the-Loop (SITL), UAV models and useful sensor plugins.
 Please follow its README for further instructions on how to install prerequisities.
+
+## I want the nice Linux environment that everybody from MRS works in
+
+Great! In that case you want to install Tomas's Linux-setup.
+**Beware!** This might alter you existing configuration of some Linux tools (Vim, Tmux, i3wm, ranger, ...).
+Refer to its [README](https://github.com/klaxalk/linux-setup/blob/master/README.md), for more information.
+Installation is *not* obligatory and the MRS UAV system will work without it.
+
+Paste following code into your terminal and press **enter**
+```bash
+cd /tmp
+echo "mkdir -p ~/git
+cd ~/git
+sudo apt-get -y install git
+git clone https://github.com/klaxalk/linux-setup.git
+cd linux-setup
+./install.sh" > run.sh && source run.sh
+```
