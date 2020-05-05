@@ -53,3 +53,14 @@ $MY_PATH/scripts/set_mrs_workspace.sh
 ## | --------------------- setup workspace -------------------- |
 
 $MY_PATH/scripts/set_my_workspace.sh
+
+## | ------- add workspaces to ROS_WORKSPACES in .bashrc ------ |
+
+num=`cat ~/.bashrc | grep "ROS_WORKSPACES" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  # set bashrc
+  echo "
+export ROS_WORKSPACES=\"~/mrs_workspace ~/workspace\"" >> ~/.bashrc
+  
+fi
