@@ -1,0 +1,15 @@
+language: generic
+os:
+- linux
+branches:
+  only:
+  - master
+sudo: required
+dist: bionic
+compiler:
+- gcc
+before_install:
+- ./.ci/ci_before_install.sh
+before_script: 
+script:
+- ./.ci/ci_test_build.sh
