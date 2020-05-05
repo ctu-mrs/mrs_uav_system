@@ -3,7 +3,7 @@
 set -e
 
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
-trap 'echo "\"${last_command}\" command failed with exit code $?"' ERR
+trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 echo "$0: installing ROS"
 
@@ -20,5 +20,3 @@ if [ "$num" -lt "1" ]; then
 source /opt/ros/melodic/setup.bash" >> ~/.bashrc
   
 fi
-
-exit 0
