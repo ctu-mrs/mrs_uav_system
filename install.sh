@@ -1,5 +1,10 @@
 #!/bin/bash
 
+set -e
+
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+trap 'echo "\"${last_command}\" command failed with exit code $?"' ERR
+
 # get the path to this script
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
@@ -16,7 +21,7 @@ do
   esac
 done
 
-[ -n "$GIT_PATH" ] && GIT_PATH=~/git
+[ -z "$GIT_PATH" ] && GIT_PATH=~/git
 
 ## | ----------------------- install ROS ---------------------- |
 
@@ -64,3 +69,5 @@ if [ "$num" -lt "1" ]; then
 export ROS_WORKSPACES=\"~/mrs_workspace ~/workspace\"" >> ~/.bashrc
   
 fi
+
+exit 0
