@@ -30,14 +30,16 @@ To start the automatic installation, please paste the following code into your t
 You might be prompted a few times to confirm something by pressing enter, but most of the choice have an automatic default answer.
 ```bash
 cd /tmp
-echo 'mkdir -p ~/git
-cd ~/git
+echo '
+GIT_PATH=~/git
+mkdir -p $GIT_PATH
+cd $GIT_PATH
 sudo apt -y install git
 git clone https://github.com/ctu-mrs/mrs_uav_system
-cd ~/git/mrs_uav_system
+cd mrs_uav_system
 git checkout master
 git pull
-./install.sh' > clone.sh && source clone.sh
+./install.sh -g $GIT_PATH' > clone.sh && source clone.sh
 ```
 
 ## I already have ROS and just want to peek in

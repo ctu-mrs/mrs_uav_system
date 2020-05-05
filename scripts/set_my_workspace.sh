@@ -46,4 +46,13 @@ echo "$0: building $WORKSPACE_PATH"
 cd $WORKSPACE_PATH
 command catkin build
 
+num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  # set bashrc
+  echo "
+source $WORKSPACE_PATH/devel/setup.bash" >> ~/.bashrc
+  
+fi
+
 exit 0

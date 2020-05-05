@@ -33,4 +33,13 @@ cd $WORKSPACE_PATH
 source /opt/ros/melodic/setup.bash
 command catkin build -c --mem-limit 75%
 
+num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  # set bashrc
+  echo "
+source $WORKSPACE_PATH/devel/setup.bash" >> ~/.bashrc
+  
+fi
+
 exit 0

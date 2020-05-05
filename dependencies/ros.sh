@@ -12,4 +12,13 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF
 sudo apt -y update
 sudo apt -y install ros-melodic-desktop-full
 
+num=`cat ~/.bashrc | grep "/opt/ros/melodic/setup.bash" | wc -l`
+if [ "$num" -lt "1" ]; then
+
+  # set bashrc
+  echo "
+source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+  
+fi
+
 exit 0
