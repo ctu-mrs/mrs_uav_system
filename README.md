@@ -3,9 +3,10 @@
 This repository is the main entry point to the MRS UAV system.
 
 ### Status Ros Melodic
+
 uav_core repo [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core)
 
-simulation repo  [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation) 
+simulation repo [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation) 
 
 # Installation
 
@@ -30,17 +31,10 @@ You might be prompted a few times to confirm something by pressing enter, but mo
 cd /tmp
 echo 'mkdir -p ~/git
 cd ~/git
-sudo apt update
-sudo apt upgrade
-sudo apt-get -y install git expect
-expect -c "
-spawn git clone git@github.com:uav/mrs_uav_system.git
-expect {
-  \"no)?\" {
-    send "yes\\n"
-    interact }
-}"
-cd ~/git/mrs_uav_system/
+sudo apt -y install git
+git clone https://github.com/ctu-mrs/mrs_uav_system
+cd ~/git/mrs_uav_system
+git checkout master
 git pull
 ./install.sh' > clone.sh && source clone.sh
 ```
@@ -66,8 +60,8 @@ Paste following code into your terminal and press **enter**
 cd /tmp
 echo "mkdir -p ~/git
 cd ~/git
-sudo apt-get -y install git
-git clone https://github.com/klaxalk/linux-setup.git
+sudo apt -y install git
+git clone https://github.com/klaxalk/linux-setup
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
 ```
