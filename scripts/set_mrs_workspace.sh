@@ -1,29 +1,36 @@
 #!/bin/bash
-# author: Tomas Baca
 
-# create the directory for the workspace
-mkdir -p ~/$ROS_WORKSPACE/src
+set -e
 
-cd ~/$ROS_WORKSPACE
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+trap 'echo "\"${last_command}\" command failed with exit code $?"' ERR
 
-catkin config --profile debug --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
-catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
-catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
-catkin profile set reldeb
+# get the path to this script
+APP_PATH=`dirname "$0"`
+APP_PATH=`( cd "$APP_PATH" && pwd )`
 
-# link uav_core repository to mrs_workspace
+WORKSPACE_NAME=mrs_workspace
+WORKSPACE_PATH=~/$WORKSPACE_NAME
+
+echo "$0: creating $WORKSPACE_PATH/src"
+mkdir -p $WORKSPACE_PATH/src
+
+cd $WORKSPACE_PATH
+command catkin init
+
+echo "$0: setting up build profiles"
+command catkin config --profile debug --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin profile set reldeb
+
+# link mrs repositories to the workspace
 cd src
-ln -s ~/git/uav_core
+ln -sf ~/git/uav_core
+ln -sf ~/git/simulation
 
-#############################################
-# Compile the workspace for the first time
-#############################################
-
-cd ~/$ROS_WORKSPACE
+cd $WORKSPACE_PATH
 source /opt/ros/melodic/setup.bash
-# command catkin build mavros --mem-limit 75%
 command catkin build -c --mem-limit 75%
 
-# # after sucessfully building mavros, install libgeo
-# cd ~/git/uav_core/ros_packages/mavros/mavros/scripts
-# sudo ./install_geographiclib_datasets.sh
+exit 0
