@@ -3,7 +3,7 @@
 set -e
 
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
-trap 'echo "\"${last_command}\" command failed with exit code $?"' ERR
+trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 # get the path to this script
 APP_PATH=`dirname "$0"`
@@ -14,7 +14,7 @@ WORKSPACE_PATH=~/$WORKSPACE_NAME
 MRS_WORKSPACE=~/mrs_workspace
 
 # create the folder structure
-mkdir -p $WORKSPACE_PATH
+mkdir -p $WORKSPACE_PATH/src
 
 cd $WORKSPACE_PATH
 command catkin init
@@ -34,7 +34,7 @@ command catkin config --extend $MRS_WORKSPACE/devel
 
 echo "$0: cloning example packages"
 cd ~/git
-[ ! -e example_ros_packages ] && git clone git@github.com:ctu-mrs/example_ros_packages
+[ ! -e example_ros_packages ] && git clone https://github.com/ctu-mrs/example_ros_packages
 cd example_ros_packages
 gitman install
 
@@ -54,5 +54,3 @@ if [ "$num" -lt "1" ]; then
 source $WORKSPACE_PATH/devel/setup.bash" >> ~/.bashrc
   
 fi
-
-exit 0
