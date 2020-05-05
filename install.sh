@@ -35,7 +35,9 @@ bash $MY_PATH/dependencies/gitman.sh
 
 [ ! -e "$GIT_PATH" ] && echo "$0: creating $GIT_PATH" && mkdir -p $GIT_PATH
 
-## | --------------------- claning packags -------------------- |
+## | -------------------- cloning packages -------------------- |
+
+cd "$GIT_PATH"
 
 [ ! -e "$GIT_PATH/uav_core" ] && git clone git@github.com:ctu-mrs/uav_core
 [ ! -e "$GIT_PATH/simulation" ] && git clone git@github.com:ctu-mrs/simulation
