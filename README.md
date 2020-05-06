@@ -4,12 +4,12 @@ This repository is the main entry point to the MRS UAV system.
 
 ### Build Status
 
-| Repo                                                        | Ubuntu  | Status                                                                                                                          |
-|-------------------------------------------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------|
-| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | Melodic | [![Build Status](https://travis-ci.com/ctu-mrs/mrs_uav_system.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_uav_system) |
-| [uav_core](https://github.com/ctu-mrs/uav_core)             | Melodic | [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core)             |
-| [simulation](https://github.com/ctu-mrs/simulation)         | Melodic | [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation)         |
-| [linux-setup](https://github.com/klaxalk/linux-setup)       | Melodic | [![Build Status](https://travis-ci.com/klaxalk/linux-setup.svg?branch=master)](https://travis-ci.com/klaxalk/linux-setup)       |
+| Repo                                                        | Ubuntu | Status                                                                                                                          |
+|-------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------|
+| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/mrs_uav_system.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_uav_system) |
+| [uav_core](https://github.com/ctu-mrs/uav_core)             | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core)             |
+| [simulation](https://github.com/ctu-mrs/simulation)         | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation)         |
+| [linux-setup](https://github.com/klaxalk/linux-setup)       | Bionic | [![Build Status](https://travis-ci.com/klaxalk/linux-setup.svg?branch=master)](https://travis-ci.com/klaxalk/linux-setup)       |
 
 # Installation
 
