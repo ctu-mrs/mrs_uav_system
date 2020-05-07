@@ -16,6 +16,7 @@ echo "$0: creating $WORKSPACE_PATH/src"
 mkdir -p $WORKSPACE_PATH/src
 
 cd $WORKSPACE_PATH
+source /opt/ros/melodic/setup.bash
 command catkin init
 
 echo "$0: setting up build profiles"
