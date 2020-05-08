@@ -1,6 +1,6 @@
 # Multi-robot Systems Group UAV system
 
-![UAV collage](fig/drone_collage.jpg)
+![UAV collage](.fig/drone_collage.jpg)
 
 ### Build Status
 
