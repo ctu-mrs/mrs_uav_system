@@ -42,7 +42,8 @@ git clone https://github.com/ctu-mrs/mrs_uav_system
 cd mrs_uav_system
 git checkout master
 git pull
-./install.sh -g $GIT_PATH' > clone.sh && source clone.sh
+./install.sh -g $GIT_PATH
+source ~/.bashrc' > clone.sh && source clone.sh
 ```
 
 ## "I already have ROS and just want to peek in"
