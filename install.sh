@@ -39,9 +39,9 @@ bash $MY_PATH/dependencies/gitman.sh
 
 cd "$GIT_PATH"
 
-[ ! -e "$GIT_PATH/uav_core" ] && git clone git@github.com:ctu-mrs/uav_core
-[ ! -e "$GIT_PATH/simulation" ] && git clone git@github.com:ctu-mrs/simulation
-[ ! -e "$GIT_PATH/example_ros_packages" ] && git clone git@github.com:ctu-mrs/example_ros_packages
+[ ! -e "$GIT_PATH/uav_core" ] && git clone https://github.com/ctu-mrs/uav_core
+[ ! -e "$GIT_PATH/simulation" ] && git clone https://github.com/ctu-mrs/simulation
+[ ! -e "$GIT_PATH/example_ros_packages" ] && git clone https://github.com/ctu-mrs/example_ros_packages
 
 ## | ------------------- installing uav_core ------------------ |
 
