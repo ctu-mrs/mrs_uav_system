@@ -10,9 +10,14 @@
 | [simulation](https://github.com/ctu-mrs/simulation)         | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation)         | Gazebo/ROS UAV simulation tools                                                                                                              |
 | [linux-setup](https://github.com/klaxalk/linux-setup)       | Bionic | [![Build Status](https://travis-ci.com/klaxalk/linux-setup.svg?branch=master)](https://travis-ci.com/klaxalk/linux-setup)       | Linux configuration focused on development in terminal                                                                                       |
 
-### Wiki
+### Documentation
 
-[https://ctu-mrs.github.io/](https://ctu-mrs.github.io/)
+The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/)
+However, it barely scratches a surface of what it should contain (and we know it).
+Our system is a research-oriented platform, and it evolves rapidly.
+Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
+Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
+So we instead aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
 
 ## Installation
 
@@ -33,7 +38,7 @@ Our automated installation will:
 * added configuration lines into your *~/.bashrc*.
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**.
-You might be prompted a few times to confirm something by pressing enter, but most of the choice have an automatic default answer.
+You might be prompted a few times to confirm something by pressing enter:
 ```bash
 cd /tmp
 echo '
@@ -51,7 +56,7 @@ source ~/.bashrc' > clone.sh && source clone.sh
 
 ### "I already have ROS and just want to peek in"
 
-If you already have ROS installed and if you are fluent with *workspaces*, *.bashrc*, *catkin tools*, etc., you can clone our repositories individually manually.
+If you already have ROS installed and if you are fluent with *workspaces*, *.bashrc*, *catkin tools*, etc., feel free to clone our repositories individually.
 The [uav_core](https://github.com/ctu-mrs/uav_core) repository integrates our UAV control system.
 Please follow its README for further instructions on how to install its particular dependencies.
 
@@ -61,7 +66,7 @@ Please follow its README for further instructions on how to install prerequisiti
 ### "I want the nice Linux environment that everybody from MRS works with"
 
 Great! In that case you want to install Tomas's Linux-setup.
-**Beware!** This might alter you existing configuration of some Linux tools (Vim, Tmux, i3wm, ranger, ...).
+**Beware!** This might alter your existing configuration of some Linux tools (Vim, Tmux, i3wm, ranger, ...).
 Refer to its [README](https://github.com/klaxalk/linux-setup), for more information.
 Installation is *not* obligatory and the MRS UAV system will work without it.
 
