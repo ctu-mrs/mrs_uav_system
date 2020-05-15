@@ -12,7 +12,7 @@
 
 ### Documentation
 
-The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/)
+The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
 However, it barely scratches a surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
