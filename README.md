@@ -1,5 +1,20 @@
 # Multi-robot Systems Group UAV system
-![](.fig/drone_collage.jpg)
+![thumbnail](.fig/drone_collage.jpg)
+
+The [Multi-robot Systems Group](http://mrs.felk.cvut.cz) is a robotics lab at the [Czech Technical University in Prague](https://www.cvut.cz/).
+We mostly work with multi-rotor helicopters, and for them specifically, we develop this control, estimation, and simulation platform.
+We think that real-world and replicable experiments should support excellent research and science in robotics.
+Thus our platform is built to allow safe verification of approaches in planning, control, estimation, computer vision, tracking, and more.
+
+## Properties
+
+The platform is
+
+* built using [Robot Operating System](https://www.ros.org/) (Melodic),
+* meant to be executed entirely onboard,
+* can be deployed on any multi-rotor vehicle, given it is equipped with a [PX4](https://github.com/ctu-mrs/px4_firmware)-compatible [flight controller](https://pixhawk.org/),
+* for both indoor and outdoor,
+* supports multi-robot experiments using [Nimbro network](https://github.com/ctu-mrs/nimbro_network) communication.
 
 ### Build Status
 
@@ -17,7 +32,14 @@ However, it barely scratches a surface of what it should contain (and we know it
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
 Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
-So we instead aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
+So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
+
+## Related packages - not being the part of the installation
+
+| Package                                                                              | Description                                               |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | MRS System-depended optional plugins and resources        |
+| [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines |
 
 ## Installation
 
