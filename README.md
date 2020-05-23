@@ -38,7 +38,7 @@ So instead, we aim at educating our students to look around the packages (each c
 
 | Package                                                                              | Description                                               |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | MRS System-depended optional plugins and resources        |
+| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources      |
 | [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines |
 
 ## Installation
@@ -85,7 +85,7 @@ Please follow its README for further instructions on how to install its particul
 The [simulation](https://github.com/ctu-mrs/simulation) repository provides resources for *Gazebo/ROS* simulation, including px4 Simulation-in-the-Loop (SITL), UAV models and useful sensor plugins.
 Please follow its README for further instructions on how to install prerequisities.
 
-### "I want the nice Linux environment that everybody from MRS works with"
+### "I want the Linux environment people from MRS works with"
 
 Great! In that case you want to install Tomas's Linux-setup.
 **Beware!** This might alter your existing configuration of some Linux tools (Vim, Tmux, i3wm, ranger, ...).
