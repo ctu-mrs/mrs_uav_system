@@ -12,5 +12,5 @@ before_install:
 - ./.ci/ci_before_install.sh
 before_script:
 - ./.ci/ci_test_build.sh
-script:
-- ./.ci/takeoff_test.sh
+# script:
+# - ./.ci/takeoff_test.sh
