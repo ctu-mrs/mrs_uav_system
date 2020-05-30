@@ -32,6 +32,9 @@ command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDe
 command catkin profile set reldeb
 command catkin config --extend $MRS_WORKSPACE/devel
 
+[ -z "$TRAVIS_CI" ] && command catkin profile set reldeb
+[ ! -z "$TRAVIS_CI" ] && command catkin profile set debug
+
 echo "$0: cloning example packages"
 cd ~/git
 [ ! -e example_ros_packages ] && git clone https://github.com/ctu-mrs/example_ros_packages
