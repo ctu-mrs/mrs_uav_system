@@ -39,7 +39,8 @@ ln -sf ~/git/simulation
 cd $WORKSPACE_PATH
 source /opt/ros/melodic/setup.bash
 command catkin build mavros
-command catkin build -c --mem-limit 75%
+[ -z "$TRAVIS_CI" ] && command catkin build -c --mem-limit 75%
+[ ! -z "$TRAVIS_CI" ] && command catkin build
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
