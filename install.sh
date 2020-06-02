@@ -69,5 +69,5 @@ if [ "$num" -lt "1" ]; then
   # set bashrc
   echo "
 export ROS_WORKSPACES=\"~/mrs_workspace ~/workspace\"" >> ~/.bashrc
-  
+
 fi

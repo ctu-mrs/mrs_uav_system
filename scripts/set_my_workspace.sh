@@ -20,7 +20,7 @@ cd $WORKSPACE_PATH
 command catkin init
 
 echo "$0: setting up build profiles"
-command catkin config --profile debug --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile debug --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
 command catkin profile set debug
 command catkin config --extend $MRS_WORKSPACE/devel
 
@@ -59,5 +59,5 @@ if [ "$num" -lt "1" ]; then
   # set bashrc
   echo "
 source $WORKSPACE_PATH/devel/setup.bash" >> ~/.bashrc
-  
+
 fi
