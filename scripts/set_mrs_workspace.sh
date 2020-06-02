@@ -20,10 +20,16 @@ source /opt/ros/melodic/setup.bash
 command catkin init
 
 echo "$0: setting up build profiles"
-command catkin config --profile debug --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
-command catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile debug --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
 command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
-command catkin profile set reldeb
+
+# normal installation
+[ -z "$TRAVIS_CI" ] && command catkin profile set reldeb
+
+# TRAVIS CI build
+# set debug for faster build
+[ ! -z "$TRAVIS_CI" ] && command catkin profile set debug
 
 # link mrs repositories to the workspace
 cd src
@@ -33,7 +39,8 @@ ln -sf ~/git/simulation
 cd $WORKSPACE_PATH
 source /opt/ros/melodic/setup.bash
 command catkin build mavros
-command catkin build -c --mem-limit 75%
+[ -z "$TRAVIS_CI" ] && command catkin build -c --mem-limit 75%
+[ ! -z "$TRAVIS_CI" ] && command catkin build
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
@@ -41,5 +48,5 @@ if [ "$num" -lt "1" ]; then
   # set bashrc
   echo "
 source $WORKSPACE_PATH/devel/setup.bash" >> ~/.bashrc
-  
+
 fi

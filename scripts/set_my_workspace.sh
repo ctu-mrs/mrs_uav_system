@@ -20,7 +20,7 @@ cd $WORKSPACE_PATH
 command catkin init
 
 echo "$0: setting up build profiles"
-command catkin config --profile debug --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile debug --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
 command catkin profile set debug
 command catkin config --extend $MRS_WORKSPACE/devel
 
@@ -31,6 +31,13 @@ command catkin config --extend $MRS_WORKSPACE/devel
 command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
 command catkin profile set reldeb
 command catkin config --extend $MRS_WORKSPACE/devel
+
+# normal installation
+[ -z "$TRAVIS_CI" ] && command catkin profile set reldeb
+
+# TRAVIS CI build
+# set debug for faster build
+[ ! -z "$TRAVIS_CI" ] && command catkin profile set debug
 
 echo "$0: cloning example packages"
 cd ~/git
@@ -52,5 +59,5 @@ if [ "$num" -lt "1" ]; then
   # set bashrc
   echo "
 source $WORKSPACE_PATH/devel/setup.bash" >> ~/.bashrc
-  
+
 fi
