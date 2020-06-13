@@ -36,10 +36,12 @@ So instead, we aim at educating our students to look around the packages (each c
 
 ## Related packages - not being the part of the installation
 
-| Package                                                                              | Description                                               |
-|--------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources      |
-| [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines |
+| Package                                                                              | Description                                                                                   |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources                                          |
+| [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines                                     |
+| [Hector SLAM](https://github.com/tu-darmstadt-ros-pkg/hector_slam)                   | 2D Laser-based LIDAR SLAM, [how to](https://ctu-mrs.github.io/docs/software/hector_slam.html) |
+| [MRS Serial](https://github.com/ctu-mrs/mrs_serial)                                  | serial line interface to ROS, communicates using the BACA protocol                            |
 
 ## Installation
 
