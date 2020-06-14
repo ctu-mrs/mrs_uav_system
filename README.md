@@ -34,6 +34,8 @@ Most of our users are either researchers (who already know the platform) or fres
 Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
 So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
 
+Basics of the control and estimation pipeline are described in the [preprint](http://mrs.felk.cvut.cz/data/papers/mrs-platform.pdf).
+
 ### Unamneed Aerial Vehicles
 
 The platformed is currently pre-configured for the following platforms, operated by MRS:
