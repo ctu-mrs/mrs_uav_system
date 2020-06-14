@@ -34,6 +34,16 @@ Most of our users are either researchers (who already know the platform) or fres
 Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
 So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
 
+### Unamneed Aerial Vehicles
+
+The platformed is currently pre-configured for the following platforms, operated by MRS:
+
+| Model      | Simulation                    | Real UAV                |
+|------------|-------------------------------|-------------------------|
+| DJI f450   | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
+| DJI f550   | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
+| Tarot t650 | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
+
 ## Related packages - not being the part of the installation
 
 | Package                                                                              | Description                                                                                   |
