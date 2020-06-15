@@ -36,7 +36,7 @@ So instead, we aim at educating our students to look around the packages (each c
 
 Basics of the control and estimation pipeline are described in the [preprint](http://mrs.felk.cvut.cz/data/papers/mrs-platform.pdf).
 
-### Unamneed Aerial Vehicles
+### Unmanned Aerial Vehicles
 
 The platformed is currently pre-configured for the following platforms, operated by MRS:
 
