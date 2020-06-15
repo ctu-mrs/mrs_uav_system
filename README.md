@@ -38,7 +38,7 @@ Basics of the control and estimation pipeline are described in the [preprint](ht
 
 ### Unmanned Aerial Vehicles
 
-The platformed is currently pre-configured for the following platforms, operated by MRS:
+The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS:
 
 | Model      | Simulation                    | Real UAV                |
 |------------|-------------------------------|-------------------------|
