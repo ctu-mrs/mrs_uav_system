@@ -17,7 +17,7 @@ The platform is
 * supports multi-robot experiments using [Nimbro network](https://github.com/ctu-mrs/nimbro_network) communication.
 * provides both: agile flying and robust control.
 
-![](http://mrs.felk.cvut.cz/images/images/gazebo_circle.gif)
+![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
 
 ### Build Status
 
