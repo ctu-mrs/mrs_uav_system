@@ -15,6 +15,9 @@ The platform is
 * can be deployed on any multi-rotor vehicle, given it is equipped with a [PX4](https://github.com/ctu-mrs/px4_firmware)-compatible [flight controller](https://pixhawk.org/),
 * for both indoor and outdoor,
 * supports multi-robot experiments using [Nimbro network](https://github.com/ctu-mrs/nimbro_network) communication.
+* provides both: agile flying and robust control.
+
+![](http://mrs.felk.cvut.cz/images/images/gazebo_circle.gif)
 
 ### Build Status
 
