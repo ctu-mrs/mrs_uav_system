@@ -6,7 +6,16 @@ We mostly work with multi-rotor helicopters, and for them specifically, we devel
 We think that real-world and replicable experiments should support excellent research and science in robotics.
 Thus our platform is built to allow safe verification of approaches in planning, control, estimation, computer vision, tracking, and more.
 
-## Properties
+### Build Status
+
+| Component                                                   | Ubuntu | Status                                                                                                                          | Description                                                                                                                                  |
+|-------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/mrs_uav_system.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | integrates [uav_core](https://github.com/ctu-mrs/uav_core) and [simulation](https://github.com/ctu-mrs/simulation), prepares the build space |
+| [uav_core](https://github.com/ctu-mrs/uav_core)             | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core)             | UAV control and estimation pipeline                                                                                                          |
+| [simulation](https://github.com/ctu-mrs/simulation)         | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation)         | Gazebo/ROS UAV simulation tools                                                                                                              |
+| [linux-setup](https://github.com/klaxalk/linux-setup)       | Bionic | [![Build Status](https://travis-ci.com/klaxalk/linux-setup.svg?branch=master)](https://travis-ci.com/klaxalk/linux-setup)       | Linux configuration focused on development in terminal                                                                                       |
+
+## System properties
 
 The platform is
 
@@ -18,15 +27,6 @@ The platform is
 * provides both: agile flying and robust control.
 
 ![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
-
-### Build Status
-
-| Component                                                   | Ubuntu | Status                                                                                                                          | Description                                                                                                                                  |
-|-------------------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/mrs_uav_system.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | integrates [uav_core](https://github.com/ctu-mrs/uav_core) and [simulation](https://github.com/ctu-mrs/simulation), prepares the build space |
-| [uav_core](https://github.com/ctu-mrs/uav_core)             | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/uav_core.svg?branch=master)](https://travis-ci.com/ctu-mrs/uav_core)             | UAV control and estimation pipeline                                                                                                          |
-| [simulation](https://github.com/ctu-mrs/simulation)         | Bionic | [![Build Status](https://travis-ci.com/ctu-mrs/simulation.svg?branch=master)](https://travis-ci.com/ctu-mrs/simulation)         | Gazebo/ROS UAV simulation tools                                                                                                              |
-| [linux-setup](https://github.com/klaxalk/linux-setup)       | Bionic | [![Build Status](https://travis-ci.com/klaxalk/linux-setup.svg?branch=master)](https://travis-ci.com/klaxalk/linux-setup)       | Linux configuration focused on development in terminal                                                                                       |
 
 ### Documentation
 
@@ -49,7 +49,7 @@ The MRS UAV system is currently pre-configured for the following UAV platforms, 
 | DJI f550   | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
 | Tarot t650 | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
 
-## Related packages - not being the part of the installation
+## Related packages - not being part of the installation
 
 | Package                                                                              | Description                                                                                   |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
