@@ -1,18 +1,29 @@
 language: generic
-os:
-- linux
+
+matrix:
+  fast_finish: true
+  include:
+    - os: linux
+      dist: bionic
+      env: BADGE=bionic
+    - os: linux
+      dist: focal
+      env: BADGE=focal
+  allow_failures:
+    - env: BADGE=focal
+
 branches:
   only:
   - master
-env:
-  - TRAVIS_CI=true
-sudo: required
-dist: bionic
+
 compiler:
 - gcc
+
 before_install:
 - ./.ci/ci_before_install.sh
+
 before_script:
 - ./.ci/ci_test_build.sh
+
 script:
 - ./.ci/takeoff_test.sh

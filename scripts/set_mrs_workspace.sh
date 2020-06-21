@@ -2,6 +2,10 @@
 
 set -e
 
+distro=`lsb_release -r | awk '{ print $2 }'`
+[ "$distro" = "18.04" ] && ROS_DISTRO="melodic"
+[ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
+
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
@@ -16,7 +20,7 @@ echo "$0: creating $WORKSPACE_PATH/src"
 mkdir -p $WORKSPACE_PATH/src
 
 cd $WORKSPACE_PATH
-source /opt/ros/melodic/setup.bash
+source /opt/ros/$ROS_DISTRO/setup.bash
 command catkin init
 
 echo "$0: setting up build profiles"
@@ -37,7 +41,7 @@ ln -sf ~/git/uav_core
 ln -sf ~/git/simulation
 
 cd $WORKSPACE_PATH
-source /opt/ros/melodic/setup.bash
+source /opt/ros/$ROS_DISTRO/setup.bash
 command catkin build mavros
 [ -z "$TRAVIS_CI" ] && command catkin build -c --mem-limit 75%
 [ ! -z "$TRAVIS_CI" ] && command catkin build
