@@ -5,10 +5,14 @@ matrix:
   include:
     - os: linux
       dist: bionic
-      env: BADGE=bionic
+      env:
+        - TRAVIS_CI=true
+          BADGE=bionic
     - os: linux
       dist: focal
-      env: BADGE=focal
+      env:
+        - TRAVIS_CI=true
+          BADGE=focal
   allow_failures:
     - env: BADGE=focal
 
