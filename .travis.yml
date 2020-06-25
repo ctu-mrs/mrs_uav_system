@@ -14,7 +14,9 @@ matrix:
         - TRAVIS_CI=true
           BADGE=focal
   allow_failures:
-    - env: BADGE=focal
+    - env:
+        - TRAVIS_CI=true
+          BADGE=focal
 
 branches:
   only:
