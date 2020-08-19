@@ -31,11 +31,18 @@ The platform is
 ### Documentation
 
 The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
-However, it barely scratches a surface of what it should contain (and we know it).
+However, the website only scratches a surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
 Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
 So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
+
+The system follows a description presented in the preprint [arXiv:2008.08050](https://arxiv.org/abs/2008.08050), [pdf](https://arxiv.org/pdf/2008.08050):
+```
+Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M. (2020),
+"The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
+Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
+```
 
 ### Unmanned Aerial Vehicles
 
