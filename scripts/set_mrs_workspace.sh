@@ -42,9 +42,10 @@ ln -sf ~/git/simulation
 
 cd $WORKSPACE_PATH
 source /opt/ros/$ROS_DISTRO/setup.bash
-command catkin build mavros
+[ -z "$TRAVIS_CI" ] && command catkin build mavros -c --mem-limit 75%
+[ ! -z "$TRAVIS_CI" ] && command catkin build mavros --no-status
 [ -z "$TRAVIS_CI" ] && command catkin build -c --mem-limit 75%
-[ ! -z "$TRAVIS_CI" ] && command catkin build
+[ ! -z "$TRAVIS_CI" ] && command catkin build --no-status
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
