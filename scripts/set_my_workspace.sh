@@ -52,7 +52,7 @@ ln -sf ~/git/example_ros_packages
 echo "$0: building $WORKSPACE_PATH"
 cd $WORKSPACE_PATH
 [ -z "$TRAVIS_CI" ] && command catkin build
-[ ! -z "$TRAVIS_CI" ] && command catkin build --no-status
+[ ! -z "$TRAVIS_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
