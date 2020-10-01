@@ -66,6 +66,7 @@ The MRS UAV system is currently pre-configured for the following UAV platforms, 
 | [MRS Serial](https://github.com/ctu-mrs/mrs_serial)                                  | serial line interface to ROS, communicates using the BACA protocol                            |
 | [UVDAR](https://github.com/ctu-mrs/uvdar)                                            | mutual localization of UAVs using Ultra-Violet LED blinkers                                   |
 | [trajectory loader](https://github.com/ctu-mrs/trajectory_loader)                    | Loading UAV trajectories from CSV files                                                       |
+| [Object detection](https://github.com/ctu-mrs/object_detect)                         | Object detection by color segmentation                                                        |
 
 ## Installation
 
