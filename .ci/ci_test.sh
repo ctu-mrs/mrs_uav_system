@@ -2,6 +2,9 @@
 
 set -e
 
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
+
 distro=`lsb_release -r | awk '{ print $2 }'`
 [ "$distro" = "18.04" ] && ROS_DISTRO="melodic"
 [ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
@@ -21,8 +24,9 @@ cd ~/mrs_workspace
 
 catkin build mrs_uav_testing
 catkin build mrs_uav_testing --catkin-make-args tests
-roscd mrs_uav_testing
-rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir=/tmp
-catkin_test_results /tmp
+TEST_RESULT_PATH=$(realpath /tmp/$RANDOM)
+mkdir -p $TEST_RESULT_PATH
+rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir="$TEST_RESULT_PATH"
+catkin_test_results "$TEST_RESULT_PATH"
 
 echo "Flight test finished" 
