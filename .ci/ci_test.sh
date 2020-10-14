@@ -19,8 +19,10 @@ export ODOMETRY_TYPE="gps" # {gps, optflow, hector, vio, ...}
 
 cd ~/mrs_workspace
 
+catkin build mrs_uav_testing
 catkin build mrs_uav_testing --catkin-make-args tests
-rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir=/tmp/mrs_uav_testing
-catkin_test_results /tmp/mrs_uav_testing
+roscd mrs_uav_testing
+rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir=/tmp
+catkin_test_results /tmp
 
 echo "Flight test finished" 
