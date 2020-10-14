@@ -6,7 +6,7 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 [ "$distro" = "18.04" ] && ROS_DISTRO="melodic"
 [ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
 
-echo "Starting takeoff test" 
+echo "Starting flight test" 
 
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/mrs_workspace/devel/setup.bash
@@ -19,6 +19,8 @@ export ODOMETRY_TYPE="gps" # {gps, optflow, hector, vio, ...}
 
 cd ~/mrs_workspace
 
-catkin run_tests mrs_uav_testing
+catkin build mrs_uav_testing --catkin-make-args tests
+rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir=/tmp/mrs_uav_testing
+catkin_test_results /tmp/mrs_uav_testing
 
-catkin_test_results ~/mrs_workspace/build/mrs_uav_testing
+echo "Flight test finished" 
