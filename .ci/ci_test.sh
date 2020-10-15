@@ -22,7 +22,7 @@ export ODOMETRY_TYPE="gps" # {gps, optflow, hector, vio, ...}
 
 cd ~/mrs_workspace
 
-catkin build mrs_uav_testing
+catkin build mrs_uav_testing # it has to be fully build normally before building with --catkin-make-args tests
 catkin build mrs_uav_testing --catkin-make-args tests
 TEST_RESULT_PATH=$(realpath /tmp/$RANDOM)
 mkdir -p $TEST_RESULT_PATH
