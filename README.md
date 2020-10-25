@@ -94,7 +94,7 @@ echo '
 GIT_PATH=~/git
 mkdir -p $GIT_PATH
 cd $GIT_PATH
-sudo apt -y install git
+sudo apt-get -y install git
 git clone https://github.com/ctu-mrs/mrs_uav_system
 cd mrs_uav_system
 git checkout master
@@ -124,7 +124,7 @@ Paste following code into your terminal and press **enter**
 cd /tmp
 echo "mkdir -p ~/git
 cd ~/git
-sudo apt -y install git
+sudo apt-get -y install git
 git clone https://github.com/klaxalk/linux-setup
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
