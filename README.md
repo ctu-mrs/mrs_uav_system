@@ -8,12 +8,12 @@ Thus our platform is built to allow safe verification of approaches in planning,
 
 ### Build Status
 
-| Component                                                   | 18.04 Bionic                                                                                                                                           | 20.04 Focal                                                                                                                                                 | Description                                                                                                                                  |
-|-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/mrs_uav_system?label=Melodic)](https://travis-ci.com/ctu-mrs/mrs_uav_system)           | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/mrs_uav_system?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | integrates [uav_core](https://github.com/ctu-mrs/uav_core) and [simulation](https://github.com/ctu-mrs/simulation), prepares the build space |
-| [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/uav_core?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/uav_core)      | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/uav_core?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/uav_core)             | UAV control and estimation pipeline                                                                                                          |
-| [simulation](https://github.com/ctu-mrs/simulation)         | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/simulation?label=Melodic)](https://travis-ci.com/ctu-mrs/mrs_uav_system)               | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/simulation?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/simulation)         | Gazebo/ROS UAV simulation tools                                                                                                              |
-| [linux-setup](https://github.com/klaxalk/linux-setup)       | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?env=BADGE=bionic&label=Bionic)](https://travis-ci.com/klaxalk/linux-setup) | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?env=BADGE=focal&label=Focal)](https://travis-ci.com/klaxalk/linux-setup)        | Linux configuration focused on development in terminal                                                                                       |
+| Component                                                   | 18.04 Bionic                                                                                                                                                  | 20.04 Focal                                                                                                                                                 | Description                                                                                                                                  |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/mrs_uav_system?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/mrs_uav_system?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | integrates [uav_core](https://github.com/ctu-mrs/uav_core) and [simulation](https://github.com/ctu-mrs/simulation), prepares the build space |
+| [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/uav_core?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/uav_core)             | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/uav_core?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/uav_core)             | UAV control and estimation pipeline                                                                                                          |
+| [simulation](https://github.com/ctu-mrs/simulation)         | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/simulation?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/simulation)         | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/simulation?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/simulation)         | Gazebo/ROS UAV simulation tools                                                                                                              |
+| [linux-setup](https://github.com/klaxalk/linux-setup)       | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?env=BADGE=bionic+ARCH=amd&label=Bionic)](https://travis-ci.com/klaxalk/linux-setup)        | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?env=BADGE=focal+ARCH=amd&label=Focal)](https://travis-ci.com/klaxalk/linux-setup)        | Linux configuration focused on development in terminal                                                                                       |
 
 ## System properties
 
@@ -31,13 +31,18 @@ The platform is
 ### Documentation
 
 The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
-However, it barely scratches a surface of what it should contain (and we know it).
+However, the website only scratches a surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
 Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
 So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
 
-Basics of the control and estimation pipeline are described in the [preprint](http://mrs.felk.cvut.cz/data/papers/mrs-platform.pdf).
+The system follows a description presented in the preprint [arXiv:2008.08050](https://arxiv.org/abs/2008.08050), [pdf](https://arxiv.org/pdf/2008.08050):
+```
+Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M. (2020),
+"The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
+Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
+```
 
 ### Unmanned Aerial Vehicles
 
@@ -55,8 +60,13 @@ The MRS UAV system is currently pre-configured for the following UAV platforms, 
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources                                          |
 | [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines                                     |
+| [MRS optic flow](https://github.com/ctu-mrs/mrs_optic_flow)                          | GPU-accelerated optic flow alorithm for UAV odometry                                          |
 | [Hector SLAM](https://github.com/tu-darmstadt-ros-pkg/hector_slam)                   | 2D Laser-based LIDAR SLAM, [how to](https://ctu-mrs.github.io/docs/software/hector_slam.html) |
+| [Hector SLAM](https://github.com/ctu-mrs/hector_slam) - MRS fork                     | + Nodeleted, [how to](https://ctu-mrs.github.io/docs/software/hector_slam.html)               |
 | [MRS Serial](https://github.com/ctu-mrs/mrs_serial)                                  | serial line interface to ROS, communicates using the BACA protocol                            |
+| [UVDAR](https://github.com/ctu-mrs/uvdar)                                            | mutual localization of UAVs using Ultra-Violet LED blinkers                                   |
+| [trajectory loader](https://github.com/ctu-mrs/trajectory_loader)                    | Loading UAV trajectories from CSV files                                                       |
+| [Object detection](https://github.com/ctu-mrs/object_detect)                         | Object detection by color segmentation                                                        |
 
 ## Installation
 
@@ -84,7 +94,7 @@ echo '
 GIT_PATH=~/git
 mkdir -p $GIT_PATH
 cd $GIT_PATH
-sudo apt -y install git
+sudo apt-get -y install git
 git clone https://github.com/ctu-mrs/mrs_uav_system
 cd mrs_uav_system
 git checkout master
@@ -114,7 +124,7 @@ Paste following code into your terminal and press **enter**
 cd /tmp
 echo "mkdir -p ~/git
 cd ~/git
-sudo apt -y install git
+sudo apt-get -y install git
 git clone https://github.com/klaxalk/linux-setup
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
