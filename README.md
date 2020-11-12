@@ -68,6 +68,18 @@ The MRS UAV system is currently pre-configured for the following UAV platforms, 
 | [trajectory loader](https://github.com/ctu-mrs/trajectory_loader)                    | Loading UAV trajectories from CSV files                                                       |
 | [Object detection](https://github.com/ctu-mrs/object_detect)                         | Object detection by color segmentation                                                        |
 
+## Backwards compatibility and updates
+
+We do not guarantee backwards compatibility at any time.
+The platform is evolving according to the needs of the MRS group.
+Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc.
+However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled **users-read-me**.
+Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
+Recent changes requiring user action:
+
+* [GPS coordinates withing Gazebo world need changing](https://github.com/ctu-mrs/mrs_uav_system/issues/22)
+* [Rangefinder fusion needs enabling in simulation sessions](https://github.com/ctu-mrs/mrs_uav_system/issues/21)
+
 ## Installation
 
 Following options are provided, depending on who you are and what you want to do with the platform
