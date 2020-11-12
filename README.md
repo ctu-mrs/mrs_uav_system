@@ -77,8 +77,8 @@ However, when we change something which requires user action to maintain compati
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
 
-* [GPS coordinates withing Gazebo world need changing](https://github.com/ctu-mrs/mrs_uav_system/issues/22)
-* [Rangefinder fusion needs enabling in simulation sessions](https://github.com/ctu-mrs/mrs_uav_system/issues/21)
+* November 12, 2020: [GPS coordinates withing Gazebo world need changing](https://github.com/ctu-mrs/mrs_uav_system/issues/22)
+* November 12, 2020: [Rangefinder fusion needs enabling in simulation sessions](https://github.com/ctu-mrs/mrs_uav_system/issues/21)
 
 ## Installation
 
