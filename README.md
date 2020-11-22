@@ -82,7 +82,9 @@ Recent changes requiring user action:
 
 ## Installation
 
-Following options are provided, depending on who you are and what you want to do with the platform
+Following options are provided, depending on who you are and what you want to do with the platform.
+**Beware**, installing the system into a virtual machine may not be a good idea for you, unless you have a very powerfull computer.
+Real-time simulations in Gazebo perform very poorly in virtual machines.
 
 ### "I have a fresh Ubuntu 18.04 and want it quick and easy"
 
