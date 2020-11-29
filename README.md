@@ -8,7 +8,7 @@ Thus our platform is built to allow safe verification of approaches in planning,
 
 ### Build Status
 
-| Component                                                   | 18.04 && 20.04                                                                                                                         |
+| Component                                                   | 18.04 & 20.04                                                                                                                         |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/CI/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions) |
 | [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](https://github.com/ctu-mrs/uav_core/workflows/CI/badge.svg)](https://github.com/ctu-mrs/uav_core/actions)             |
