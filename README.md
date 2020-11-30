@@ -8,12 +8,12 @@ Thus our platform is built to allow safe verification of approaches in planning,
 
 ### Build Status
 
-| Component                                                   | 18.04 & 20.04                                                                                                                         |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/CI/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions) |
-| [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](https://github.com/ctu-mrs/uav_core/workflows/CI/badge.svg)](https://github.com/ctu-mrs/uav_core/actions)             |
-| [simulation](https://github.com/ctu-mrs/simulation)         | [![Build Status](https://github.com/ctu-mrs/simulation/workflows/CI/badge.svg)](https://github.com/ctu-mrs/simulation/actions)         |
-| [linux-setup](https://github.com/klaxalk/linux-setup)       | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?&label=CI)](https://travis-ci.com/klaxalk/linux-setup)     |
+| Component                                                   | 18.04                                                                                                                                       | 20.04                                                                                                                                       |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions) |
+| [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](https://github.com/ctu-mrs/uav_core/workflows/CI/badge.svg)](https://github.com/ctu-mrs/uav_core/actions)                  |                                                                                                                                             |
+| [simulation](https://github.com/ctu-mrs/simulation)         | [![Build Status](https://github.com/ctu-mrs/simulation/workflows/CI/badge.svg)](https://github.com/ctu-mrs/simulation/actions)              |                                                                                                                                             |
+| [linux-setup](https://github.com/klaxalk/linux-setup)       | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?&label=CI)](https://travis-ci.com/klaxalk/linux-setup)          |                                                                                                                                             |
 
 ## System properties
 
