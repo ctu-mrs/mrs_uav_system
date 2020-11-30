@@ -31,6 +31,8 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-18.04
+    env:
+      GITHUB_CI: true
     steps:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

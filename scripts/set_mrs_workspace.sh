@@ -29,11 +29,11 @@ command catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release 
 command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native' -DCMAKE_C_FLAGS='-march=native'
 
 # normal installation
-[ -z "$TRAVIS_CI" ] && command catkin profile set reldeb
+[ -z "$GITHUB_CI" ] && command catkin profile set reldeb
 
 # TRAVIS CI build
 # set debug for faster build
-[ ! -z "$TRAVIS_CI" ] && command catkin profile set debug
+[ ! -z "$GITHUB_CI" ] && command catkin profile set debug
 
 # link mrs repositories to the workspace
 cd src
@@ -42,10 +42,10 @@ ln -sf ~/git/simulation
 
 cd $WORKSPACE_PATH
 source /opt/ros/$ROS_DISTRO/setup.bash
-[ -z "$TRAVIS_CI" ] && command catkin build mavros -c --mem-limit 75%
-[ ! -z "$TRAVIS_CI" ] && command catkin build mavros --limit-status-rate 0.2 --summarize
-[ -z "$TRAVIS_CI" ] && command catkin build -c --mem-limit 75%
-[ ! -z "$TRAVIS_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
+[ -z "$GITHUB_CI" ] && command catkin build mavros -c --mem-limit 75%
+[ ! -z "$GITHUB_CI" ] && command catkin build mavros --limit-status-rate 0.2 --summarize
+[ -z "$GITHUB_CI" ] && command catkin build -c --mem-limit 75%
+[ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
