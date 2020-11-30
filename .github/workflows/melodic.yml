@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Melodic
 
 # Controls when the action will run. 
 on:
@@ -30,11 +30,7 @@ jobs:
 
   # This workflow contains a single job called "build"
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-18.04, ubuntu-20.04]
-
+    runs-on: ubuntu-18.04
     steps:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
