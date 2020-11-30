@@ -33,11 +33,11 @@ command catkin profile set reldeb
 command catkin config --extend $MRS_WORKSPACE/devel
 
 # normal installation
-[ -z "$TRAVIS_CI" ] && command catkin profile set reldeb
+[ -z "$GITHUB_CI" ] && command catkin profile set reldeb
 
 # TRAVIS CI build
 # set debug for faster build
-[ ! -z "$TRAVIS_CI" ] && command catkin profile set debug
+[ ! -z "$GITHUB_CI" ] && command catkin profile set debug
 
 echo "$0: cloning example packages"
 cd ~/git
@@ -51,8 +51,8 @@ ln -sf ~/git/example_ros_packages
 
 echo "$0: building $WORKSPACE_PATH"
 cd $WORKSPACE_PATH
-[ -z "$TRAVIS_CI" ] && command catkin build
-[ ! -z "$TRAVIS_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
+[ -z "$GITHUB_CI" ] && command catkin build
+[ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
