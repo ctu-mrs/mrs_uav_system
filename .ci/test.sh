@@ -19,6 +19,7 @@ export RUN_TYPE="simulation" # {simulation, uav}
 export UAV_TYPE="t650" # {f550, f450, t650, eagle, naki}
 export PROPULSION_TYPE="default" # {default, new_esc, ...}
 export ODOMETRY_TYPE="gps" # {gps, optflow, hector, vio, ...}
+export SENSORS="garmin_down" # {gps, optflow, hector, vio, ...}
 
 cd ~/mrs_workspace
 
