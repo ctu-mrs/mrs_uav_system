@@ -43,5 +43,5 @@ jobs:
         run: ./.ci/install.sh
 
       # Runs a set of commands using the runners shell
-      - name: Test
-        run: ./.ci/test.sh
+      # - name: Test
+      #   run: ./.ci/test.sh
