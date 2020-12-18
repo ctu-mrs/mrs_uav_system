@@ -1,10 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Noetic
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
     paths-ignore:
@@ -12,10 +8,12 @@ on:
   pull_request:
     branches: [ master ]
 
+  schedule:
+    - cron:  '0 0 * * *' # at the end of every day
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
   cancel:
@@ -28,7 +26,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-  # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-20.04
     env:
@@ -37,11 +34,11 @@ jobs:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # fetch the whole history
 
-      # Runs a single command using the runners shell
       - name: Install
         run: ./.ci/install.sh
 
-      # Runs a set of commands using the runners shell
       # - name: Test
       #   run: ./.ci/test.sh
