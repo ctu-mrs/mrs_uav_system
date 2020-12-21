@@ -19,7 +19,7 @@ Thus our platform is built to allow safe verification of approaches in planning,
 
 The platform is
 
-* built using [Robot Operating System](https://www.ros.org/) (Melodic),
+* built using [Robot Operating System](https://www.ros.org/) (Melodic, Noetic),
 * meant to be executed entirely onboard,
 * can be deployed on any multi-rotor vehicle, given it is equipped with a [PX4](https://github.com/ctu-mrs/px4_firmware)-compatible [flight controller](https://pixhawk.org/),
 * for both indoor and outdoor,
@@ -88,7 +88,7 @@ Following options are provided, depending on who you are and what you want to do
 **Beware**, installing the system into a virtual machine may not be a good idea for you, unless you have a very powerfull computer.
 Real-time simulations in Gazebo perform very poorly in virtual machines.
 
-### "I have a fresh Ubuntu 18.04 and want it quick and easy"
+### "I have fresh Ubuntu install and want it quick and easy"
 
 In this case we provide installation scripts that set everything up for you.
 Our automated installation will:
