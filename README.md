@@ -54,9 +54,13 @@ The MRS UAV system is currently pre-configured for the following UAV platforms, 
 | DJI f550   | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
 | Tarot t650 | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
 
-## Related packages - not being part of the installation
+## Related packages
 
-| Package                                                                              | Description                                                                                   |                                                                                                                                                                       |                                                                                                                                                                      |
+The following packages are not necessarily part of our automated installation.
+Therefore, you might need to clone them by yorself and place in your ROS workspace.
+Some of those are forks of third party repositories.
+
+| Package                                                                              | Description                                                                                   | 18.04                                                                                                                                                                 | 20.04                                                                                                                                                                |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources                                          | [![Build Status](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/actions) | [![Build Status](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/actions) |
 | [Example ROS packages](https://github.com/ctu-mrs/example_ros_packages)              | MRS ROS examples                                                                              | [![Build Status](https://github.com/ctu-mrs/example_ros_packages/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/example_ros_packages/actions)               | [![Build Status](https://github.com/ctu-mrs/example_ros_packages/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/example_ros_packages/actions)               |
