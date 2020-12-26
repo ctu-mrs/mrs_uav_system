@@ -6,7 +6,7 @@ We mostly work with multi-rotor helicopters, and for them specifically, we devel
 We think that real-world and replicable experiments should support excellent research and science in robotics.
 Thus our platform is built to allow safe verification of approaches in planning, control, estimation, computer vision, tracking, and more.
 
-### Build Status
+## Build Status
 
 | Component                                                   | 18.04                                                                                                                                       | 20.04                                                                                                                                      |
 |-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -28,7 +28,7 @@ The platform is
 
 ![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
 
-### Documentation
+## [Documentation](https://ctu-mrs.github.io/)
 
 The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
 However, the website only scratches a surface of what it should contain (and we know it).
@@ -44,7 +44,7 @@ Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M
 Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
 ```
 
-### Unmanned Aerial Vehicles
+## Unmanned Aerial Vehicles
 
 The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS:
 
@@ -87,6 +87,7 @@ However, when we change something which requires user action to maintain compati
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
 
+* December 25, 2020: [Updated controller interface, updated thrust curve parametrization](https://github.com/ctu-mrs/mrs_uav_system/issues/33)
 * December 15, 2020: [Rework of simulation UAV spawning mechanism, Noetic update](https://github.com/ctu-mrs/mrs_uav_system/issues/32)
 * November 12, 2020: [GPS coordinates withing Gazebo world need changing](https://github.com/ctu-mrs/mrs_uav_system/issues/22)
 * November 12, 2020: [Rangefinder fusion needs enabling in simulation sessions](https://github.com/ctu-mrs/mrs_uav_system/issues/21)
