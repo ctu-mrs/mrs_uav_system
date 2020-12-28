@@ -46,10 +46,12 @@ Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
 
 ## Unmanned Aerial Vehicles
 
-The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS:
+The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS.
+The platforms are order by the size / payload capacity.
 
 | Model        | Simulation                    | Real UAV                |
 |--------------|-------------------------------|-------------------------|
+| DJI f330     | Soon ;-)                      | ![](.fig/f330_real.jpg) |
 | DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
 | DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
 | Holybro x500 | ![](.fig/x500_simulation.jpg) | Soon ;-)                |
