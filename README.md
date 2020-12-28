@@ -48,11 +48,12 @@ Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
 
 The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS:
 
-| Model      | Simulation                    | Real UAV                |
-|------------|-------------------------------|-------------------------|
-| DJI f450   | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
-| DJI f550   | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
-| Tarot t650 | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
+| Model        | Simulation                    | Real UAV                |
+|--------------|-------------------------------|-------------------------|
+| DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
+| DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
+| Holybro x500 | ![](.fig/x500_simulation.jpg) | Soon ;-)                |
+| Tarot t650   | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
 
 ## Related packages
 
