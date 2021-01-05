@@ -158,3 +158,8 @@ git clone https://github.com/klaxalk/linux-setup
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
 ```
+
+For help with using the [system](system), you can also refer to the [MRS Cheatsheet](https://ctu-mrs.github.io/docs/introduction/cheatsheet.html).
+
+## Running the simulation
+If you have successfully installed the system, you can continue with [starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html).
