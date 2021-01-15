@@ -5,6 +5,8 @@ on:
     branches: [ master ]
     paths-ignore:
       - '**/README.md'
+      - '**.jpg'
+      - '**.png'
   pull_request:
     branches: [ master ]
 

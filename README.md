@@ -51,7 +51,7 @@ The platforms are order by the size / payload capacity.
 
 | Model        | Simulation                    | Real UAV                |
 |--------------|-------------------------------|-------------------------|
-| DJI f330     | Soon ;-)                      | ![](.fig/f330_real.jpg) |
+| DJI f330     | ![](.fig/f330_simulation.jpg) | ![](.fig/f330_real.jpg) |
 | DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
 | DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
 | Holybro x500 | ![](.fig/x500_simulation.jpg) | Soon ;-)                |
