@@ -3,7 +3,8 @@
 set -e
 
 sudo apt-get -y update -qq
-sudo apt-mark hold openssh-server
+sudo apt-mark hold openssh-server # the installation might get stuck while upgrading this
+sudo apt-mark hold msodbcsql17 mssql-tools # microsoft wants to manually accept EULA while upgrading this
 
 # 20.04 problem fix
 sudo apt-get -y install grub-efi
