@@ -9,7 +9,7 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 [ "$distro" = "18.04" ] && ROS_DISTRO="melodic"
 [ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
 
-echo "Starting flight test" 
+echo "Starting automated ROS test of the mrs_workspace"
 
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/mrs_workspace/devel/setup.bash
@@ -30,4 +30,4 @@ mkdir -p $TEST_RESULT_PATH
 rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir="$TEST_RESULT_PATH"
 catkin_test_results "$TEST_RESULT_PATH"
 
-echo "Flight test finished" 
+echo "Tests finished"
