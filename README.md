@@ -124,6 +124,7 @@ echo '
 GIT_PATH=~/git
 mkdir -p $GIT_PATH
 cd $GIT_PATH
+sudo apt update
 sudo apt-get -y install git
 git clone https://github.com/ctu-mrs/mrs_uav_system
 cd mrs_uav_system
