@@ -42,5 +42,5 @@ jobs:
       - name: Install
         run: ./.ci/install.sh
 
-      # - name: Test
-      #   run: ./.ci/test.sh
+      - name: Test
+        run: ./.ci/test.sh
