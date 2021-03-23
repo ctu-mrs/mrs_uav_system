@@ -6,20 +6,20 @@ We mostly work with multi-rotor helicopters, and for them specifically, we devel
 We think that real-world and replicable experiments should support excellent research and science in robotics.
 Thus our platform is built to allow safe verification of approaches in planning, control, estimation, computer vision, tracking, and more.
 
-### Build Status
+## Build Status
 
-| Component                                                   | 18.04 Bionic                                                                                                                                                  | 20.04 Focal                                                                                                                                                 | Description                                                                                                                                  |
-|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/mrs_uav_system?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/mrs_uav_system?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/mrs_uav_system) | integrates [uav_core](https://github.com/ctu-mrs/uav_core) and [simulation](https://github.com/ctu-mrs/simulation), prepares the build space |
-| [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/uav_core?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/uav_core)             | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/uav_core?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/uav_core)             | UAV control and estimation pipeline                                                                                                          |
-| [simulation](https://github.com/ctu-mrs/simulation)         | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/simulation?env=BADGE=bionic&label=Melodic)](https://travis-ci.com/ctu-mrs/simulation)         | [![Build Status](http://badges.herokuapp.com/travis.com/ctu-mrs/simulation?env=BADGE=focal&label=Noetic)](https://travis-ci.com/ctu-mrs/simulation)         | Gazebo/ROS UAV simulation tools                                                                                                              |
-| [linux-setup](https://github.com/klaxalk/linux-setup)       | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?env=BADGE=bionic&label=Bionic)](https://travis-ci.com/klaxalk/linux-setup)        | [![Build Status](http://badges.herokuapp.com/travis.com/klaxalk/linux-setup?env=BADGE=focal&label=Focal)](https://travis-ci.com/klaxalk/linux-setup)        | Linux configuration focused on development in terminal                                                                                       |
+| Component                                                   | 18.04                                                                                                                                       | 20.04                                                                                                                                      |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions) |
+| [uav_core](https://github.com/ctu-mrs/uav_core)             | [![Build Status](https://github.com/ctu-mrs/uav_core/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/uav_core/actions)             | [![Build Status](https://github.com/ctu-mrs/uav_core/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/uav_core/actions)             |
+| [simulation](https://github.com/ctu-mrs/simulation)         | [![Build Status](https://github.com/ctu-mrs/simulation/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/simulation/actions)         | [![Build Status](https://github.com/ctu-mrs/simulation/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/simulation/actions)         |
+| [linux-setup](https://github.com/klaxalk/linux-setup)       | [![Build Status](https://github.com/klaxalk/linux-setup/workflows/Bionic/badge.svg)](https://github.com/klaxalk/linux-setup/actions)        | [![Build Status](https://github.com/klaxalk/linux-setup/workflows/Focal/badge.svg)](https://github.com/klaxalk/linux-setup/actions)        |
 
 ## System properties
 
 The platform is
 
-* built using [Robot Operating System](https://www.ros.org/) (Melodic),
+* built using [Robot Operating System](https://www.ros.org/) (Melodic, Noetic),
 * meant to be executed entirely onboard,
 * can be deployed on any multi-rotor vehicle, given it is equipped with a [PX4](https://github.com/ctu-mrs/px4_firmware)-compatible [flight controller](https://pixhawk.org/),
 * for both indoor and outdoor,
@@ -28,42 +28,81 @@ The platform is
 
 ![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
 
-### Documentation
+## [Documentation](https://ctu-mrs.github.io/)
 
 The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
-However, it barely scratches a surface of what it should contain (and we know it).
+However, the website only scratches a surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
 Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
 So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
 
-Basics of the control and estimation pipeline are described in the [preprint](http://mrs.felk.cvut.cz/data/papers/mrs-platform.pdf).
+The system follows a description presented in the preprint [arXiv:2008.08050](https://arxiv.org/abs/2008.08050), [pdf](https://arxiv.org/pdf/2008.08050):
+```
+Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M. (2020),
+"The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
+Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
+```
 
-### Unmanned Aerial Vehicles
+## Unmanned Aerial Vehicles
 
-The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS:
+The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS.
+The platforms are order by the size / payload capacity.
 
-| Model      | Simulation                    | Real UAV                |
-|------------|-------------------------------|-------------------------|
-| DJI f450   | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
-| DJI f550   | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
-| Tarot t650 | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
+| Model        | Simulation                    | Real UAV                      |
+|--------------|-------------------------------|-------------------------------|
+| DJI f330     | ![](.fig/f330_simulation.jpg) | ![](.fig/f330_real.jpg)       |
+| DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg)       |
+| Holybro x500 | ![](.fig/x500_simulation.jpg) | ![](.fig/x500_real.jpg)       |
+| DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg)       |
+| Tarot t650   | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg)       |
 
-## Related packages - not being part of the installation
+## Related packages
 
-| Package                                                                              | Description                                                                                   |
-|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources                                          |
-| [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines                                     |
-| [Hector SLAM](https://github.com/tu-darmstadt-ros-pkg/hector_slam)                   | 2D Laser-based LIDAR SLAM, [how to](https://ctu-mrs.github.io/docs/software/hector_slam.html) |
-| [MRS Serial](https://github.com/ctu-mrs/mrs_serial)                                  | serial line interface to ROS, communicates using the BACA protocol                            |
-| [UVDAR](https://github.com/ctu-mrs/uvdar)                                            | mutual localization of UAVs using Ultra-Violet LED blinkers                                   |
+The following packages are not necessarily part of our automated installation.
+Therefore, you might need to clone them by yorself and place in your ROS workspace.
+Some of those are forks of third party repositories.
+
+| Package                                                                              | Description                                                                                   | 18.04                                                                                                                                                                 | 20.04                                                                                                                                                                |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [MRS Gazebo Extra Resources](https://github.com/ctu-mrs/mrs_gazebo_extras_resources) | *MRS System*-depended optional plugins and resources                                          | [![Build Status](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/actions) | [![Build Status](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_gazebo_extras_resources/actions) |
+| [Example ROS packages](https://github.com/ctu-mrs/example_ros_packages)              | MRS ROS examples                                                                              | [![Build Status](https://github.com/ctu-mrs/example_ros_packages/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/example_ros_packages/actions)               | [![Build Status](https://github.com/ctu-mrs/example_ros_packages/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/example_ros_packages/actions)               |
+| [Nimbro network](https://github.com/ctu-mrs/nimbro_network)                          | ROS communication layer for multiple independent machines                                     | [![Build Status](https://github.com/ctu-mrs/nimbro_network/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/nimbro_network/actions)                           | [![Build Status](https://github.com/ctu-mrs/nimbro_network/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/nimbro_network/actions)                           |
+| [MRS optic flow](https://github.com/ctu-mrs/mrs_optic_flow)                          | GPU-accelerated optic flow alorithm for UAV odometry                                          | [![Build Status](https://github.com/ctu-mrs/mrs_optic_flow/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_optic_flow/actions)                           | [![Build Status](https://github.com/ctu-mrs/mrs_optic_flow/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_optic_flow/actions)                           |
+| [Hector SLAM](https://github.com/tu-darmstadt-ros-pkg/hector_slam)                   | 2D Laser-based LIDAR SLAM, [how to](https://ctu-mrs.github.io/docs/software/hector_slam.html) |                                                                                                                                                                       |                                                                                                                                                                      |
+| [Hector SLAM](https://github.com/ctu-mrs/hector_slam) - MRS fork                     | + Nodeleted, [how to](https://ctu-mrs.github.io/docs/software/hector_slam.html)               | [![Build Status](https://github.com/ctu-mrs/hector_slam/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/hector_slam/actions)                                 | [![Build Status](https://github.com/ctu-mrs/hector_slam/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/hector_slam/actions)                                 |
+| [MRS Serial](https://github.com/ctu-mrs/mrs_serial)                                  | serial line interface to ROS, communicates using the BACA protocol                            | [![Build Status](https://github.com/ctu-mrs/mrs_serial/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_serial/actions)                                   | [![Build Status](https://github.com/ctu-mrs/mrs_serial/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_serial/actions)                                   |
+| [UVDAR](https://github.com/ctu-mrs/uvdar)                                            | mutual localization of UAVs using Ultra-Violet LED blinkers                                   | [![Build Status](https://github.com/ctu-mrs/uvdar_core/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/uvdar_core/actions)                                   | [![Build Status](https://github.com/ctu-mrs/uvdar_core/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/uvdar_core/actions)                                   |
+| [UVDAR gazebo plugin](https://github.com/ctu-mrs/uvdar_gazebo_plugin)                | Gazebo plugin for UVDAR                                                                       | [![Build Status](https://github.com/ctu-mrs/uvdar_gazebo_plugin/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/uvdar_gazebo_plugin/actions)                 | [![Build Status](https://github.com/ctu-mrs/uvdar_gazebo_plugin/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/uvdar_gazebo_plugin/actions)                 |
+| [trajectory loader](https://github.com/ctu-mrs/trajectory_loader)                    | Loading UAV trajectories from CSV files                                                       | [![Build Status](https://github.com/ctu-mrs/trajectory_loader/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/trajectory_loader/actions)                     | [![Build Status](https://github.com/ctu-mrs/trajectory_loader/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/trajectory_loader/actions)                     |
+| [Bluefox2](https://github.com/ctu-mrs/bluefox2)                                      | MV Bluefox2 driver, MRS fork                                                                  | [![Build Status](https://github.com/ctu-mrs/bluefox2/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/bluefox2/actions)                                       | [![Build Status](https://github.com/ctu-mrs/bluefox2/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/bluefox2/actions)                                       |
+| [Object detection](https://github.com/ctu-mrs/object_detect)                         | Object detection by color segmentation                                                        |                                                                                                                                                                       | [![Build Status](https://github.com/ctu-mrs/object_detect/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/object_detect/actions)                             |
+| [MRS utils](https://github.com/ctu-mrs/mrs_utils)                                    | Development utils                                                                             | [![Build Status](https://github.com/ctu-mrs/mrs_utils/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mrs_utils/actions)                                     | [![Build Status](https://github.com/ctu-mrs/mrs_utils/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_utils/actions)                                     |
+| [MBZIRC 2020 - Wall Building](https://github.com/ctu-mrs/mbzirc_2020_wall_building)  | System for automatic wall-building for MBZIRC 2020                                            | [![Build Status](https://github.com/ctu-mrs/mbzirc_2020_wall_building/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mbzirc_2020_wall_building/actions)     | [![Build Status](https://github.com/ctu-mrs/mbzirc_2020_wall_building/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mbzirc_2020_wall_building/actions)     |
+| [Summer School 2019](https://github.com/ctu-mrs/mtsp_planning_task)                  | Summer School 2019 task - MTSP planning                                                       | [![Build Status](https://github.com/ctu-mrs/mtsp_planning_task/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/mtsp_planning_task/actions)                   | [![Build Status](https://github.com/ctu-mrs/mtsp_planning_task/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mtsp_planning_task/actions)                   |
+| [Summer School 2020](https://github.com/ctu-mrs/uvdar_leader_follower)               | Summer School 2020 task - UVDAR leader-follower                                               | [![Build Status](https://github.com/ctu-mrs/uvdar_leader_follower/workflows/Melodic/badge.svg)](https://github.com/ctu-mrs/uvdar_leader_follower/actions)             | [![Build Status](https://github.com/ctu-mrs/uvdar_leader_follower/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/uvdar_leader_follower/actions)             |
+
+## Backwards compatibility and updates
+
+We do not guarantee backwards compatibility at any time.
+The platform is evolving according to the needs of the MRS group.
+Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc.
+However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled **users-read-me**.
+Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
+Recent changes requiring user action:
+
+* December 25, 2020: [Updated controller interface, updated thrust curve parametrization](https://github.com/ctu-mrs/mrs_uav_system/issues/33)
+* December 15, 2020: [Rework of simulation UAV spawning mechanism, Noetic update](https://github.com/ctu-mrs/mrs_uav_system/issues/32)
+* November 12, 2020: [GPS coordinates within Gazebo world need changing](https://github.com/ctu-mrs/mrs_uav_system/issues/22)
+* November 12, 2020: [Rangefinder fusion needs enabling in simulation sessions](https://github.com/ctu-mrs/mrs_uav_system/issues/21)
 
 ## Installation
 
-Following options are provided, depending on who you are and what you want to do with the platform
+Following options are provided, depending on who you are and what you want to do with the platform.
+**Beware**, installing the system into a virtual machine may not be a good idea for you, unless you have a very powerfull computer.
+Real-time simulations in Gazebo perform very poorly in virtual machines.
 
-### "I have a fresh Ubuntu 18.04 and want it quick and easy"
+### "I have fresh Ubuntu install and want it quick and easy"
 
 In this case we provide installation scripts that set everything up for you.
 Our automated installation will:
@@ -85,7 +124,7 @@ echo '
 GIT_PATH=~/git
 mkdir -p $GIT_PATH
 cd $GIT_PATH
-sudo apt -y install git
+sudo apt-get -y install git
 git clone https://github.com/ctu-mrs/mrs_uav_system
 cd mrs_uav_system
 git checkout master
@@ -115,8 +154,13 @@ Paste following code into your terminal and press **enter**
 cd /tmp
 echo "mkdir -p ~/git
 cd ~/git
-sudo apt -y install git
+sudo apt-get -y install git
 git clone https://github.com/klaxalk/linux-setup
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
 ```
+
+For help with using the system, you can also refer to the [MRS Cheatsheet](https://ctu-mrs.github.io/docs/introduction/cheatsheet.html).
+
+## Running the simulation
+If you have successfully installed the system, you can continue with [starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html).

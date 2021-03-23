@@ -20,24 +20,24 @@ cd $WORKSPACE_PATH
 command catkin init
 
 echo "$0: setting up build profiles"
-command catkin config --profile debug --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile debug --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native' -DCMAKE_C_FLAGS='-march=native'
 command catkin profile set debug
 command catkin config --extend $MRS_WORKSPACE/devel
 
-command catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color'  -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native'  -DCMAKE_C_FLAGS='-march=native'
 command catkin profile set release
 command catkin config --extend $MRS_WORKSPACE/devel
 
-command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native -fno-diagnostics-color' -DCMAKE_C_FLAGS='-march=native -fno-diagnostics-color'
+command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -march=native' -DCMAKE_C_FLAGS='-march=native'
 command catkin profile set reldeb
 command catkin config --extend $MRS_WORKSPACE/devel
 
 # normal installation
-[ -z "$TRAVIS_CI" ] && command catkin profile set reldeb
+[ -z "$GITHUB_CI" ] && command catkin profile set reldeb
 
 # TRAVIS CI build
 # set debug for faster build
-[ ! -z "$TRAVIS_CI" ] && command catkin profile set debug
+[ ! -z "$GITHUB_CI" ] && command catkin profile set debug
 
 echo "$0: cloning example packages"
 cd ~/git
@@ -51,7 +51,8 @@ ln -sf ~/git/example_ros_packages
 
 echo "$0: building $WORKSPACE_PATH"
 cd $WORKSPACE_PATH
-command catkin build
+[ -z "$GITHUB_CI" ] && command catkin build
+[ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then

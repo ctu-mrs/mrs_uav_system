@@ -23,10 +23,10 @@ for server in ha.pool.sks-keyservers.net \
     sudo apt-key adv --keyserver "$server" --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654 && break || echo "Trying new server..."
 done
 
-sudo apt -y update
+sudo apt-get -y update
 
-[ "$distro" = "18.04" ] && sudo apt -y install ros-melodic-desktop-full
-[ "$distro" = "20.04" ] && sudo apt -y install ros-noetic-desktop-full
+[ "$distro" = "18.04" ] && sudo apt-get -y install ros-melodic-desktop-full
+[ "$distro" = "20.04" ] && sudo apt-get -y install ros-noetic-desktop-full
 
 num=`cat ~/.bashrc | grep "/opt/ros/$ROS_DISTRO/setup.bash" | wc -l`
 if [ "$num" -lt "1" ]; then
