@@ -22,6 +22,10 @@ export ODOMETRY_TYPE="gps" # {gps, optflow, hector, vio, ...}
 export SENSORS="garmin_down" # {gps, optflow, hector, vio, ...}
 export ROS_MASTER_URI=http://localhost:11311
 
+roscore &
+
+sleep 2
+
 cd ~/mrs_workspace
 
 catkin build mrs_uav_testing # it has to be fully build normally before building with --catkin-make-args tests
