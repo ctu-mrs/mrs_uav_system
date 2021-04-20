@@ -32,7 +32,7 @@ catkin build mrs_uav_testing # it has to be fully build normally before building
 catkin build mrs_uav_testing --catkin-make-args tests
 TEST_RESULT_PATH=$(realpath /tmp/$RANDOM)
 mkdir -p $TEST_RESULT_PATH
-rostest mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir="$TEST_RESULT_PATH"
+rostest --reuse-master mrs_uav_testing control_test_rostest.launch -t --results-filename=mrs_uav_testing.test --results-base-dir="$TEST_RESULT_PATH"
 catkin_test_results "$TEST_RESULT_PATH"
 
 echo "Tests finished"
