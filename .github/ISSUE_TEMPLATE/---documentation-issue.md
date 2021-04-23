@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4DA Documentation Issue"
 about: Create a report to help us impove
-title: ''
+title: "\U0001F4DA "
 labels: documentation
 assignees: ''
 
