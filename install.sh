@@ -21,6 +21,41 @@ do
   esac
 done
 
+n_cpu=`nproc --all`
+RAM_size=`grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=2; {}/1024^2" | bc -l`
+SWAP_size=`grep SwapTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=2; {}/1024^2" | bc -l`
+
+total_available_memory=`echo $RAM_size + $SWAP_size | bc -l`
+safe_rate_of_memory=`echo $n_cpu*2.5 | bc -l`
+
+if (( $(echo "$safe_rate_of_memory > $total_available_memory" |bc -l) )); then
+  recommended_swap_size=`echo $safe_rate_of_memory - $RAM_size | bc -l`
+  rounded_recommended_swap_size=`echo "$recommended_swap_size"+1 | bc -l | awk '{print int($1)}'`
+  echo ""
+  echo "----------------------------------------------------------------------------------------------"
+  echo "Installation can fail during compilation of the MRS system due to not sufficient RAM+SWAP memory"
+  echo "              We recommend to have roughtly RAM+SWAP >= 2.5*number_of_cpu"
+  echo "             -----------------------------------------------------------"
+  echo "              Your number_of_cpu : $n_cpu" 
+  echo "              Your RAM size      : $RAM_size GB" 
+  echo "              Your SWAP size     : $SWAP_size GB" 
+  echo "----------------------------------------------------------------------------------------------"
+  echo "If so, please increase SWAP to recommended size, which is $recommended_swap_size GB".
+  echo "To create $rounded_recommended_swap_size GB SWAP, follow these steps:"
+  echo "-----------------------------------------------------------"
+  echo "sudo swapoff -a"
+  echo "sudo dd if=/dev/zero of=/swapfile bs=1GB count=$rounded_recommended_swap_size"
+  echo "sudo chmod 600 /swapfile"
+  echo "sudo mkswap /swapfile"
+  echo "sudo swapon /swapfile"
+  echo "grep SwapTotal /proc/meminfo"
+  echo "-----------------------------------------------------------"
+  echo ""
+  echo "Press Enter to continue..."
+  echo ""
+  read
+fi
+
 [ -z "$GIT_PATH" ] && GIT_PATH=~/git
 
 ## | ----------------------- install ROS ---------------------- |
