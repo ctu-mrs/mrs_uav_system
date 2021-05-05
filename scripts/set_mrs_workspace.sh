@@ -44,6 +44,10 @@ cd $WORKSPACE_PATH
 source /opt/ros/$ROS_DISTRO/setup.bash
 [ -z "$GITHUB_CI" ] && command catkin build mavros -c --mem-limit 75%
 [ ! -z "$GITHUB_CI" ] && command catkin build mavros --limit-status-rate 0.2 --summarize
+[ -z "$GITHUB_CI" ] && command catkin build mavlink_sitl_gazebo -c --mem-limit 75%
+[ ! -z "$GITHUB_CI" ] && command catkin build mavlink_sitl_gazebo --limit-status-rate 0.2 --summarize
+[ -z "$GITHUB_CI" ] && command catkin build mrs_gazebo_common_resources -c --mem-limit 75%
+[ ! -z "$GITHUB_CI" ] && command catkin build mrs_gazebo_common_resources --limit-status-rate 0.2 --summarize
 [ -z "$GITHUB_CI" ] && command catkin build -c --mem-limit 75%
 [ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
 
