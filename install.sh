@@ -21,6 +21,41 @@ do
   esac
 done
 
+n_cpu=`nproc --all`
+RAM_size=`grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=2; {}/1024^2" | bc -l`
+SWAP_size=`grep SwapTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=2; {}/1024^2" | bc -l`
+
+total_available_memory=`echo $RAM_size + $SWAP_size | bc -l`
+safe_rate_of_memory=`echo $n_cpu*2.5 | bc -l`
+
+if (( $(echo "$safe_rate_of_memory > $total_available_memory" |bc -l) )); then
+  recommended_swap_size=`echo $safe_rate_of_memory - $RAM_size | bc -l`
+  rounded_recommended_swap_size=`echo "$recommended_swap_size"+1 | bc -l | awk '{print int($1)}'`
+  echo ""
+  echo -e "\033[31m----------------------------------------------------------------------------------------------\033[0m"
+  echo -e "\033[31mInstallation can fail during compilation of the MRS system due to not sufficient RAM+SWAP memory\033[0m"
+  echo -e "\033[31m              We recommend to have roughtly RAM+SWAP >= 2.5*number_of_cpu\033[0m"
+  echo -e "\033[31m             -----------------------------------------------------------\033[0m"
+  echo -e "\033[31m              Your number_of_cpu : $n_cpu\033[0m" 
+  echo -e "\033[31m              Your RAM size      : $RAM_size GB\033[0m" 
+  echo -e "\033[31m              Your SWAP size     : $SWAP_size GB\033[0m" 
+  echo -e "\033[31m----------------------------------------------------------------------------------------------\033[0m"
+  echo -e "\033[31mIf so, please increase SWAP to the recommended size, which is $recommended_swap_size GB\033[0m."
+  echo -e "\033[31mTo create $rounded_recommended_swap_size GB SWAP, follow these steps:\033[0m"
+  echo -e "\033[31m-----------------------------------------------------------\033[0m"
+  echo -e "\033[31msudo swapoff -a\033[0m"
+  echo -e "\033[31msudo dd if=/dev/zero of=/swapfile bs=1GB count=$rounded_recommended_swap_size\033[0m"
+  echo -e "\033[31msudo chmod 600 /swapfile\033[0m"
+  echo -e "\033[31msudo mkswap /swapfile\033[0m"
+  echo -e "\033[31msudo swapon /swapfile\033[0m"
+  echo -e "\033[31mgrep SwapTotal /proc/meminfo\033[0m"
+  echo -e "\033[31m-----------------------------------------------------------\033[0m"
+  echo ""
+  echo "Press Enter to continue..."
+  echo ""
+  [ -z "$GITHUB_CI" ] && read
+fi
+
 [ -z "$GIT_PATH" ] && GIT_PATH=~/git
 
 ## | ----------------------- install ROS ---------------------- |
