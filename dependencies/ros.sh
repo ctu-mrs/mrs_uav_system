@@ -28,6 +28,12 @@ sudo apt-get -y update
 [ "$distro" = "18.04" ] && sudo apt-get -y install ros-melodic-desktop-full
 [ "$distro" = "20.04" ] && sudo apt-get -y install ros-noetic-desktop-full
 
+# add repository for ignition library
+sudo apt-get -y install wget lsb-release gnupg
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get -y update
+
 num=`cat ~/.bashrc | grep "/opt/ros/$ROS_DISTRO/setup.bash" | wc -l`
 if [ "$num" -lt "1" ]; then
 
