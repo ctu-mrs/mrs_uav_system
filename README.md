@@ -39,11 +39,11 @@ So instead, we aim at educating our students to look around the packages (each c
 
 [![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.jpg)](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.pdf)
 
-The system follows a description presented in the preprint [arXiv:2008.08050](https://arxiv.org/abs/2008.08050), [pdf](https://arxiv.org/pdf/2008.08050):
+The system follows a description presented in the article [doi.org/10.1007/s10846-021-01383-5](https://doi.org/10.1007/s10846-021-01383-5), [pdf](https://link.springer.com/content/pdf/10.1007/s10846-021-01383-5.pdf):
 ```
-Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M. (2020),
+Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M.,
 "The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
-Education with Autonomous Unmanned Aerial Vehicles", 2020, arXiv:2008.08050
+Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26 (2021).
 ```
 
 ## Unmanned Aerial Vehicles
