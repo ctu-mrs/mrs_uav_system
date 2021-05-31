@@ -21,6 +21,8 @@ do
   esac
 done
 
+sudo apt-get install -y bc
+
 n_cpu=`nproc --all`
 RAM_size=`grep MemTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=2; {}/1024^2" | bc -l`
 SWAP_size=`grep SwapTotal /proc/meminfo | awk '{print $2}' | xargs -I {} echo "scale=2; {}/1024^2" | bc -l`
