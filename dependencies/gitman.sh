@@ -15,5 +15,5 @@ elif [ "$distro" = "20.04" ]; then
   sudo apt-get -y install python3-pip python3-setuptools
 fi
 
-sudo pip3 install gitman
-sudo -H pip3 install gitman
+sudo pip3 install gitman==2.3.0
+sudo -H pip3 install gitman==2.3.0
