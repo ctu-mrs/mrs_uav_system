@@ -22,6 +22,8 @@ export ODOMETRY_TYPE="gps" # {gps, optflow, hector, vio, ...}
 export SENSORS="garmin_down" # {gps, optflow, hector, vio, ...}
 export ROS_MASTER_URI=http://localhost:11311
 
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libasan.so
+
 roscore &
 
 sleep 2
