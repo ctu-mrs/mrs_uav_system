@@ -50,6 +50,16 @@ source /opt/ros/$ROS_DISTRO/setup.bash
 [ -z "$GITHUB_CI" ] && command catkin build -c --mem-limit 75%
 [ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
 
+# blackilst our tf2 fork on melodic
+if [[ "$ROS_DISTRO" == "melodic" ]]; then
+
+  echo "Blacklisting custom tf2 due to being on melodic"
+
+  cd $WORKSPACE_PATH
+  catkin config --blacklist "geometry2 test_tf2 tf2 tf2_bullet tf2_eigen tf2_geometry_msgs tf2_kdl tf2_msgs tf2_py tf2_ros tf2_sensor_msgs tf2_tools"
+
+fi
+
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
 
