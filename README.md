@@ -113,14 +113,14 @@ Real-time simulations in Gazebo perform very poorly in virtual machines.
 ### "I have fresh Ubuntu install and want it quick and easy"
 
 In this case we provide installation scripts that set everything up for you.
-Our automated installation will:
+Our automated install script will:
 * install Robot Operating System (ROS),
 * install other dependencies such *git*, *gitman*,
 * clone [uav_core](https://github.com/ctu-mrs/uav_core), [simulation](https://github.com/ctu-mrs/simulation), [example_ros_packages](https://github.com/ctu-mrs/example_ros_packages) into *~/git*,
 * install more dependencies such as *tmux* and *tmuxinator*
-* create our ros workspace in ```~/mrs_workspace``` for the *uav_core* and *simulation*,
-* create a ros workspace in ```~/workspace``` for *examples*,
-* link our packages to the workspaces,
+* create our ros workspace ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)) in ```~/mrs_workspace``` for the *uav_core* and *simulation*,
+* create a ros workspace in ```~/workspace``` for *examples* ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)),
+* link our packages to the workspaces ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)),
 * compile the workspaces,
 * added configuration lines into your *~/.bashrc*.
 
