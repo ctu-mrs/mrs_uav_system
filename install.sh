@@ -97,11 +97,11 @@ $GIT_PATH/simulation/installation/install.sh
 
 ## | ------------------- setup mrs_workspace ------------------ |
 
-$MY_PATH/scripts/set_mrs_workspace.sh -l "$WORKSPACE_LOCATION"
+$MY_PATH/scripts/set_mrs_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH
 
 ## | --------------------- setup workspace -------------------- |
 
-$MY_PATH/scripts/set_my_workspace.sh -l "$WORKSPACE_LOCATION"
+$MY_PATH/scripts/set_my_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH
 
 ## | ------- add workspaces to ROS_WORKSPACES in .bashrc ------ |
 
