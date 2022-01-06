@@ -11,11 +11,15 @@ MY_PATH=`( cd "$MY_PATH" && pwd )`
 
 cd $MY_PATH
 
-while getopts "g:" options;
+while getopts "g:l:" options;
 do
   case ${options} in
     g)
       GIT_PATH=$OPTARG
+      shift
+      ;;
+    l)
+      WORKSPACE_LOCATION=$OPTARG
       shift
       ;;
   esac
@@ -58,7 +62,8 @@ if (( $(echo "$safe_rate_of_memory > $total_available_memory" |bc -l) )); then
   [ -z "$GITHUB_CI" ] && read
 fi
 
-[ -z "$GIT_PATH" ] && GIT_PATH=~/git
+[ -z "$GIT_PATH" ] && GIT_PATH=$HOME/git
+[ -z "$WORKSPACE_LOCATION" ] && WORKSPACE_LOCATION=$HOME
 
 ## | ----------------------- install ROS ---------------------- |
 
@@ -92,11 +97,11 @@ $GIT_PATH/simulation/installation/install.sh
 
 ## | ------------------- setup mrs_workspace ------------------ |
 
-$MY_PATH/scripts/set_mrs_workspace.sh
+$MY_PATH/scripts/set_mrs_workspace.sh -l "$WORKSPACE_LOCATION"
 
 ## | --------------------- setup workspace -------------------- |
 
-$MY_PATH/scripts/set_my_workspace.sh
+$MY_PATH/scripts/set_my_workspace.sh -l "$WORKSPACE_LOCATION"
 
 ## | ------- add workspaces to ROS_WORKSPACES in .bashrc ------ |
 
@@ -105,6 +110,6 @@ if [ "$num" -lt "1" ]; then
 
   # set bashrc
   echo "
-export ROS_WORKSPACES=\"~/mrs_workspace ~/workspace\"" >> ~/.bashrc
+export ROS_WORKSPACES=\"$WORKSPACE_LOCATION/mrs_workspace $WORKSPACE_LOCATION/workspace\"" >> ~/.bashrc
 
 fi
