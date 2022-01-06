@@ -9,16 +9,17 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
-while getopts "l:g:" options;
-do
+# shift
+OPTIND=1
+while getopts "g:l:" options; do
   case ${options} in
-    l)
-      WORKSPACE_LOCATION=$OPTARG
-      shift
-      ;;
     g)
-      GIT_PATH=$OPTARG
-      shift
+      GIT_PATH=${OPTARG}
+      echo "Parsed GIT_PATH=$GIT_PATH"
+      ;;
+    l)
+      WORKSPACE_LOCATION=${OPTARG}
+      echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
       ;;
   esac
 done

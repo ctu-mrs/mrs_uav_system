@@ -11,16 +11,17 @@ MY_PATH=`( cd "$MY_PATH" && pwd )`
 
 cd $MY_PATH
 
-while getopts "g:l:" options;
-do
+# shift
+OPTIND=1
+while getopts "g:l:" options; do
   case ${options} in
     g)
-      GIT_PATH=$OPTARG
-      shift
+      GIT_PATH=${OPTARG}
+      echo "Parsed GIT_PATH=$GIT_PATH"
       ;;
     l)
-      WORKSPACE_LOCATION=$OPTARG
-      shift
+      WORKSPACE_LOCATION=${OPTARG}
+      echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
       ;;
   esac
 done
