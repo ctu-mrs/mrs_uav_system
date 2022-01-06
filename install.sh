@@ -65,6 +65,8 @@ fi
 [ -z "$GIT_PATH" ] && GIT_PATH=$HOME/git
 [ -z "$WORKSPACE_LOCATION" ] && WORKSPACE_LOCATION=$HOME
 
+echo "Installation started WORKSPACE_LOCATION=$WORKSPACE_LOCATION, GIT_PATH=$GIT_PATH"
+
 ## | ----------------------- install ROS ---------------------- |
 
 bash $MY_PATH/dependencies/ros.sh

@@ -26,6 +26,8 @@ done
 [ -z "$WORKSPACE_LOCATION" ] && WORKSPACE_LOCATION="$HOME"
 [ -z "$GIT_PATH" ] && GIT_PATH="$HOME/git"
 
+echo "Setting up workspace: WORKSPACE_LOCATION=$WORKSPACE_LOCATION, GIT_PATH=$GIT_PATH"
+
 # get the path to this script
 APP_PATH=`dirname "$0"`
 APP_PATH=`( cd "$APP_PATH" && pwd )`
