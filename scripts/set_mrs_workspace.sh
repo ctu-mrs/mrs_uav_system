@@ -9,12 +9,32 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
+# shift
+OPTIND=1
+while getopts "g:l:" options; do
+  case ${options} in
+    g)
+      GIT_PATH=${OPTARG}
+      echo "Parsed GIT_PATH=$GIT_PATH"
+      ;;
+    l)
+      WORKSPACE_LOCATION=${OPTARG}
+      echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
+      ;;
+  esac
+done
+
+[ -z "$WORKSPACE_LOCATION" ] && WORKSPACE_LOCATION="$HOME"
+[ -z "$GIT_PATH" ] && GIT_PATH="$HOME/git"
+
+echo "Setting up workspace: WORKSPACE_LOCATION=$WORKSPACE_LOCATION, GIT_PATH=$GIT_PATH"
+
 # get the path to this script
 APP_PATH=`dirname "$0"`
 APP_PATH=`( cd "$APP_PATH" && pwd )`
 
 WORKSPACE_NAME=mrs_workspace
-WORKSPACE_PATH=~/$WORKSPACE_NAME
+WORKSPACE_PATH=$WORKSPACE_LOCATION/$WORKSPACE_NAME
 
 echo "$0: creating $WORKSPACE_PATH/src"
 mkdir -p $WORKSPACE_PATH/src
@@ -36,8 +56,8 @@ command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDe
 
 # link mrs repositories to the workspace
 cd src
-ln -sf ~/git/uav_core
-ln -sf ~/git/simulation
+ln -sf $GIT_PATH/uav_core
+ln -sf $GIT_PATH/simulation
 
 cd $WORKSPACE_PATH
 source /opt/ros/$ROS_DISTRO/setup.bash
