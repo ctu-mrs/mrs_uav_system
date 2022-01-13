@@ -12,4 +12,6 @@ docker login --username klaxalk --password $TOKEN
 docker push ctumrs/mrs_uav_system:latest
 
 WEEK_TAG="`date +%Y`_w`date +%V`"
+docker tag ctumrs/mrs_uav_system:latest ctumrs/mrs_uav_system:$WEEK_TAG
+
 docker push ctumrs/mrs_uav_system:$WEEK_TAG
