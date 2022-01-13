@@ -10,3 +10,6 @@ docker build . --file docker/without_linux_setup --tag ctumrs/mrs_uav_system:lat
 docker login --username klaxalk --password $TOKEN
 
 docker push ctumrs/mrs_uav_system:latest
+
+WEEK_TAG="`date +%Y`_w`date +%V`"
+docker push ctumrs/mrs_uav_system:$WEEK_TAG
