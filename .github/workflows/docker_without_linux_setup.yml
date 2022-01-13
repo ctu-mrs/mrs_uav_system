@@ -1,4 +1,4 @@
-name: Docker
+name: Docker_without_LS
 
 on:
   push:
@@ -41,4 +41,4 @@ jobs:
           fetch-depth: 0 # fetch the whole history
 
       - name: Docker
-        run: ./.ci/docker.sh
+        run: ./.ci/docker_without_linux_setup.sh
