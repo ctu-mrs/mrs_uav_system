@@ -108,12 +108,12 @@ Recent changes requiring user action:
 
 ### Singularity and Docker
 
-Singularity images with our systm are the preferred way how a _normal_ user interracts with our sustem.
+Singularity images with our system are the preferred way how a _normal_ user should interract with our sustem.
 Pleaase, follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/)
 
-Our Singularity images are built almost completely from docker images.
+Our Singularity images are built almost completely from Docker images.
 The following link points to our Docker HUB organization.
 
 * [Docker Images](https://hub.docker.com/u/ctumrs)
