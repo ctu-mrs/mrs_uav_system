@@ -13,7 +13,7 @@ cd $MY_PATH
 
 # shift
 OPTIND=1
-while getopts "g:l:" options; do
+while getopts "g:l:n" options; do
   case ${options} in
     g)
       GIT_PATH=${OPTARG}
@@ -22,6 +22,10 @@ while getopts "g:l:" options; do
     l)
       WORKSPACE_LOCATION=${OPTARG}
       echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
+      ;;
+    n)
+      NO_BUILD=" -n"
+      echo "NO_BUILD=true"
       ;;
   esac
 done
@@ -100,11 +104,11 @@ $GIT_PATH/simulation/installation/install.sh
 
 ## | ------------------- setup mrs_workspace ------------------ |
 
-$MY_PATH/scripts/set_mrs_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH
+$MY_PATH/scripts/set_mrs_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH $NO_BUILD
 
 ## | --------------------- setup workspace -------------------- |
 
-$MY_PATH/scripts/set_my_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH
+$MY_PATH/scripts/set_my_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH $NO_BUILD
 
 ## | ------- add workspaces to ROS_WORKSPACES in .bashrc ------ |
 

@@ -11,7 +11,7 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 # shift
 OPTIND=1
-while getopts "g:l:" options; do
+while getopts "g:l:n" options; do
   case ${options} in
     g)
       GIT_PATH=${OPTARG}
@@ -20,6 +20,10 @@ while getopts "g:l:" options; do
     l)
       WORKSPACE_LOCATION=${OPTARG}
       echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
+      ;;
+    n)
+      NO_BUILD=true
+      echo "NO_BUILD=true"
       ;;
   esac
 done
@@ -61,14 +65,17 @@ ln -sf $GIT_PATH/simulation
 
 cd $WORKSPACE_PATH
 source /opt/ros/$ROS_DISTRO/setup.bash
-[ -z "$GITHUB_CI" ] && command catkin build mavros -c --mem-limit 75%
-[ ! -z "$GITHUB_CI" ] && command catkin build mavros --limit-status-rate 0.2 --summarize
-[ -z "$GITHUB_CI" ] && command catkin build mavlink_sitl_gazebo -c --mem-limit 75%
-[ ! -z "$GITHUB_CI" ] && command catkin build mavlink_sitl_gazebo --limit-status-rate 0.2 --summarize
-[ -z "$GITHUB_CI" ] && command catkin build mrs_gazebo_common_resources -c --mem-limit 75%
-[ ! -z "$GITHUB_CI" ] && command catkin build mrs_gazebo_common_resources --limit-status-rate 0.2 --summarize
-[ -z "$GITHUB_CI" ] && command catkin build -c --mem-limit 75%
-[ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
+
+if ! $NO_BUILD; then
+  [ -z "$GITHUB_CI" ] && command catkin build mavros -c --mem-limit 75%
+  [ ! -z "$GITHUB_CI" ] && command catkin build mavros --limit-status-rate 0.2 --summarize
+  [ -z "$GITHUB_CI" ] && command catkin build mavlink_sitl_gazebo -c --mem-limit 75%
+  [ ! -z "$GITHUB_CI" ] && command catkin build mavlink_sitl_gazebo --limit-status-rate 0.2 --summarize
+  [ -z "$GITHUB_CI" ] && command catkin build mrs_gazebo_common_resources -c --mem-limit 75%
+  [ ! -z "$GITHUB_CI" ] && command catkin build mrs_gazebo_common_resources --limit-status-rate 0.2 --summarize
+  [ -z "$GITHUB_CI" ] && command catkin build -c --mem-limit 75%
+  [ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
+fi
 
 # blackilst our tf2 fork on melodic
 if [[ "$ROS_DISTRO" == "melodic" ]]; then

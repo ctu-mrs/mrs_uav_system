@@ -7,7 +7,7 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 # shift
 OPTIND=1
-while getopts "g:l:" options; do
+while getopts "g:l:n" options; do
   case ${options} in
     g)
       GIT_PATH=${OPTARG}
@@ -16,6 +16,10 @@ while getopts "g:l:" options; do
     l)
       WORKSPACE_LOCATION=${OPTARG}
       echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
+      ;;
+    n)
+      NO_BUILD=true
+      echo "NO_BUILD=true"
       ;;
   esac
 done
@@ -68,8 +72,11 @@ ln -sf $GIT_PATH/example_ros_packages
 
 echo "$0: building $WORKSPACE_PATH"
 cd $WORKSPACE_PATH
-[ -z "$GITHUB_CI" ] && command catkin build
-[ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
+
+if ! $NO_BUILD; then
+  [ -z "$GITHUB_CI" ] && command catkin build
+  [ ! -z "$GITHUB_CI" ] && command catkin build --limit-status-rate 0.2 --summarize
+fi
 
 num=`cat ~/.bashrc | grep "$WORKSPACE_PATH" | wc -l`
 if [ "$num" -lt "1" ]; then
