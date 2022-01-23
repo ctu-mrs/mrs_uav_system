@@ -13,10 +13,12 @@ cd $MY_PATH
 
 # shift
 OPTIND=1
-while getopts "g:l:nm:" options; do
+MY_WORKSPACE=true
+while getopts "g:l:nm:-:" options; do
    if [ "${options}" = "-" ]; then   # long option: reformulate OPT and OPTARG
     options="${OPTARG%%=*}"       # extract long option name
-    OPTARG="${OPTARG#$OPT}"   # extract long option argument (may be empty)
+    echo "option $options"
+    OPTARG="${OPTARG#$options}"   # extract long option argument (may be empty)
     OPTARG="${OPTARG#=}"      # if long option argument, remove assigning `=`
   fi
   case ${options} in
@@ -33,7 +35,7 @@ while getopts "g:l:nm:" options; do
       echo "NO_BUILD=true"
       ;;
     m | my-workspace)
-      MY_WORKSPACE=${OPTARG}
+      [[ ${OPTARG} == "false" ]] && MY_WORKSPACE=false
       echo "MY_WORKSPACE=$MY_WORKSPACE"
       ;;
   esac
