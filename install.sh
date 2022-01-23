@@ -13,7 +13,12 @@ cd $MY_PATH
 
 # shift
 OPTIND=1
-while getopts "g:l:n" options; do
+while getopts "g:l:nm:" options; do
+   if [ "${options}" = "-" ]; then   # long option: reformulate OPT and OPTARG
+    options="${OPTARG%%=*}"       # extract long option name
+    OPTARG="${OPTARG#$OPT}"   # extract long option argument (may be empty)
+    OPTARG="${OPTARG#=}"      # if long option argument, remove assigning `=`
+  fi
   case ${options} in
     g)
       GIT_PATH=${OPTARG}
@@ -23,9 +28,13 @@ while getopts "g:l:n" options; do
       WORKSPACE_LOCATION=${OPTARG}
       echo "Parsed WORKSPACE_LOCATION=$WORKSPACE_LOCATION"
       ;;
-    n)
+    n | no-build)
       NO_BUILD=" -n"
       echo "NO_BUILD=true"
+      ;;
+    m | my-workspace)
+      MY_WORKSPACE=${OPTARG}
+      echo "MY_WORKSPACE=$MY_WORKSPACE"
       ;;
   esac
 done
@@ -108,7 +117,7 @@ $MY_PATH/scripts/set_mrs_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH $NO_BU
 
 ## | --------------------- setup workspace -------------------- |
 
-$MY_PATH/scripts/set_my_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH $NO_BUILD
+$MY_WORKSPACE && $MY_PATH/scripts/set_my_workspace.sh -l $WORKSPACE_LOCATION -g $GIT_PATH $NO_BUILD
 
 ## | ------- add workspaces to ROS_WORKSPACES in .bashrc ------ |
 
