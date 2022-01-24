@@ -58,7 +58,7 @@ command catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDe
 # build profile for github actions
 [ ! -z "$GITHUB_CI" ] && command catkin profile set debug
 
-command cakin config --extend /opt/ros/$ROS_DISTRO
+command catkin config --extend /opt/ros/$ROS_DISTRO
 
 # link mrs repositories to the workspace
 cd src
