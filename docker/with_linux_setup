@@ -5,6 +5,8 @@ ENV HOME=/home
 
 RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system
 
-RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs && rm -rf /var/lib/apt/lists/*
+RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/*
+
+RUN cd /opt/mrs/mrs_workspace && catkin build && rm -rf build
 
 CMD ["bash"]
