@@ -14,6 +14,7 @@ cd $MY_PATH
 # shift
 OPTIND=1
 MY_WORKSPACE=true
+NO_BUILD=""
 while getopts "g:l:nm:-:" options; do
    if [ "${options}" = "-" ]; then   # long option: reformulate OPT and OPTARG
     options="${OPTARG%%=*}"       # extract long option name

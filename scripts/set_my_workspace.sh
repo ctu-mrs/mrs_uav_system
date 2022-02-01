@@ -7,6 +7,7 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 # shift
 OPTIND=1
+NO_BUILD=false
 while getopts "g:l:n" options; do
   case ${options} in
     g)
