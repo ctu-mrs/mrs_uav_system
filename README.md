@@ -106,11 +106,25 @@ Recent changes requiring user action:
 
 ## Installation
 
+### Singularity and Docker
+
+Singularity images with our system are the preferred way how a _normal_ user should interract with our sustem.
+Pleaase, follow this link to learn how to run our system using Singularity.
+
+* [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/)
+
+Our Singularity images are built almost completely from Docker images.
+The following link points to our Docker HUB organization.
+
+* [Docker Images](https://hub.docker.com/u/ctumrs)
+
+### Native installation
+
 Following options are provided, depending on who you are and what you want to do with the platform.
 **Beware**, installing the system into a virtual machine may not be a good idea for you, unless you have a very powerfull computer.
 Real-time simulations in Gazebo perform very poorly in virtual machines.
 
-### "I have fresh Ubuntu install and want it quick and easy"
+#### "I have fresh Ubuntu install and want it quick and easy"
 
 In this case we provide installation scripts that set everything up for you.
 Our automated install script will:
@@ -141,7 +155,7 @@ git pull
 source ~/.bashrc' > clone.sh && source clone.sh
 ```
 
-### "I already have ROS and just want to peek in"
+#### "I already have ROS and just want to peek in"
 
 If you already have ROS installed and if you are fluent with *workspaces*, *.bashrc*, *catkin tools*, etc., feel free to clone our repositories individually.
 The [uav_core](https://github.com/ctu-mrs/uav_core) repository integrates our UAV control system.
@@ -150,7 +164,7 @@ Please follow its README for further instructions on how to install its particul
 The [simulation](https://github.com/ctu-mrs/simulation) repository provides resources for *Gazebo/ROS* simulation, including px4 Simulation-in-the-Loop (SITL), UAV models and useful sensor plugins.
 Please follow its README for further instructions on how to install prerequisities.
 
-### "I want the Linux environment people from MRS works with"
+#### "I want the Linux environment people from MRS works with"
 
 Great! In that case you want to install Tomas's Linux-setup.
 **Beware!** This might alter your existing configuration of some Linux tools (Vim, Tmux, i3wm, ranger, ...).
@@ -171,4 +185,5 @@ cd linux-setup
 For help with using the system, you can also refer to the [MRS Cheatsheet](https://ctu-mrs.github.io/docs/introduction/cheatsheet.html).
 
 ## Running the simulation
+
 If you have successfully installed the system, you can continue with [starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html).
