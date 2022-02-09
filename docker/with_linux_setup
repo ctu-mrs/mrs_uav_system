@@ -7,6 +7,6 @@ RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu
 
 RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/*
 
-RUN cd /opt/mrs/mrs_workspace && catkin build && rm -rf build
+RUN cd /opt/mrs/mrs_workspace && catkin build && rm -rf build && chmod -R 777 /opt/mrs/
 
 CMD ["bash"]
