@@ -3,10 +3,10 @@ FROM klaxalk/linux-setup:master
 WORKDIR /home
 ENV HOME=/home
 
-RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system && chmod -R 777 /opt/mrs/
+RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system && chmod -R +666 /opt/mrs/
 
-RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/* && chmod -R 777 /opt/mrs/
+RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/* && chmod -R +666 /opt/mrs/
 
-RUN cd /opt/mrs/mrs_workspace && catkin build && rm -rf build && chmod -R 777 /opt/mrs/
+RUN cd /opt/mrs/mrs_workspace && catkin build && rm -rf build && chmod -R +666 /opt/mrs/
 
 CMD ["bash"]
