@@ -3,7 +3,11 @@ FROM klaxalk/linux-setup:master
 WORKDIR /home
 ENV HOME=/home
 
-RUN sudo apt-get -y update
+RUN sudo apt-get -y update && sudo apt-get -y install git
+
+# fixes prompts during apt installations
+RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+RUN sudo apt-get install -y -q
 
 RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system
 
