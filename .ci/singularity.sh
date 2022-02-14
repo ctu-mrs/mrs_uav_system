@@ -10,6 +10,9 @@ THIS_PATH=`pwd`
 
 echo $TOKEN >> /tmp/token
 
+mkdir cache
+export SINGULARITY_CACHEDIR=$THIS_PATH/cache
+
 git clone https://github.com/ctu-mrs/mrs_singularity
 cd $THIS_PATH/mrs_singularity/install
 ./install_singularity.sh
