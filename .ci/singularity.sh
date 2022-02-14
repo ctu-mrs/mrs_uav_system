@@ -6,8 +6,7 @@ trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 # get the path to the repository
-THIS_PATH=`dirname "$0"`
-THIS_PATH=`( cd "$THIS_PATH" && pwd )`
+THIS_PATH=`pwd`
 
 echo $TOKEN >> /tmp/token
 
