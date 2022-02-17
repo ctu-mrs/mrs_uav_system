@@ -1,4 +1,4 @@
-FROM klaxalk/linux-setup:master AS main
+FROM klaxalk/linux-setup:master
 
 ARG mrs_path=/opt/mrs
 
@@ -6,26 +6,23 @@ ARG mrs_path=/opt/mrs
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 RUN sudo apt-get install -y -q
 
+RUN sudo apt-get -y update
+
 # clone and install MRS UAV System
-RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system
+RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
+RUN cd $mrs_path/git/mrs_uav_system && ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/* && cd $mrs_path/mrs_workspace/ && catkin config --install && catkin build && rm -rf build && rm -rf devel && rm -rf $mrs_path/git/uav_core/.gitman && rm -rf /mrs_path/git/simulation/.gitman && rm -rf /var/lib/apt/lists/* 
 
-RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/*
-
-RUN echo pes
+# RUN mkdir -p $mrs_path/modules_workspace/src && source catkin init && catkin config --extend $mrs_path/mrs_workspace/install && catkin config --install
 
 # clone and install UAV Modules
-RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules
-RUN ln -s $mrs_path/git/uav_modules $mrs_path/mrs_workspace/src
-RUN cd $mrs_path/mrs_workspace/src/uav_modules && gitman install && ./installation/install.sh --unattended && rm -rf /var/lib/apt/lists/* && rm -rf $mrs_path/git/uav_modules/ros_packages/aloam/lib/*
+# RUN cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules && ln -s $mrs_path/git/uav_modules $mrs_path/mrs_workspace/src
+# RUN cd $mrs_path/mrs_workspace/src/uav_modules && gitman install && ./installation/install.sh --unattended && rm -rf /var/lib/apt/lists/* && rm -rf $mrs_path/git/uav_modules/ros_packages/aloam/lib/*
 
 # build the workspace
-RUN cd $mrs_path/mrs_workspace && catkin config --install
-RUN cd $mrs_path/mrs_workspace && catkin build && rm -rf build && rm -rf devel
+# RUN cd $mrs_path/mrs_workspace && catkin config --install
+# RUN cd $mrs_path/mrs_workspace && catkin build && rm -rf build && rm -rf devel
 
 # remove the unwanted
-RUN rm -rf $mrs_path/git/uav_core/.gitman/* && rm -rf $mrs_path/git/uav_modules/.gitman/*
-
-FROM scratch AS finish
-COPY --from=main / /
+# RUN rm -rf $mrs_path/git/uav_core/.gitman/* && rm -rf $mrs_path/git/uav_modules/.gitman/*
 
 CMD ["bash"]
