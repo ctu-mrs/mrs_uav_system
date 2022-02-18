@@ -1,4 +1,4 @@
-FROM ros:noetic
+FROM ctumrs/mrs_uav_system:latest
 
 ARG mrs_path=/opt/mrs
 
@@ -13,8 +13,7 @@ RUN \
   mkdir -p $mrs_path/git && \
   cd $mrs_path/git && \
   git clone https://github.com/ctu-mrs/uav_modules && \
-  cd $mrs_path/git/uav_modules && \
-  git checkout docker
+  cd $mrs_path/git/uav_modules
 
 RUN \
   cd $mrs_path/git/uav_modules && \
