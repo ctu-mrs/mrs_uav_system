@@ -1,4 +1,4 @@
-FROM klaxalk/linux-setup:master
+FROM ctumrs/mrs_uav_system_ls:latest
 
 ARG mrs_path=/opt/mrs
 
@@ -8,21 +8,25 @@ RUN sudo apt-get install -y -q
 
 RUN sudo apt-get -y update
 
-# clone and install MRS UAV System
-RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
-RUN cd $mrs_path/git/mrs_uav_system && ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/* && cd $mrs_path/mrs_workspace/ && catkin config --install && catkin build && rm -rf build && rm -rf devel && rm -rf $mrs_path/git/uav_core/.gitman && rm -rf /mrs_path/git/simulation/.gitman && rm -rf /var/lib/apt/lists/* 
-
-# RUN mkdir -p $mrs_path/modules_workspace/src && source catkin init && catkin config --extend $mrs_path/mrs_workspace/install && catkin config --install
-
 # clone and install UAV Modules
-# RUN cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules && ln -s $mrs_path/git/uav_modules $mrs_path/mrs_workspace/src
-# RUN cd $mrs_path/mrs_workspace/src/uav_modules && gitman install && ./installation/install.sh --unattended && rm -rf /var/lib/apt/lists/* && rm -rf $mrs_path/git/uav_modules/ros_packages/aloam/lib/*
+RUN \
+  mkdir -p $mrs_path/git && \
+  cd $mrs_path/git && \
+  git clone https://github.com/ctu-mrs/uav_modules && \
+  cd $mrs_path/git/uav_modules && \
+  git checkout docker
 
-# build the workspace
-# RUN cd $mrs_path/mrs_workspace && catkin config --install
-# RUN cd $mrs_path/mrs_workspace && catkin build && rm -rf build && rm -rf devel
-
-# remove the unwanted
-# RUN rm -rf $mrs_path/git/uav_core/.gitman/* && rm -rf $mrs_path/git/uav_modules/.gitman/*
+RUN \
+  cd $mrs_path/git/uav_modules && \
+  gitman install && \
+  $mrs_path/git/uav_modules/installation/install.sh --unattended && \
+  $mrs_path/git/uav_modules/installation/set_modules_workspace.sh -g $mrs_path/git -l $mrs_path -n && \
+  cd $mrs_path/modules_workspace && \
+  catkin config --install && \
+  catkin build && \
+  rm -rf $mrs_path/modules_workspace/build && \
+  rm -rf $mrs_path/modules_workspace/devel && \
+  rm -rf $mrs_path/git/uav_modules/.gitman && \
+  rm -rf /var/lib/apt/lists/*
 
 CMD ["bash"]

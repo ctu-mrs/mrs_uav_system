@@ -6,11 +6,22 @@ ARG mrs_path=/opt/mrs
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 RUN sudo apt-get install -y -q
 
-# clone and install MRS UAV System
-RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system
-RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/*
+RUN sudo apt-get -y update
 
-# build the workspace
-RUN cd $mrs_path/mrs_workspace && catkin build && rm -rf build
+# clone and install MRS UAV System
+RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
+
+RUN \
+  cd $mrs_path/git/mrs_uav_system && \
+  ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false && \
+  rm -rf /var/lib/apt/lists/* && \
+  cd $mrs_path/mrs_workspace/ && \
+  catkin config --install && \
+  catkin build && \
+  rm -rf $mrs_path/mrs_workspace/build && \
+  rm -rf $mrs_path/mrs_workspace/devel && \
+  rm -rf $mrs_path/git/uav_core/.gitman && \
+  rm -rf $mrs_path/git/simulation/.gitman && \
+  rm -rf /var/lib/apt/lists/*
 
 CMD ["bash"]

@@ -6,16 +6,27 @@ ARG mrs_path=/opt/mrs
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 RUN sudo apt-get install -y -q
 
-# clone and install MRS UAV System
-RUN mkdir -p /opt/mrs/git && cd /opt/mrs/git && git clone https://github.com/ctu-mrs/mrs_uav_system
-RUN cd /opt/mrs/git/mrs_uav_system && ./install.sh -g /opt/mrs/git -l /opt/mrs --no-build --my-workspace=false && rm -rf /var/lib/apt/lists/*
+RUN sudo apt-get -y update
 
 # clone and install UAV Modules
-RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules
-RUN ln -s $mrs_path/git/uav_modules $mrs_path/mrs_workspace/src
-RUN cd $mrs_path/mrs_workspace/src/uav_modules && gitman install && ./installation/install.sh --unattended && rm -rf /var/lib/apt/lists/* && rm -rf $mrs_path/git/uav_modules/ros_packages/aloam/lib/*
+RUN \
+  mkdir -p $mrs_path/git && \
+  cd $mrs_path/git && \
+  git clone https://github.com/ctu-mrs/uav_modules && \
+  cd $mrs_path/git/uav_modules && \
+  git checkout docker
 
-# build the workspace
-RUN cd $mrs_path/mrs_workspace && catkin build && rm -rf build
+RUN \
+  cd $mrs_path/git/uav_modules && \
+  gitman install && \
+  $mrs_path/git/uav_modules/installation/install.sh --unattended && \
+  $mrs_path/git/uav_modules/installation/set_modules_workspace.sh -g $mrs_path/git -l $mrs_path -n && \
+  cd $mrs_path/modules_workspace && \
+  catkin config --install && \
+  catkin build && \
+  rm -rf $mrs_path/modules_workspace/build && \
+  rm -rf $mrs_path/modules_workspace/devel && \
+  rm -rf $mrs_path/git/uav_modules/.gitman && \
+  rm -rf /var/lib/apt/lists/*
 
 CMD ["bash"]
