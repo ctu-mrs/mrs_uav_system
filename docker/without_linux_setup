@@ -17,7 +17,7 @@ RUN \
   rm -rf /var/lib/apt/lists/* && \
   cd $mrs_path/mrs_workspace/ && \
   catkin config --install && \
-  catkin build && \
+  catkin build --limit-status-rate 0.2 --summarize && \
   rm -rf $mrs_path/mrs_workspace/build && \
   rm -rf $mrs_path/mrs_workspace/devel && \
   rm -rf $mrs_path/git/uav_core/.gitman && \

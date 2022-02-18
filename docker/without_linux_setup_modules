@@ -23,7 +23,7 @@ RUN \
   $mrs_path/git/uav_modules/installation/set_modules_workspace.sh -g $mrs_path/git -l $mrs_path -n && \
   cd $mrs_path/modules_workspace && \
   catkin config --install && \
-  catkin build && \
+  catkin build --limit-status-rate 0.2 --summarize && \
   rm -rf $mrs_path/modules_workspace/build && \
   rm -rf $mrs_path/modules_workspace/devel && \
   rm -rf $mrs_path/git/uav_modules/.gitman && \
