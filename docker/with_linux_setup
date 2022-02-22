@@ -22,6 +22,8 @@ RUN \
   rm -rf $mrs_path/mrs_workspace/devel && \
   rm -rf $mrs_path/git/uav_core/.gitman && \
   rm -rf $mrs_path/git/simulation/.gitman && \
+  sudo apt-get -y remove --purge gcc-arm-none-eabi && \
+  sudo apt-get -y autoremove && \
   rm -rf /var/lib/apt/lists/*
 
 CMD ["bash"]
