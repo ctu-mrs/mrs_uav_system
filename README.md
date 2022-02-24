@@ -62,6 +62,7 @@ The platforms are order by the size / payload capacity.
 | Holybro x500 | ![](.fig/x500_simulation.jpg) | ![](.fig/x500_real.jpg)       |
 | DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg)       |
 | Tarot t650   | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg)       |
+| NAKI II      | ![](.fig/naki_simulation.jpg) | ![](.fig/naki_real.jpg)       |
 
 ## Related packages
 
