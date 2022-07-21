@@ -23,12 +23,9 @@ RUN \
   cd $mrs_path/modules_workspace && \
   catkin config --install && \
   catkin build --limit-status-rate 0.2 --summarize && \
-  sudo rosdep init && sudo rosdep update && \
   rm -rf $mrs_path/modules_workspace/build && \
   rm -rf $mrs_path/modules_workspace/devel && \
   rm -rf $mrs_path/git/uav_modules/.gitman && \
-  sudo apt-get -y remove --purge gcc-arm-none-eabi && \
-  sudo apt-get -y autoremove && \
   rm -rf /var/lib/apt/lists/*
 
 CMD ["bash"]
