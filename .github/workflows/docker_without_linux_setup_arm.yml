@@ -14,9 +14,9 @@ jobs:
     name: Cancel Previous Runs
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel Previous Runs
       - uses: styfle/cancel-workflow-action@0.8.0
       - uses: uraimo/run-on-arch-action@v2
+        name: Cancel Previous Runs
         with:
           arch: armv7
           access_token: ${{ github.token }}
@@ -27,13 +27,11 @@ jobs:
       GITHUB_CI: true
       TOKEN: ${{ secrets.DOCKERHUB }}
     steps:
-
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: uraimo/run-on-arch-action@v2
         with:
           fetch-depth: 0 # fetch the whole history
           arch: armv7
 
-      - name: Docker
+        name: Docker
         run: ./.ci/docker_without_linux_setup_arm.sh
