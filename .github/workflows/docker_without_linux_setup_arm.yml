@@ -1,4 +1,4 @@
-name: Docker_without_LS
+name: Docker_without_LS_arm
 
 on:
   schedule:
