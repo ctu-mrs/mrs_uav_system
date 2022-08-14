@@ -7,6 +7,7 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 [ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
 
 debian=`uname -a | grep -i debian | wc -l`
+uname -a
 [[ "$debian" -eq "1" ]] && ROS_DISTRO="noetic"
 
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
