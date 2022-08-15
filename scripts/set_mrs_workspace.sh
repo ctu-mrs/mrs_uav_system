@@ -9,8 +9,11 @@ distro=`lsb_release -r | awk '{ print $2 }'`
 [ "$distro" = "18.04" ] && ROS_DISTRO="melodic"
 [ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
 
+lsb_release -d
 debian=`lsb_release -d | grep -i debian | wc -l`
 [[ "$debian" -ge "1" ]] && ROS_DISTRO="noetic" && echo we are on DEBIAN
+
+[ -z ROS_DISTRO ] && ROS_DISTRO="noetic"
 
 # shift
 OPTIND=1
