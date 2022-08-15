@@ -14,16 +14,14 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 echo "$0: Installing ROS"
 
-[ "$ROS_DISTRO" = "melodic" ] && sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu Melodic main" > /etc/apt/sources.list.d/ros-latest.list'
-[ "$ROS_DISTRO" = "noetic" ] && sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu Noetic main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 sudo apt-get -y install curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 sudo apt-get -y update
 
-[ "$ROS_DISTRO" = "melodic" ] && sudo apt-get -y install ros-melodic-desktop-full
-[ "$ROS_DISTRO" = "noetic" ] && sudo apt-get -y install ros-noetic-desktop-full
+sudo apt-get -y install ros-$ROS_DISTRO-desktop-full
 
 num=`cat ~/.bashrc | grep "/opt/ros/$ROS_DISTRO/setup.bash" | wc -l`
 if [ "$num" -lt "1" ]; then
