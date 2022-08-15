@@ -15,12 +15,12 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 echo "$0: Installing ROS"
 
 # add repository for ignition library
-echo sudo apt-get -y install wget lsb-release gnupg
-echo sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable $ROS_DISTRO main" > /etc/apt/sources.list.d/gazebo-stable.list'
-echo wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
-echo sudo apt-get -y update
+sudo apt-get -y install wget lsb-release gnupg
+sudo sh -c "echo 'deb http://packages.osrfoundation.org/gazebo/ubuntu-stable $ROS_DISTRO main' > /etc/apt/sources.list.d/gazebo-stable.list"
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get -y update
 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $ROS_DISTRO main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c "echo 'deb http://packages.ros.org/ros/ubuntu $ROS_DISTRO main' > /etc/apt/sources.list.d/ros-latest.list"
 
 sudo apt-get -y install curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
