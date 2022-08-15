@@ -1,0 +1,28 @@
+FROM brute/brute_base:latest
+
+ARG mrs_path=/opt/mrs
+
+# fixes prompts during apt installations
+RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+RUN sudo apt-get install -y -q
+
+RUN sudo apt-get -y update && sudo apt-get -y install git
+
+# clone and install MRS UAV System
+RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
+
+RUN cd $mrs_path/git/mrs_uav_system && git fetch
+RUN cd $mrs_path/git/mrs_uav_system && git checkout debian 
+RUN cd $mrs_path/git/mrs_uav_system && ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false 
+RUN rm -rf /var/lib/apt/lists/* 
+RUN cd $mrs_path/mrs_workspace/ && catkin config --install 
+RUN cd $mrs_path/mrs_workspace/ && catkin build --limit-status-rate 0.2 --summarize 
+RUN rm -rf $mrs_path/mrs_workspace/build 
+RUN rm -rf $mrs_path/mrs_workspace/devel 
+RUN rm -rf $mrs_path/git/uav_core/.gitman 
+RUN rm -rf $mrs_path/git/simulation/.gitman 
+RUN sudo apt-get -y remove --purge gcc-arm-none-eabi 
+RUN sudo apt-get -y autoremove 
+RUN rm -rf /var/lib/apt/lists/*
+
+CMD ["bash"]
