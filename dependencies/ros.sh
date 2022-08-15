@@ -16,18 +16,21 @@ echo "$0: Installing ROS"
 
 # add repository for ignition library
 sudo apt-get -y install wget lsb-release gnupg
-sudo sh -c "echo 'deb http://packages.osrfoundation.org/gazebo/ubuntu-stable $ROS_DISTRO main' > /etc/apt/sources.list.d/gazebo-stable.list"
+[ "$ROS_DISTRO" = "melodic" ] && sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable Melodic main" > /etc/apt/sources.list.d/gazebo-stable.list'
+[ "$ROS_DISTRO" = "noetic" ] && sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable Noetic main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt-get -y update
 
-sudo sh -c "echo 'deb http://packages.ros.org/ros/ubuntu $ROS_DISTRO main' > /etc/apt/sources.list.d/ros-latest.list"
+[ "$ROS_DISTRO" = "melodic" ] && sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu Melodic main" > /etc/apt/sources.list.d/ros-latest.list'
+[ "$ROS_DISTRO" = "noetic" ] && sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu Noetic main" > /etc/apt/sources.list.d/ros-latest.list'
 
 sudo apt-get -y install curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 sudo apt-get -y update
 
-sudo apt-get -y install ros-$ROS_DISTRO-desktop-full
+[ "$ROS_DISTRO" = "melodic" ] && sudo apt-get -y install ros-melodic-desktop-full
+[ "$ROS_DISTRO" = "noetic" ] && sudo apt-get -y install ros-noetic-desktop-full
 
 num=`cat ~/.bashrc | grep "/opt/ros/$ROS_DISTRO/setup.bash" | wc -l`
 if [ "$num" -lt "1" ]; then
