@@ -12,7 +12,7 @@ RUN sudo apt-get -y update && sudo apt-get -y install git
 RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
 
 RUN cd $mrs_path/git/mrs_uav_system && git fetch
-RUN cd $mrs_path/git/mrs_uav_system && git checkout debian 
+RUN cd $mrs_path/git/mrs_uav_system && git checkout debian && git pull
 RUN cd $mrs_path/git/mrs_uav_system && ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false 
 RUN rm -rf /var/lib/apt/lists/* 
 RUN cd $mrs_path/mrs_workspace/ && catkin config --install 
