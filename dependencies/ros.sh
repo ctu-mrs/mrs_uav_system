@@ -14,13 +14,6 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
 echo "$0: Installing ROS"
 
-# add repository for ignition library
-sudo apt-get -y install wget lsb-release gnupg
-[ "$ROS_DISTRO" = "melodic" ] && sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable Melodic main" > /etc/apt/sources.list.d/gazebo-stable.list'
-[ "$ROS_DISTRO" = "noetic" ] && sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable Noetic main" > /etc/apt/sources.list.d/gazebo-stable.list'
-wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
-sudo apt-get -y update
-
 [ "$ROS_DISTRO" = "melodic" ] && sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu Melodic main" > /etc/apt/sources.list.d/ros-latest.list'
 [ "$ROS_DISTRO" = "noetic" ] && sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu Noetic main" > /etc/apt/sources.list.d/ros-latest.list'
 
