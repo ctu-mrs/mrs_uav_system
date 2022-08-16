@@ -76,7 +76,7 @@ if (( $(echo "$safe_rate_of_memory > $total_available_memory" |bc -l) )); then
   echo ""
   echo "Press Enter to continue..."
   echo ""
-  [ -z "$GITHUB_CI" ] && read
+  [ -z "$GITHUB_CI" ] && [ ! $DOCKER ] && read
 fi
 
 [ -z "$GIT_PATH" ] && GIT_PATH=$HOME/git

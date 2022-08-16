@@ -1,5 +1,6 @@
 FROM klaxalk/linux-setup:master
 
+ARG DOCKER=true
 ARG mrs_path=/opt/mrs
 
 # fixes prompts during apt installations
