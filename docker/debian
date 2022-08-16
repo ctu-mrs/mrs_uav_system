@@ -1,4 +1,4 @@
-FROM klaxalk/linux-setup:master
+FROM brute/brute_base:latest
 
 ARG DOCKER=true
 ARG mrs_path=/opt/mrs
@@ -7,7 +7,7 @@ ARG mrs_path=/opt/mrs
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 RUN sudo apt-get install -y -q
 
-RUN sudo apt-get -y update
+RUN sudo apt-get -y update && sudo apt-get -y install git
 
 # clone and install MRS UAV System
 RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
@@ -16,7 +16,9 @@ RUN \
   cd $mrs_path/git/mrs_uav_system && \
   ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false && \
   rm -rf /var/lib/apt/lists/* && \
-  cd $mrs_path/mrs_workspace/ && \
+  cd $mrs_path/mrs_workspace/src && \
+  git clone https://github.com/ctu-mrs/mrs_utils && \
+  cd $mrs_path/mrs_workspace && \
   catkin config --install && \
   catkin build --limit-status-rate 0.2 --summarize && \
   rm -rf $mrs_path/mrs_workspace/build && \

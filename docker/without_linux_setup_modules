@@ -1,5 +1,6 @@
 FROM ctumrs/mrs_uav_system:latest
 
+ARG DOCKER=true
 ARG mrs_path=/opt/mrs
 
 # fixes prompts during apt installations
