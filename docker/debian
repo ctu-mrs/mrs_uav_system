@@ -1,7 +1,9 @@
 FROM brute/brute_base:latest
 
+RUN echo pes
+
 ARG DOCKER=true
-ARG mrs_path=/opt/mrs
+ARG MRS_PATH=/opt/mrs
 
 # fixes prompts during apt installations
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
@@ -9,22 +11,24 @@ RUN sudo apt-get install -y -q
 
 RUN sudo apt-get -y update && sudo apt-get -y install git
 
-# clone and install MRS UAV System
-RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system
+# clone MRS UAV System
+RUN mkdir -p $MRS_PATH/git && cd $MRS_PATH/git && git clone https://github.com/ctu-mrs/mrs_uav_system
 
+# install MRS UAV System
 RUN \
-  cd $mrs_path/git/mrs_uav_system && \
-  ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false && \
+  cd $MRS_PATH/git/mrs_uav_system && \
+  ./install.sh -g $MRS_PATH/git -l $MRS_PATH --no-build --my-workspace=false && \
+  sudo apt-get -y install vim && \
   rm -rf /var/lib/apt/lists/* && \
-  cd $mrs_path/mrs_workspace/src && \
+  cd $MRS_PATH/mrs_workspace/src && \
   git clone https://github.com/ctu-mrs/mrs_utils && \
-  cd $mrs_path/mrs_workspace && \
+  cd $MRS_PATH/mrs_workspace && \
   catkin config --install && \
   catkin build --limit-status-rate 0.2 --summarize && \
-  rm -rf $mrs_path/mrs_workspace/build && \
-  rm -rf $mrs_path/mrs_workspace/devel && \
-  rm -rf $mrs_path/git/uav_core/.gitman && \
-  rm -rf $mrs_path/git/simulation/.gitman && \
+  rm -rf $MRS_PATH/mrs_workspace/build && \
+  rm -rf $MRS_PATH/mrs_workspace/devel && \
+  rm -rf $MRS_PATH/git/uav_core/.gitman && \
+  rm -rf $MRS_PATH/git/simulation/.gitman && \
   sudo apt-get -y remove --purge gcc-arm-none-eabi && \
   sudo apt-get -y autoremove && \
   rm -rf /var/lib/apt/lists/*
