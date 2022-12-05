@@ -5,6 +5,8 @@ set -e
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
+apt-get -y update
+
 apt-get -y install \
     ca-certificates \
     curl \
