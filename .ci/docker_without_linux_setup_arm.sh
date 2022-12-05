@@ -5,7 +5,7 @@ set -e
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 
-sudo apt-get -y install \
+apt-get -y install \
     ca-certificates \
     curl \
     gnupg \
@@ -13,18 +13,18 @@ sudo apt-get -y install \
 
 ## | ---------------- download dockers gpg key ---------------- |
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 ## | ----------------- setup stable repository ---------------- |
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 ## | ------------------ install docker engine ----------------- |
 
-sudo apt-get -y update
-sudo apt-get -y install docker-ce docker-ce-cli containerd.io
+apt-get -y update
+apt-get -y install docker-ce docker-ce-cli containerd.io
 
 docker login --username klaxalk --password $TOKEN
 
