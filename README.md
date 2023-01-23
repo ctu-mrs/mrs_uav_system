@@ -122,15 +122,14 @@ The following link points to our Docker HUB organization.
 
 * [Docker Images](https://hub.docker.com/u/ctumrs)
 
-### Native installation
+### Native installation (not recommended)
 
-Following options are provided, depending on who you are and what you want to do with the platform.
-**Beware**, installing the system into a virtual machine may not be a good idea for you, unless you have a very powerfull computer.
-Real-time simulations in Gazebo perform very poorly in virtual machines.
+Native installation is supported via a set of automated install scripts.
+**Beware** the installation will take a **lot of disk space**, is **difficult to remove** from the computer, and is often **difficult to upgrade**.
+The native installation is intended mostly for real drones.
+Most people should use [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity) for working with the MRS system!
 
-#### "I have fresh Ubuntu install and want it quick and easy"
-
-In this case we provide installation scripts that set everything up for you.
+In the you want a native installation case we provide installation scripts that set everything up for you.
 Our automated install script will:
 * install Robot Operating System (ROS),
 * install other dependencies such *git*, *gitman*,
@@ -140,7 +139,7 @@ Our automated install script will:
 * create a ros workspace in ```~/workspace``` for *examples* ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)),
 * link our packages to the workspaces ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)),
 * compile the workspaces,
-* added configuration lines into your *~/.bashrc*.
+* add configuration lines into your *~/.bashrc*.
 
 To start the automatic installation, please paste the following code into your terminal and press **enter**.
 You might be prompted a few times to confirm something by pressing enter:
