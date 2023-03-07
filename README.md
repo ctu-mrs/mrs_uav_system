@@ -112,8 +112,8 @@ Recent changes requiring user action:
 
 ### Singularity and Docker
 
-Singularity images with our system are the preferred way how a _normal_ user should interract with our sustem.
-Pleaase, follow this link to learn how to run our system using Singularity.
+Singularity images with our system are the preferred way how a _normal_ user should interract with our system.
+Please, follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/)
 
