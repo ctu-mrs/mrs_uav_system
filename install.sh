@@ -98,12 +98,18 @@ bash $MY_PATH/dependencies/gitman.sh
 
 ## | -------------------- cloning packages -------------------- |
 
-cd "$GIT_PATH"
 
+cd "$GIT_PATH"
 [ ! -e "$GIT_PATH/uav_core" ] && git clone https://github.com/ctu-mrs/uav_core
+cd "$GIT_PATH/uav_core"
 git checkout simulation_m690
+
+cd "$GIT_PATH"
 [ ! -e "$GIT_PATH/simulation" ] && git clone https://github.com/ctu-mrs/simulation
+cd "$GIT_PATH/simulation"
 git checkout t_drone_m_690
+
+cd "$GIT_PATH"
 [ ! -e "$GIT_PATH/example_ros_packages" ] && git clone https://github.com/ctu-mrs/example_ros_packages
 
 ## | ------------------- installing uav_core ------------------ |
