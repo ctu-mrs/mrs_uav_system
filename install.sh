@@ -101,7 +101,9 @@ bash $MY_PATH/dependencies/gitman.sh
 cd "$GIT_PATH"
 
 [ ! -e "$GIT_PATH/uav_core" ] && git clone https://github.com/ctu-mrs/uav_core
+git checkout simulation_m690
 [ ! -e "$GIT_PATH/simulation" ] && git clone https://github.com/ctu-mrs/simulation
+git checkout t_drone_m_690
 [ ! -e "$GIT_PATH/example_ros_packages" ] && git clone https://github.com/ctu-mrs/example_ros_packages
 
 ## | ------------------- installing uav_core ------------------ |
