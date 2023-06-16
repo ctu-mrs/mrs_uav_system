@@ -1,4 +1,6 @@
 # Multi-robot Systems Group UAV system
+![logos](.fig/logos.png)
+
 ![thumbnail](.fig/drone_collage.jpg)
 
 The [Multi-robot Systems Group](http://mrs.felk.cvut.cz) is a robotics lab at the [Czech Technical University in Prague](https://www.cvut.cz/).
