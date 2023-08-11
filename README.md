@@ -12,14 +12,7 @@ Thus our platform is built to allow safe verification of approaches in planning,
 
 These meta-repositories aggregate related packages.
 
-| Component                                                                       | 20.04                                                                                                                                                          | Description                                                                                                        |
-|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system)                     | [![Build Status](https://github.com/ctu-mrs/mrs_uav_system/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_uav_system/actions)                     | Integrates [uav_core](https://github.com/ctu-mrs/uav_core) and [simulation](https://github.com/ctu-mrs/simulation) |
-| [uav_core](https://github.com/ctu-mrs/uav_core)                                 | [![Build Status](https://github.com/ctu-mrs/uav_core/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/uav_core/actions)                                 | The minimum needed to fly a drone                                                                                  |
-| [simulation](https://github.com/ctu-mrs/simulation)                             | [![Build Status](https://github.com/ctu-mrs/simulation/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/simulation/actions)                             | Simulation resources                                                                                               |
-| [uav_modules](https://github.com/ctu-mrs/uav_modules)                           | [![Build Status](https://github.com/ctu-mrs/uav_modules/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/uav_modules/actions)                           | Optional UAV modules, drivers and utils                                                                            |
-| [octomap_mapping_planning](https://github.com/ctu-mrs/octomap_mapping_planning) | [![Build Status](https://github.com/ctu-mrs/octomap_mapping_planning/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/octomap_mapping_planning/actions) | Octomap Mapping & Planning for UAVs                                                                                |
-| [linux-setup](https://github.com/klaxalk/linux-setup)                           | [![Build Status](https://github.com/klaxalk/linux-setup/workflows/Focal/badge.svg)](https://github.com/klaxalk/linux-setup/actions)                            | Tomas's Linux configuration                                                                                        |
+TODO
 
 ## System properties
 
@@ -27,7 +20,7 @@ The platform is
 
 * built using [Robot Operating System](https://www.ros.org/) Noetic,
 * meant to be executed entirely onboard,
-* can be deployed on any multi-rotor vehicle, given it is equipped with a [PX4](https://github.com/ctu-mrs/px4_firmware)-compatible [flight controller](https://pixhawk.org/),
+* can be deployed on any multi-rotor vehicle, given TODO
 * for both indoor and outdoor,
 * supports multi-robot experiments using [Nimbro network](https://github.com/ctu-mrs/nimbro_network) communication.
 * provides both: agile flying and robust control.
@@ -112,9 +105,12 @@ Recent changes requiring user action:
 
 ## Installation
 
+### Native installation
+
+TODO
+
 ### Singularity and Docker
 
-Singularity images with our system are the preferred way how a _normal_ user should interract with our system.
 Please, follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/)
@@ -123,51 +119,6 @@ Our Singularity images are built almost completely from Docker images.
 The following link points to our Docker HUB organization.
 
 * [Docker Images](https://hub.docker.com/u/ctumrs)
-
-### Native installation (not recommended)
-
-Native installation is supported via a set of automated install scripts.
-**Beware** the installation will take a **lot of disk space**, is **difficult to remove** from the computer, and is often **difficult to upgrade**.
-The native installation is intended mostly for real drones.
-Most people should use [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity) for working with the MRS system!
-
-In the you want a native installation case we provide installation scripts that set everything up for you.
-Our automated install script will:
-* install Robot Operating System (ROS),
-* install other dependencies such *git*, *gitman*,
-* clone [uav_core](https://github.com/ctu-mrs/uav_core), [simulation](https://github.com/ctu-mrs/simulation), [example_ros_packages](https://github.com/ctu-mrs/example_ros_packages) into *~/git*,
-* install more dependencies such as *tmux* and *tmuxinator*
-* create our ros workspace ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)) in ```~/mrs_workspace``` for the *uav_core* and *simulation*,
-* create a ros workspace in ```~/workspace``` for *examples* ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)),
-* link our packages to the workspaces ([guide](https://ctu-mrs.github.io/docs/software/catkin/managing_workspaces/managing_workspaces.html)),
-* compile the workspaces,
-* add configuration lines into your *~/.bashrc*.
-
-To start the automatic installation, please paste the following code into your terminal and press **enter**.
-You might be prompted a few times to confirm something by pressing enter:
-```bash
-cd /tmp
-echo '
-GIT_PATH=~/git
-mkdir -p $GIT_PATH
-cd $GIT_PATH
-sudo apt-get -y install git
-git clone https://github.com/ctu-mrs/mrs_uav_system
-cd mrs_uav_system
-git checkout master
-git pull
-./install.sh -g $GIT_PATH
-source ~/.bashrc' > clone.sh && source clone.sh
-```
-
-#### "I already have ROS and just want to peek in"
-
-If you already have ROS installed and if you are fluent with *workspaces*, *.bashrc*, *catkin tools*, etc., feel free to clone our repositories individually.
-The [uav_core](https://github.com/ctu-mrs/uav_core) repository integrates our UAV control system.
-Please follow its README for further instructions on how to install its particular dependencies.
-
-The [simulation](https://github.com/ctu-mrs/simulation) repository provides resources for *Gazebo/ROS* simulation, including px4 Simulation-in-the-Loop (SITL), UAV models and useful sensor plugins.
-Please follow its README for further instructions on how to install prerequisities.
 
 #### "I want the Linux environment people from MRS works with"
 
