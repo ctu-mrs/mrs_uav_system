@@ -4,15 +4,35 @@
 ![thumbnail](.fig/drone_collage.jpg)
 
 The [Multi-robot Systems Group](http://mrs.felk.cvut.cz) is a robotics lab at the [Czech Technical University in Prague](https://www.cvut.cz/).
-We mostly work with multi-rotor helicopters, and for them specifically, we develop this control, estimation, and simulation platform.
+We specialize on multi-rotor helicopters, and for them specifically, we develop this control, estimation, and simulation system.
 We think that real-world and replicable experiments should support excellent research and science in robotics.
-Thus our platform is built to allow safe verification of approaches in planning, control, estimation, computer vision, tracking, and more.
+Thus our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
 
-## Meta-repositories
+## Build status
 
-These meta-repositories aggregate related packages.
+|                                                              | aarch64                                                                                                                                                                             | x86_64                                                                                                                                                                              |
+|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Unstable (Nightly)](http://github.com/ctu-mrs/ppa-unstable) | [![unstable-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_arm64.yml) | [![unstable-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_amd64.yml) |
+| Stable                                                       | **TODO**                                                                                                                                                                            | **TODO**                                                                                                                                                                            |
 
-TODO
+## System structure
+
+**TODO** diagram
+
+### Hardware APIs
+
+**TODO**
+
+* PX4 API
+* Tello API
+
+### Simulators
+
+**TODO**
+
+* MRS Simulator
+* Gazebo Simulator
+* Coppelia Simulator
 
 ## System properties
 
@@ -20,7 +40,7 @@ The platform is
 
 * built using [Robot Operating System](https://www.ros.org/) Noetic,
 * meant to be executed entirely onboard,
-* can be deployed on any multi-rotor vehicle, given TODO
+* can be deployed on any multi-rotor vehicle, given **TODO** **write about hardware API**
 * for both indoor and outdoor,
 * supports multi-robot experiments using [Nimbro network](https://github.com/ctu-mrs/nimbro_network) communication.
 * provides both: agile flying and robust control.
@@ -95,6 +115,7 @@ However, when we change something which requires user action to maintain compati
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
 
+* August, 2023: **TODO** **Rehaul of the entiner MRS UAV System**
 * January 17, 2023: [Updates for px4 firmware v1.13.2](https://github.com/ctu-mrs/mrs_uav_system/issues/150)
 * March 8, 2022: [mrs_lib::Transformer interface updated](https://github.com/ctu-mrs/mrs_uav_system/issues/136)
 * December 09, 2021: [not building with --march=native anymore](https://github.com/ctu-mrs/mrs_uav_system/issues/126)
@@ -107,7 +128,31 @@ Recent changes requiring user action:
 
 ### Native installation
 
-TODO
+1. Install the Robot Operating System (Noetic):
+```bash
+curl https://ctu-mrs.github.io/ppa-unstable/add_ros_ppa.sh | bash
+sudo apt install ros-noetic-desktop-full
+```
+
+2. Select which version of the MRS UAV System you want to install.
+
+For **stable** version, add the following PPA:
+```bash
+**TODO**
+```
+For **unstable** (nightly-build) of the system, add the following PPA:
+```bash
+curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
+```
+
+Then, install the MRS UAV System:
+```bash
+sudo apt install ros-noetic-mrs-uav-system
+```
+
+3. Follow these instructions ([starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html), **TODO update**) for starting the example simulation sessions.
+
+4. Follow these instruction (**TOOD**) for creating your own catkin workspace and building your packages with the MRS UAV system.
 
 ### Singularity and Docker
 
@@ -116,7 +161,7 @@ Please, follow this link to learn how to run our system using Singularity.
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/)
 
 Our Singularity images are built almost completely from Docker images.
-The following link points to our Docker HUB organization.
+The following link points to our Docker HUB repository.
 
 * [Docker Images](https://hub.docker.com/u/ctumrs)
 
@@ -139,7 +184,3 @@ cd linux-setup
 ```
 
 For help with using the system, you can also refer to the [MRS Cheatsheet](https://ctu-mrs.github.io/docs/introduction/cheatsheet.html).
-
-## Running the simulation
-
-If you have successfully installed the system, you can continue with [starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html).
