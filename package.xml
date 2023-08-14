@@ -18,6 +18,7 @@
   <depend>mrs_uav_core</depend>
   <depend>mrs_uav_gazebo_simulation</depend>
   <depend>mrs_uav_deployment</depend>
+  <depend>mrs_uav_modules</depend>
 
   <depend>mrs_uav_px4_api</depend>
   <depend>mrs_uav_dji_tello_api</depend>
