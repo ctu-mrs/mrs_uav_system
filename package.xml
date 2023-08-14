@@ -20,6 +20,6 @@
   <depend>mrs_uav_deployment</depend>
 
   <depend>mrs_uav_px4_api</depend>
-  <depend>mrs_uav_tello_api</depend>
+  <depend>mrs_uav_dji_tello_api</depend>
 
 </package>
