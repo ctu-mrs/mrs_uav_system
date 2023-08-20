@@ -1,0 +1,13 @@
+FROM ros:noetic
+
+RUN echo "build"
+
+# fixes prompts during apt installations
+RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+RUN apt-get -y update
+RUN apt-get -y install -y sudo curl
+
+RUN curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
+RUN apt-get -y install ros-noetic-mrs-uav-system
+
+CMD ["bash"]

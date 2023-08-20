@@ -4,4 +4,4 @@ MY_PATH=`( cd "$MY_PATH" && pwd )`
 
 cd $MY_PATH
 
-docker build -f ./without_linux_setup -t ctumrs/mrs_uav_system:latest .
+docker build -f ./1.5 -t ctumrs/mrs_uav_system:1.5 .
