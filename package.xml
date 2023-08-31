@@ -15,12 +15,14 @@
   <depend>cmake_modules</depend>
   <depend>rospy</depend>
 
-  <depend>mrs_uav_core</depend>
-  <depend>mrs_uav_gazebo_simulation</depend>
-  <depend>mrs_uav_deployment</depend>
-  <depend>mrs_uav_modules</depend>
+  <run_depend>mrs_uav_core</run_depend>
+  <run_depend>mrs_uav_gazebo_simulation</run_depend>
+  <run_depend>mrs_uav_deployment</run_depend>
+  <run_depend>mrs_uav_modules</run_depend>
 
-  <depend>mrs_uav_px4_api</depend>
-  <depend>mrs_uav_dji_tello_api</depend>
+  <run_depend>mrs_uav_px4_api</run_depend>
+  <run_depend>mrs_uav_dji_tello_api</run_depend>
+
+  <run_depend>python-is-python3</run_depend>
 
 </package>
