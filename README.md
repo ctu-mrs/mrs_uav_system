@@ -10,10 +10,19 @@ Thus our platform is built to allow safe real-world experimental validation of a
 
 ## Build status
 
-|                                                              | aarch64                                                                                                                                                                             | x86_64                                                                                                                                                                              |
-|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Unstable (Nightly)](http://github.com/ctu-mrs/ppa-unstable) | [![unstable-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_arm64.yml) | [![unstable-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_amd64.yml) |
-| Stable                                                       | **TODO**                                                                                                                                                                            | **TODO**                                                                                                                                                                            |
+### AMD64
+
+|                     | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS Packages        | [![stable-mrs-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_amd64.yml)                      | [![unstable-mrs-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_amd64.yml)                      |
+| Thirdparty packages | [![stable-thirdparty-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_amd64.yml) | [![unstable-thirdparty-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_amd64.yml) |
+
+### AARCH64/ARM64
+
+|                     | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS Packages        | [![stable-mrs-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_arm64.yml)                      | [![unstable-mrs-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_arm64.yml)                      |
+| Thirdparty packages | [![stable-thirdparty-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_arm64.yml) | [![unstable-thirdparty-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_arm64.yml) |
 
 ## System structure
 
@@ -143,7 +152,7 @@ curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
 
 Then, install the MRS UAV System:
 ```bash
-sudo apt install ros-noetic-mrs-uav-system
+sudo apt install ros-noetic-mrs-uav-system-full
 ```
 
 3. Follow these instructions ([starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html), **TODO update**) for starting the example simulation sessions.
