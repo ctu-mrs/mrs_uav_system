@@ -5,6 +5,11 @@ on:
   push:
     branches: [ 1.5 ]
 
+    paths-ignore:
+      - '**/README.md'
+      - '**.jpg'
+      - '**.png'
+
   workflow_dispatch:
 
 concurrency:

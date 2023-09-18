@@ -12,17 +12,19 @@ Thus our platform is built to allow safe real-world experimental validation of a
 
 ### AMD64
 
-|                     | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRS Packages        | [![stable-mrs-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_amd64.yml)                      | [![unstable-mrs-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_amd64.yml)                      |
-| Thirdparty packages | [![stable-thirdparty-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_amd64.yml) | [![unstable-thirdparty-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_amd64.yml) |
+|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS ROS Packages        | [![stable-mrs-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_amd64.yml)                      | [![unstable-mrs-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_amd64.yml)                      |
+| Thirdparty ROS packages | [![stable-thirdparty-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_amd64.yml) | [![unstable-thirdparty-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_amd64.yml) |
+| Non-ROS packages        | [![stable-nonbloom-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_nonbloom_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_nonbloom_amd64.yml)       | [![unstable-nonbloom-amd64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_nonbloom_amd64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_nonbloom_amd64.yml)       |
 
 ### AARCH64/ARM64
 
-|                     | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRS Packages        | [![stable-mrs-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_arm64.yml)                      | [![unstable-mrs-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_arm64.yml)                      |
-| Thirdparty packages | [![stable-thirdparty-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_arm64.yml) | [![unstable-thirdparty-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_arm64.yml) |
+|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS ROS Packages        | [![stable-mrs-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_mrs_arm64.yml)                      | [![unstable-mrs-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_mrs_arm64.yml)                      |
+| Thirdparty ROS packages | [![stable-thirdparty-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_thirdparty_arm64.yml) | [![unstable-thirdparty-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_thirdparty_arm64.yml) |
+| Non-ROS packages        | [![stable-nonbloom-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_nonbloom_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/stable_nonbloom_arm64.yml)       | [![unstable-nonbloom-arm64](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_nonbloom_arm64.yml/badge.svg)](https://github.com/ctu-mrs/rosdistro/actions/workflows/unstable_nonbloom_arm64.yml)       |
 
 ## System structure
 
@@ -141,11 +143,11 @@ sudo apt install ros-noetic-desktop-full
 
 2. Select which version of the MRS UAV System you want to install.
 
-For **stable** version, add the following PPA:
+For **[stable](https://github.com/ctu-mrs/ppa-stable)** version, add the following PPA:
 ```bash
-**TODO**
+curl https://ctu-mrs.github.io/ppa-stable/add_ppa.sh | bash
 ```
-For **unstable** (nightly-build) of the system, add the following PPA:
+For   **[unstable](https://github.com/ctu-mrs/ppa-unstable)** (nightly-build) of the system, add the following PPA:
 ```bash
 curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
 ```
@@ -163,7 +165,7 @@ sudo apt install ros-noetic-mrs-uav-system-full
 
 Please, follow this link to learn how to run our system using Singularity.
 
-* [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/)
+* [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/tree/1.5)
 
 Our Singularity images are built almost completely from Docker images.
 The following link points to our Docker HUB repository.
