@@ -10,7 +10,7 @@ Thus our platform is built to allow safe real-world experimental validation of a
 
 ## Build status
 
-### AMD64
+### x86-64/AMD64
 
 |                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -61,11 +61,11 @@ The platform is
 ## [Documentation](https://ctu-mrs.github.io/)
 
 The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
-However, the website only scratches a surface of what it should contain (and we know it).
+However, the website only scratches the surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
-Maintaining up-to-date documentation for such an audience is hard work, since we mostly spend our time developing the system while using it for our research.
-So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files and be able to read the code, which we strive to keep readable.
+Maintaining up-to-date documentation for such an audience is hard work since we mostly spend our time developing the system while using it for our research.
+So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files, and be able to read the code, which we strive to keep readable.
 
 [![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.jpg)](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.pdf)
 
@@ -79,7 +79,7 @@ Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26
 ## Unmanned Aerial Vehicles
 
 The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS.
-The platforms are order by the size / payload capacity.
+The platforms are ordered by the size/payload capacity.
 
 | Model        | Simulation                    | Real UAV                      |
 |--------------|-------------------------------|-------------------------------|
@@ -93,8 +93,8 @@ The platforms are order by the size / payload capacity.
 ## Related packages
 
 The following packages are not necessarily part of our automated installation.
-Therefore, you might need to clone them by yorself and place in your ROS workspace.
-Some of those are forks of third party repositories.
+Therefore, you might need to clone them by yourself and place them in your ROS workspace.
+Some of those are forks of third-party repositories.
 
 | Package                                                                              | Description                                                                                   | 20.04                                                                                                                                                                |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -113,16 +113,16 @@ Some of those are forks of third party repositories.
 | [MRS utils](https://github.com/ctu-mrs/mrs_utils)                                    | Development utils                                                                             | [![Build Status](https://github.com/ctu-mrs/mrs_utils/workflows/Noetic/badge.svg)](https://github.com/ctu-mrs/mrs_utils/actions)                                     |
 | [OctomapTools](https://github.com/ctu-mrs/octomap_tools)                             | Octomap visualization and manipulation                                                        |                                                                                                                                                                      |
 
-## Backwards compatibility and updates
+## Backwards Compatibility and updates
 
-We do not guarantee backwards compatibility at any time.
+We do not guarantee backward compatibility at any time.
 The platform is evolving according to the needs of the MRS group.
-Updates can be made that are not going to be compatible with users local configs, simulation worlds, tmux sessions, etc.
-However, when we change something which requires user action to maintain compatibility, we will create an issue in this repository labelled **users-read-me**.
+Updates can be made that are not going to be compatible with users' local configs, simulation worlds, tmux sessions, etc.
+However, when we change something that requires user action to maintain compatibility, we will create an issue in this repository labeled **users-read-me**.
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
 
-* August, 2023: **TODO** **Rehaul of the entiner MRS UAV System**
+* August, 2023: **TODO** **Rehaul of the entire MRS UAV System**
 * January 17, 2023: [Updates for px4 firmware v1.13.2](https://github.com/ctu-mrs/mrs_uav_system/issues/150)
 * March 8, 2022: [mrs_lib::Transformer interface updated](https://github.com/ctu-mrs/mrs_uav_system/issues/136)
 * December 09, 2021: [not building with --march=native anymore](https://github.com/ctu-mrs/mrs_uav_system/issues/126)
@@ -159,7 +159,7 @@ sudo apt install ros-noetic-mrs-uav-system-full
 
 3. Follow these instructions ([starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html), **TODO update**) for starting the example simulation sessions.
 
-4. Follow these instruction (**TOOD**) for creating your own catkin workspace and building your packages with the MRS UAV system.
+4. Follow these instructions (**TOOD**) for creating your own catkin workspace and building your packages with the MRS UAV system.
 
 ### Singularity and Docker
 
@@ -172,14 +172,14 @@ The following link points to our Docker HUB repository.
 
 * [Docker Images](https://hub.docker.com/u/ctumrs)
 
-#### "I want the Linux environment people from MRS works with"
+#### "I want the Linux environment people from MRS work with"
 
-Great! In that case you want to install Tomas's Linux-setup.
+Great! In that case, you want to install Tomas's Linux-setup.
 **Beware!** This might alter your existing configuration of some Linux tools (Vim, Tmux, i3wm, ranger, ...).
 Refer to its [README](https://github.com/klaxalk/linux-setup), for more information.
 Installation is *not* obligatory and the MRS UAV system will work without it.
 
-Paste following code into your terminal and press **enter**
+Paste the following code into your terminal and press **enter**
 ```bash
 cd /tmp
 echo "mkdir -p ~/git
