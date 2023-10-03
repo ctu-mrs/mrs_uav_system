@@ -60,6 +60,10 @@ The platform is
 
 ## [Documentation](https://ctu-mrs.github.io/)
 
+*Note:* The MRS UAV system v1.5 is still a WIP and the system as well as the documentation is in the process of being polished.
+You can find the most complete, although still rough documentation [here](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing).
+Any feedback is welcome (you can use the issues in this repo or comment on the Google Doc)! or comment on the Google Doc)!
+
 The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
 However, the website only scratches the surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
