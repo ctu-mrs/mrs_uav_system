@@ -42,7 +42,7 @@ Thus our platform is built to allow safe real-world experimental validation of a
 **TODO**
 
 * MRS Simulator
-* Gazebo Simulator
+* Gazebo Simulator - see the [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing). TL;DR: install the `ros-noetic-mrs-uav-gazebo-simulation` package, then find an example tmux session in `roscd mrs_uav_gazebo_simulation/tmux`.
 * Coppelia Simulator
 
 ## System properties
@@ -161,7 +161,7 @@ Then, install the MRS UAV System:
 sudo apt install ros-noetic-mrs-uav-system-full
 ```
 
-3. Follow these instructions ([starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html), **TODO update**) for starting the example simulation sessions.
+3. Follow these instructions ([starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html), **TODO update - see the [Google Doc](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing) for now**) for starting the example simulation sessions.
 
 4. Follow these instructions (**TOOD**) for creating your own catkin workspace and building your packages with the MRS UAV system.
 
