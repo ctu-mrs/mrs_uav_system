@@ -10,9 +10,38 @@ Thus our platform is built to allow safe real-world experimental validation of a
 
 ## TL;DR what has changed from the old system
 
-**Note:** The MRS UAV system v1.5 is still a Work-In-Progress and the documentation is undergoing maintanance.
+**Note:** The MRS UAV system v1.5 is still a Work-In-Progress and the documentation is undergoing maintanance ([Issue#169](https://github.com/ctu-mrs/mrs_uav_system/issues/169)).
 You can find the changes and new instructions in here [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing).
 Any feedback is welcome (you can use the issues in this repo or comment on the Google Doc)!
+
+## System properties
+
+The system is
+
+* built on the [Robot Operating System](https://www.ros.org/) Noetic,
+* meant to be executed entirely onboard on a companion computer,
+* can control underactuated multirotor helicopters,
+* contains control, state estimation, mapping and planning pipelines.
+
+![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
+
+## [Documentation](https://ctu-mrs.github.io/)
+
+The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
+However, the website only scratches the surface of what it should contain (and we know it).
+Our system is a research-oriented platform, and it evolves rapidly.
+Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
+Maintaining up-to-date documentation for such an audience is hard work since we mostly spend our time developing the system while using it for our research.
+So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files, and be able to read the code, which we strive to keep readable.
+
+[![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.jpg)](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.pdf)
+
+The control and estimation system are described in the article [doi.org/10.1007/s10846-021-01383-5](https://doi.org/10.1007/s10846-021-01383-5), [pdf](https://link.springer.com/content/pdf/10.1007/s10846-021-01383-5.pdf):
+```
+Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M.,
+"The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
+Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26 (2021).
+```
 
 ## Installation
 
@@ -24,7 +53,9 @@ curl https://ctu-mrs.github.io/ppa-unstable/add_ros_ppa.sh | bash
 sudo apt install ros-noetic-desktop-full
 ```
 
-2. Select which version of the MRS UAV System you want to install.
+2. Configure your ROS environment [http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment]([http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment])
+
+3. Select which version of the MRS UAV System you want to install.
 
 For **[stable](https://github.com/ctu-mrs/ppa-stable)** version, add the following PPA:
 ```bash
@@ -35,14 +66,16 @@ For   **[unstable](https://github.com/ctu-mrs/ppa-unstable)** (nightly-build) of
 curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
 ```
 
-Then, install the MRS UAV System:
+4. Then, install the MRS UAV System:
 ```bash
 sudo apt install ros-noetic-mrs-uav-system-full
 ```
 
-3. Follow these instructions ([starting the simulation](https://ctu-mrs.github.io/docs/simulation/howto.html), **TODO update - see the [Google Doc](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing) for now**) for starting the example simulation sessions.
-
-4. Follow these instructions (**TOOD**) for creating your own catkin workspace and building your packages with the MRS UAV system.
+5. Start the example Gazebo simulation session:
+```bash
+roscd mrs_uav_gazebo_simulation/tmux/one_drone
+./start.sh
+```
 
 ### Singularity
 
@@ -98,35 +131,6 @@ Please, follow this link to learn how to run our system using Singularity.
 |-------------------|-----------------------------------------------------------------------------------|
 | Controller plugin | [example_controller_plugin](https://github.com/ctu-mrs/example_controller_plugin) |
 | Tracker plugin    | [example_controller_plugin](https://github.com/ctu-mrs/example_tracker_plugin)    |
-
-## System properties
-
-The system is
-
-* built on the [Robot Operating System](https://www.ros.org/) Noetic,
-* meant to be executed entirely onboard on a companion computer,
-* can control underactuated multirotor helicopters,
-* contains control, state estimation, mapping and planning pipelines.
-
-![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
-
-## [Documentation](https://ctu-mrs.github.io/)
-
-The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
-However, the website only scratches the surface of what it should contain (and we know it).
-Our system is a research-oriented platform, and it evolves rapidly.
-Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
-Maintaining up-to-date documentation for such an audience is hard work since we mostly spend our time developing the system while using it for our research.
-So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files, and be able to read the code, which we strive to keep readable.
-
-[![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.jpg)](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.pdf)
-
-The control and estimation system are described in the article [doi.org/10.1007/s10846-021-01383-5](https://doi.org/10.1007/s10846-021-01383-5), [pdf](https://link.springer.com/content/pdf/10.1007/s10846-021-01383-5.pdf):
-```
-Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M.,
-"The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
-Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26 (2021).
-```
 
 ## Unmanned Aerial Vehicles
 
