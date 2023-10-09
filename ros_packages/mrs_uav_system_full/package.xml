@@ -14,12 +14,15 @@
 
   <exec_depend>mrs_uav_core</exec_depend>
   <exec_depend>mrs_uav_gazebo_simulation</exec_depend>
+  <exec_depend>mrs_uav_coppelia_simulation</exec_depend>
   <exec_depend>mrs_uav_deployment</exec_depend>
   <exec_depend>mrs_uav_modules</exec_depend>
   <exec_depend>mrs_octomap_mapping_planning</exec_depend>
 
   <exec_depend>mrs_uav_px4_api</exec_depend>
   <exec_depend>mrs_uav_dji_tello_api</exec_depend>
+
+  <exec_depend>python-is-python3</exec_depend>
 
   <export>
     <metapackage/>
