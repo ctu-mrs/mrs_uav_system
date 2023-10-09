@@ -57,16 +57,16 @@ sudo apt install ros-noetic-desktop-full
 
 3. Select which version of the MRS UAV System you want to install.
 
-For **[stable](https://github.com/ctu-mrs/ppa-stable)** version, add the following PPA:
+For **[stable](https://github.com/ctu-mrs/ppa-stable)** version, add the stable PPA:
 ```bash
 curl https://ctu-mrs.github.io/ppa-stable/add_ppa.sh | bash
 ```
-For   **[unstable](https://github.com/ctu-mrs/ppa-unstable)** (nightly-build) of the system, add the following PPA:
+For **[unstable](https://github.com/ctu-mrs/ppa-unstable)** (nightly-build) of the system, add the unstable PPA:
 ```bash
 curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
 ```
 
-4. Then, install the MRS UAV System:
+4. Install the MRS UAV System:
 ```bash
 sudo apt install ros-noetic-mrs-uav-system-full
 ```
@@ -108,11 +108,11 @@ Please, follow this link to learn how to run our system using Singularity.
 | MRS UAV System - Full | Most of the bellow          | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system-full` |
 | MRS UAV System        | Only UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system`      |
 
-| Metapackages             | Repository                                                                          | Package                                               |
-|--------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------|
-| UAV Core                 | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                             | `apt install ros-noetic-mrs-uav-core`                 |
-| UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                       | `apt install ros-noetic-mrs-uav-modules`              |
-| Octomap Mapping+Planning | [octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `apt install ros-noetic-mrs-octomap-mapping-planning` |
+| Metapackages             | Repository                                                                              | Package                                               |
+|--------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------|
+| UAV Core                 | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                                 | `apt install ros-noetic-mrs-uav-core`                 |
+| UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `apt install ros-noetic-mrs-uav-modules`              |
+| Octomap Mapping+Planning | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `apt install ros-noetic-mrs-octomap-mapping-planning` |
 
 | Simulators          | Repository                                                                            | Package                                              |
 |---------------------|---------------------------------------------------------------------------------------|------------------------------------------------------|
@@ -155,7 +155,7 @@ However, when we change something that requires user action to maintain compatib
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
 
-* August, 2023: **TODO** **Rehaul of the entire MRS UAV System**
+* now: **WIP** **MRS UAV System 1.5**
 * January 17, 2023: [Updates for px4 firmware v1.13.2](https://github.com/ctu-mrs/mrs_uav_system/issues/150)
 * March 8, 2022: [mrs_lib::Transformer interface updated](https://github.com/ctu-mrs/mrs_uav_system/issues/136)
 * December 09, 2021: [not building with --march=native anymore](https://github.com/ctu-mrs/mrs_uav_system/issues/126)
