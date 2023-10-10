@@ -142,14 +142,14 @@ Please, follow this link to learn how to run our system using Singularity.
 The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS.
 The UAV platforms can be purchased from our partner company [Fly4Future](https://dronebuilder.fly4future.com/#/).
 
-| Model        | Simulation                    | Real UAV                      |
-|--------------|-------------------------------|-------------------------------|
-| DJI f330     | ![](.fig/f330_simulation.jpg) | ![](.fig/f330_real.jpg)       |
-| DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg)       |
-| Holybro x500 | ![](.fig/x500_simulation.jpg) | ![](.fig/x500_real.jpg)       |
-| DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg)       |
-| Tarot t650   | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg)       |
-| NAKI II      | ![](.fig/naki_simulation.jpg) | ![](.fig/naki_real.jpg)       |
+| Model        | Simulation                    | Real UAV                |
+|--------------|-------------------------------|-------------------------|
+| DJI f330     | ![](.fig/f330_simulation.jpg) | ![](.fig/f330_real.jpg) |
+| DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
+| Holybro x500 | ![](.fig/x500_simulation.jpg) | ![](.fig/x500_real.jpg) |
+| DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
+| Tarot t650   | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
+| NAKI II      | ![](.fig/naki_simulation.jpg) | ![](.fig/naki_real.jpg) |
 
 ## Backwards Compatibility and updates
 
@@ -160,7 +160,7 @@ However, when we change something that requires user action to maintain compatib
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
 
-* now: **WIP** **MRS UAV System 1.5**
+* now: **Work-in-Progress** **MRS UAV System 1.5:** [many changes](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing)
 * January 17, 2023: [Updates for px4 firmware v1.13.2](https://github.com/ctu-mrs/mrs_uav_system/issues/150)
 * March 8, 2022: [mrs_lib::Transformer interface updated](https://github.com/ctu-mrs/mrs_uav_system/issues/136)
 * December 09, 2021: [not building with --march=native anymore](https://github.com/ctu-mrs/mrs_uav_system/issues/126)
