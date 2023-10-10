@@ -3,7 +3,7 @@ name: ros_package_build
 on:
 
   push:
-    branches: [ 1.5 ]
+    branches: [ master ]
 
     paths-ignore:
       - '**/README.md'
