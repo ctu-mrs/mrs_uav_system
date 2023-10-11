@@ -8,7 +8,7 @@ We specialize on multi-rotor helicopters, and for them specifically, we develop 
 We think that real-world and replicable experiments should support excellent research and science in robotics.
 Thus our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
 
-> :warning: **Attention please: This README is outdated.**
+> :warning: **Attention please: This README needs work.**
 >
 > The MRS UAV System 1.5 is being released and this page needs updating. Please, keep in mind that the information on this page might not be valid.
 > Check this [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing) for the latest news and changes.
