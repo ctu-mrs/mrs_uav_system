@@ -86,7 +86,7 @@ roscd mrs_uav_gazebo_simulation/tmux/one_drone
 
 Please, follow this link to learn how to run our system using Singularity.
 
-* [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity/tree/1.5)
+* [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
 
 ## Build status
 
