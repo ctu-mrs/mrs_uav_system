@@ -135,7 +135,7 @@ Please, follow this link to learn how to run our system using Singularity.
 | Example           | Repository                                                                        |
 |-------------------|-----------------------------------------------------------------------------------|
 | Controller plugin | [example_controller_plugin](https://github.com/ctu-mrs/example_controller_plugin) |
-| Tracker plugin    | [example_controller_plugin](https://github.com/ctu-mrs/example_tracker_plugin)    |
+| Tracker plugin    | [example_tracker_plugin](https://github.com/ctu-mrs/example_tracker_plugin)       |
 
 ## Unmanned Aerial Vehicles
 
