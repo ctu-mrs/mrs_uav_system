@@ -4,16 +4,16 @@
 ![thumbnail](.fig/drone_collage.jpg)
 
 The [Multi-robot Systems Group](http://mrs.felk.cvut.cz) is a robotics lab at the [Czech Technical University in Prague](https://www.cvut.cz/).
-We specialize on multi-rotor helicopters, and for them specifically, we develop this control, estimation, and simulation system.
-We think that real-world and replicable experiments should support excellent research and science in robotics.
-Thus our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
+We specialize in multi-rotor helicopters, and for them specifically, we develop this control, estimation, and simulation system.
+We think real-world and replicable experiments should support excellent research and science in robotics.
+Thus, our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
 
 > :warning: **Attention please: This README needs work.**
 >
-> The MRS UAV System 1.5 is being released and this page needs updating. Please, keep in mind that the information on this page might not be valid.
+> The MRS UAV System 1.5 is being released, and this page needs updating. Please remember that the information on this page might not be valid.
 > Check this [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing) for the latest news and changes.
 
-## TL;DR what has changed from the old system
+## TL;DR What has changed from the old system
 
 **Note:** The MRS UAV system v1.5 is still a Work-In-Progress and the documentation is undergoing maintanance ([Issue#169](https://github.com/ctu-mrs/mrs_uav_system/issues/169)).
 You can find the changes and new instructions in here [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing).
@@ -26,18 +26,18 @@ The system is
 * built on the [Robot Operating System](https://www.ros.org/) Noetic,
 * meant to be executed entirely onboard on a companion computer,
 * can control underactuated multirotor helicopters,
-* contains control, state estimation, mapping and planning pipelines.
+* contains control, state estimation, mapping, and planning pipelines.
 
 ![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
 
 ## [Documentation](https://ctu-mrs.github.io/)
 
-The primary source of documentation is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
+The primary documentation source is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
 However, the website only scratches the surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
-Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS at all).
-Maintaining up-to-date documentation for such an audience is hard work since we mostly spend our time developing the system while using it for our research.
-So instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files, and be able to read the code, which we strive to keep readable.
+Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS).
+Maintaining up-to-date documentation for such an audience is hard work since we mostly develop the system while using it for our research.
+So, instead, we aim at educating our students to look around the packages (each contains its own README), explore the launch files, and be able to read the code, which we strive to keep readable.
 
 [![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.jpg)](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.pdf)
 
@@ -58,7 +58,7 @@ curl https://ctu-mrs.github.io/ppa-unstable/add_ros_ppa.sh | bash
 sudo apt install ros-noetic-desktop-full
 ```
 
-2. Configure your ROS environment [http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment]([http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment])
+2. Configure your ROS environment according to [http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
 
 3. Select which version of the MRS UAV System you want to install.
 
@@ -84,7 +84,7 @@ roscd mrs_uav_gazebo_simulation/tmux/one_drone
 
 ### Singularity
 
-Please, follow this link to learn how to run our system using Singularity.
+Please follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
 
@@ -139,7 +139,7 @@ Please, follow this link to learn how to run our system using Singularity.
 
 ## Unmanned Aerial Vehicles
 
-The MRS UAV system is currently pre-configured for the following UAV platforms, operated by the MRS.
+The MRS UAV system is pre-configured for the following UAV platforms operated by the MRS.
 The UAV platforms can be purchased from our partner company [Fly4Future](https://dronebuilder.fly4future.com/#/).
 
 | Model        | Simulation                    | Real UAV                |
@@ -155,7 +155,7 @@ The UAV platforms can be purchased from our partner company [Fly4Future](https:/
 
 We do not guarantee backward compatibility at any time.
 The platform is evolving according to the needs of the MRS group.
-Updates can be made that are not going to be compatible with users' local configs, simulation worlds, tmux sessions, etc.
+Updates can be made that will not be compatible with users' local configs, simulation worlds, tmux sessions, etc.
 However, when we change something that requires user action to maintain compatibility, we will create an issue in this repository labeled **users-read-me**.
 Subscribe to this repository updates and issues by clicking the **Watch** button in the top-right corner of this page.
 Recent changes requiring user action:
