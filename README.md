@@ -108,10 +108,10 @@ Please follow this link to learn how to run our system using Singularity.
 
 ## System components
 
-| Main metapackages     | Contents                    | Repository                                                  | Package                                      |
-|-----------------------|-----------------------------|-------------------------------------------------------------|----------------------------------------------|
-| MRS UAV System - Full | Most of the bellow          | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system-full` |
-| MRS UAV System        | Only UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system`      |
+| Main metapackages     | Contents               | Repository                                                  | Package                                      |
+|-----------------------|------------------------|-------------------------------------------------------------|----------------------------------------------|
+| MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system`      |
+| MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system-full` |
 
 | Metapackages             | Repository                                                                              | Package                                               |
 |--------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------|
