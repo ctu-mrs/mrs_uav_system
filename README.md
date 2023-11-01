@@ -114,27 +114,30 @@ Please follow this link to learn how to run our system using Singularity.
 
 ## System components
 
-| Main metapackages     | Contents               | Repository                                                  | Package                                      |
-|-----------------------|------------------------|-------------------------------------------------------------|----------------------------------------------|
-| MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system`      |
-| MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `apt install ros-noetic-mrs-uav-system-full` |
+| Main metapackages     | Contents               | Repository                                                  | Package                          |
+|-----------------------|------------------------|-------------------------------------------------------------|----------------------------------|
+| MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `ros-noetic-mrs-uav-system`      |
+| MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `ros-noetic-mrs-uav-system-full` |
 
-| Metapackages             | Repository                                                                              | Package                                               |
-|--------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------|
-| UAV Core                 | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                                 | `apt install ros-noetic-mrs-uav-core`                 |
-| UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `apt install ros-noetic-mrs-uav-modules`              |
-| Octomap Mapping+Planning | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `apt install ros-noetic-mrs-octomap-mapping-planning` |
+| Metapackages             | Repository                                                                              | Package                                   |
+|--------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------|
+| UAV Core                 | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                                 | `ros-noetic-mrs-uav-core`                 |
+| UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `ros-noetic-mrs-uav-modules`              |
+| Octomap Mapping+Planning | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `ros-noetic-mrs-octomap-mapping-planning` |
+| ALOAM Core               | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_aloam_core)                             | `ros-noetic-mrs-aloam-core`               |
+| Hector Core              | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_hector_core)                            | `ros-noetic-mrs-hector-core`              |
+| OpenVINS Core            | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_open_vins_core)                         | `ros-noetic-mrs-open-vins-core`           |
 
-| Simulators          | Repository                                                                            | Package                                              |
-|---------------------|---------------------------------------------------------------------------------------|------------------------------------------------------|
-| Gazebo Simulation   | [mrs_uav_gazebo_simulation](https://github.com/ctu-mrs/mrs_uav_gazebo_simulation)     | `apt install ros-noetic-mrs-uav-gazebo-simulation`   |
-| MRS Simulation      | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)       | `apt install ros-noetic-mrs-multirotor-simulator`    |
-| Coppelia Simulation | [mrs_uav_coppelia_simulation](https://github.com/ctu-mrs/mrs_uav_coppelia_simulation) | `apt install ros-noetic-mrs-uav-coppelia-simulation` |
+| Simulators          | Repository                                                                            | Package                                  |
+|---------------------|---------------------------------------------------------------------------------------|------------------------------------------|
+| Gazebo Simulation   | [mrs_uav_gazebo_simulation](https://github.com/ctu-mrs/mrs_uav_gazebo_simulation)     | `ros-noetic-mrs-uav-gazebo-simulation`   |
+| MRS Simulation      | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)       | `ros-noetic-mrs-multirotor-simulator`    |
+| Coppelia Simulation | [mrs_uav_coppelia_simulation](https://github.com/ctu-mrs/mrs_uav_coppelia_simulation) | `ros-noetic-mrs-uav-coppelia-simulation` |
 
-| Hardware API plugins | Repository                                                                | Package                                        |
-|----------------------|---------------------------------------------------------------------------|------------------------------------------------|
-| PX4 API              | [mrs_uav_px4_api](https://github.com/ctu-mrs/mrs_uav_px4_api)             | `apt install ros-noetic-mrs-uav-px4-api`       |
-| DJI Tello API        | [mrs_uav_dji_tello_api](https://github.com/ctu-mrs/mrs_uav_dji_tello_api) | `apt install ros-noetic-mrs-uav-dji-tello-api` |
+| Hardware API plugins | Repository                                                                | Package                            |
+|----------------------|---------------------------------------------------------------------------|------------------------------------|
+| PX4 API              | [mrs_uav_px4_api](https://github.com/ctu-mrs/mrs_uav_px4_api)             | `ros-noetic-mrs-uav-px4-api`       |
+| DJI Tello API        | [mrs_uav_dji_tello_api](https://github.com/ctu-mrs/mrs_uav_dji_tello_api) | `ros-noetic-mrs-uav-dji-tello-api` |
 
 ## Example packages
 
@@ -174,3 +177,16 @@ Recent changes requiring user action:
 * December 15, 2020: [Rework of simulation UAV spawning mechanism, Noetic update](https://github.com/ctu-mrs/mrs_uav_system/issues/32)
 * November 12, 2020: [GPS coordinates within Gazebo world need changing](https://github.com/ctu-mrs/mrs_uav_system/issues/22)
 * November 12, 2020: [Rangefinder fusion needs enabling in simulation sessions](https://github.com/ctu-mrs/mrs_uav_system/issues/21)
+
+# Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
