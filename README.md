@@ -88,7 +88,7 @@ Please follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
 
-## Build status
+## Build status ([Buildfarm](https://github.com/ctu-mrs/buildfarm))
 
 ### PPAs
 
