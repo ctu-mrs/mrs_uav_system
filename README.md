@@ -125,13 +125,8 @@ Please follow this link to learn how to run our system using Singularity.
 | UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `ros-noetic-mrs-uav-modules`              |
 | Octomap Mapping+Planning | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `ros-noetic-mrs-octomap-mapping-planning` |
 | ALOAM Core               | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_aloam_core)                             | `ros-noetic-mrs-aloam-core`               |
-| Hector Core              | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_hector_core)                            | `ros-noetic-mrs-hector-core`              |
-| OpenVINS Core            | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_open_vins_core)                         | `ros-noetic-mrs-open-vins-core`           |
-
-| Examples          | Repository                                                          | Build status                                                                                                                                                                                         |
-|-------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRS Core examples | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples)   | [![ros_build_test](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml)  |
-| Vision example    | [example_ros_vision](https://github.com/ctu-mrs/example_ros_vision) | [![ros_build_test](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml) |
+| Hector Core              | [mrs_hector_core](https://github.com/ctu-mrs/mrs_hector_core)                           | `ros-noetic-mrs-hector-core`              |
+| OpenVINS Core            | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core)                     | `ros-noetic-mrs-open-vins-core`           |
 
 | Simulators          | Repository                                                                            | Package                                  |
 |---------------------|---------------------------------------------------------------------------------------|------------------------------------------|
@@ -146,10 +141,10 @@ Please follow this link to learn how to run our system using Singularity.
 
 ## Example packages
 
-| Example           | Repository                                                                        |
-|-------------------|-----------------------------------------------------------------------------------|
-| Controller plugin | [example_controller_plugin](https://github.com/ctu-mrs/example_controller_plugin) |
-| Tracker plugin    | [example_tracker_plugin](https://github.com/ctu-mrs/example_tracker_plugin)       |
+| Examples          | Repository                                                          | Build status                                                                                                                                                                                          |
+|-------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS Core examples | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples)   | [![ros_build_test](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml)   |
+| Vision example    | [example_ros_vision](https://github.com/ctu-mrs/example_ros_vision) | [![ros_build_test](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml) |
 
 ## Unmanned Aerial Vehicles
 
