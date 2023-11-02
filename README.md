@@ -128,9 +128,10 @@ Please follow this link to learn how to run our system using Singularity.
 | Hector Core              | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_hector_core)                            | `ros-noetic-mrs-hector-core`              |
 | OpenVINS Core            | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_open_vins_core)                         | `ros-noetic-mrs-open-vins-core`           |
 
-| Examples          | Repository                                                        | Build status                                                                                                                                                                                        |
-|-------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRS Core examples | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples) | [![ros_build_test](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml) |
+| Examples          | Repository                                                          | Build status                                                                                                                                                                                         |
+|-------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS Core examples | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples)   | [![ros_build_test](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml)  |
+| Vision example    | [example_ros_vision](https://github.com/ctu-mrs/example_ros_vision) | [![ros_build_test](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml) |
 
 | Simulators          | Repository                                                                            | Package                                  |
 |---------------------|---------------------------------------------------------------------------------------|------------------------------------------|
