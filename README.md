@@ -82,35 +82,11 @@ roscd mrs_uav_gazebo_simulation/tmux/one_drone
 ./start.sh
 ```
 
-### Singularity
+### Singularity Containers
 
 Please follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
-
-## Build status ([Buildfarm](https://github.com/ctu-mrs/buildfarm))
-
-### PPAs
-
-| [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                         | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                           |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [![stable-ppa-build](https://github.com/ctu-mrs/ppa-stable/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa-stable/actions/workflows/deploy.yml) | [![unstable-ppa-build](https://github.com/ctu-mrs/ppa-unstable/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa-unstable/actions/workflows/deploy.yml) |
-
-### x86-64/AMD64
-
-|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRS ROS Packages        | [![stable-mrs-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_amd64.yml)                      | [![unstable-mrs-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_amd64.yml)                      |
-| Thirdparty ROS packages | [![stable-thirdparty-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_amd64.yml) | [![unstable-thirdparty-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_amd64.yml) |
-| Non-ROS packages        | [![stable-nonbloom-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_amd64.yml)       | [![unstable-nonbloom-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_amd64.yml)       |
-
-### AARCH64/ARM64
-
-|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRS ROS Packages        | [![stable-mrs-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_arm64.yml)                      | [![unstable-mrs-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_arm64.yml)                      |
-| Thirdparty ROS packages | [![stable-thirdparty-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_arm64.yml) | [![unstable-thirdparty-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_arm64.yml) |
-| Non-ROS packages        | [![stable-nonbloom-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_arm64.yml)       | [![unstable-nonbloom-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_arm64.yml)       |
 
 ## System components
 
@@ -145,6 +121,30 @@ Please follow this link to learn how to run our system using Singularity.
 |-------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MRS Core examples | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples)   | [![ros_build_test](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml)   |
 | Vision example    | [example_ros_vision](https://github.com/ctu-mrs/example_ros_vision) | [![ros_build_test](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/example_ros_vision/actions/workflows/ros_build_test.yml) |
+
+## Build status ([Buildfarm](https://github.com/ctu-mrs/buildfarm))
+
+### PPAs
+
+| [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                         | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![stable-ppa-build](https://github.com/ctu-mrs/ppa-stable/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa-stable/actions/workflows/deploy.yml) | [![unstable-ppa-build](https://github.com/ctu-mrs/ppa-unstable/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa-unstable/actions/workflows/deploy.yml) |
+
+### x86-64/AMD64
+
+|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS ROS Packages        | [![stable-mrs-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_amd64.yml)                      | [![unstable-mrs-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_amd64.yml)                      |
+| Thirdparty ROS packages | [![stable-thirdparty-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_amd64.yml) | [![unstable-thirdparty-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_amd64.yml) |
+| Non-ROS packages        | [![stable-nonbloom-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_amd64.yml)       | [![unstable-nonbloom-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_amd64.yml)       |
+
+### AARCH64/ARM64
+
+|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS ROS Packages        | [![stable-mrs-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_mrs_arm64.yml)                      | [![unstable-mrs-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_mrs_arm64.yml)                      |
+| Thirdparty ROS packages | [![stable-thirdparty-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_thirdparty_arm64.yml) | [![unstable-thirdparty-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_arm64.yml) |
+| Non-ROS packages        | [![stable-nonbloom-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/stable_nonbloom_arm64.yml)       | [![unstable-nonbloom-arm64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_arm64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_nonbloom_arm64.yml)       |
 
 ## Unmanned Aerial Vehicles
 
