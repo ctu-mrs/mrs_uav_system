@@ -151,14 +151,15 @@ Please follow this link to learn how to run our system using Singularity.
 The MRS UAV system is pre-configured for the following UAV platforms operated by the MRS.
 The UAV platforms can be purchased from our partner company [Fly4Future](https://dronebuilder.fly4future.com/#/).
 
-| Model        | Simulation                    | Real UAV                |
-|--------------|-------------------------------|-------------------------|
-| DJI f330     | ![](.fig/f330_simulation.jpg) | ![](.fig/f330_real.jpg) |
-| DJI f450     | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
-| Holybro x500 | ![](.fig/x500_simulation.jpg) | ![](.fig/x500_real.jpg) |
-| DJI f550     | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
-| Tarot t650   | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
-| NAKI II      | ![](.fig/naki_simulation.jpg) | ![](.fig/naki_real.jpg) |
+| Model         | Simulation                    | Real UAV                |
+|---------------|-------------------------------|-------------------------|
+| DJI f330      | ![](.fig/f330_simulation.jpg) | ![](.fig/f330_real.jpg) |
+| DJI f450      | ![](.fig/f450_simulation.jpg) | ![](.fig/f450_real.jpg) |
+| Holybro x500  | ![](.fig/x500_simulation.jpg) | ![](.fig/x500_real.jpg) |
+| DJI f550      | ![](.fig/f550_simulation.jpg) | ![](.fig/f550_real.jpg) |
+| Tarot t650    | ![](.fig/t650_simulation.jpg) | ![](.fig/t650_real.jpg) |
+| T-Drones m690 | ![](.fig/m690_simulation.jpg) | ![](.fig/m690_real.jpg) |
+| NAKI II       | ![](.fig/naki_simulation.jpg) | ![](.fig/naki_real.jpg) |
 
 ## Backwards Compatibility and updates
 
