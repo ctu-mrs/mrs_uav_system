@@ -14,6 +14,7 @@
 
   <exec_depend>mrs_uav_core</exec_depend>
   <exec_depend>mrs_uav_modules</exec_depend>
+
   <exec_depend>python-is-python3</exec_depend>
 
   <export>
