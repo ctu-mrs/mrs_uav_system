@@ -132,9 +132,9 @@ Please follow this link to learn how to run our system using Singularity.
 
 ### Testing
 
-| Tests                                                                                                                                                                                                         | Test coverage                                                                                              |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [![testing-mrs-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/testing_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/testing_mrs_amd64.yml)                  | [![testing-ppa-build](https://ctu-mrs.github.io/buildfarm/badge.svg)](https://ctu-mrs.github.io/buildfarm) |
+| Release candidate                                                                                                                                                                            | Unstable                                                                                                                                                                                  | Test coverage                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| [![testing-mrs-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/testing_mrs_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/testing_mrs_amd64.yml) | [![rostest_unstable](https://github.com/ctu-mrs/buildfarm/actions/workflows/rostest_unstable.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/rostest_unstable.yml) | [![testing-ppa-build](https://ctu-mrs.github.io/buildfarm/badge.svg)](https://ctu-mrs.github.io/buildfarm) |
 
 ### x86-64/AMD64
 
