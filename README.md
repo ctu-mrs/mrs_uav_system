@@ -88,6 +88,56 @@ Please follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
 
+### Start developing your own package
+
+This tutorial assumes you've installed the MRS UAV System using the commands above.
+
+1. Setup a catkin workspace:
+```
+source /opt/ros/noetic/setup.bash             # source the general ROS workspace so that the local one will extend it and see all the packages
+mkdir -p ~/workspace/src && cd ~/workspace    # create the workspace folder in home and cd to it
+catkin init -w ~/workspace                    # initialize the new workspace
+# setup basic compilation profiles
+catkin config --profile debug --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17 -Og' -DCMAKE_C_FLAGS='-Og'
+catkin config --profile release --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17'
+catkin config --profile reldeb --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS='-std=c++17'
+catkin profile set reldeb                     # set the reldeb profile as active
+```
+
+2. You can repurpose one of our examples as a starting point (optional):
+```
+# it is good practice to not clone ROS packages directly into a workspace, so let's use a separate directory for this
+git clone git@github.com:ctu-mrs/mrs_core_examples.git ~/git/mrs_core_examples                    # clone this repository (recommended, requires private key on Github)
+# git clone https://github.com/ctu-mrs/mrs_core_examples.git ~/git/mrs_core_examples              # if you do not have a private key set up on Github, you can use https instead of ssh
+export NEW_PACKAGE=replaceme                                                                      # fill the NEW_NAME variable with your desired name of the new package (no spaces)
+cp -r ~/git/mrs_core_examples/cpp/waypoint_flier ~/git/$NEW_PACKAGE                               # copy an example package (e.g. the waypoint_flier)
+cp ~/git/mrs_core_examples/repurpose_package.sh ~/git/$NEW_PACKAGE                                # copy the repurpose_package.sh script to the new package
+cd ~/git/$NEW_PACKAGE && ./repurpose_package.sh example_waypoint_flier $NEW_PACKAGE --camel-case  # use the script to replace all occurences of the old name
+```
+
+3. Link your package to the workspace and build it (the code below assumes you set the `NEW_PACKAGE` variable):
+```
+ln -s ~/git/$NEW_PACKAGE ~/workspace/src         # create a symbolic link of the package to the workspace
+cd ~/workspace/src && catkin build $NEW_PACKAGE  # build the package within the workspace
+```
+
+4. Now, you can use the new package:
+```
+source ~/workspace/devel/setup.bash     # source the workspace to see the packages within (if you don't use bash, source the appropriate script instead)
+roscd $NEW_PACKAGE                      # now ROS knows about your new package and you can roscd to it
+```
+
+**Note:** It is recommended to add the `source ~/workspace/devel/setup.bash` command to your `~/.bashrc` to be executed automatically with every new workspace.
+
+5. Create a remote for your new package (depends on your git server) and push to it:
+```
+cd ~/workspace/src/$NEW_PACKAGE && git add . && git commit -m "initial commit"  # create the first commit in the new repository
+git remote add origin <your-new-remote>                                         # replace <your-new-remote>
+git push --set-upstream origin master                                           # push your initial commit
+```
+
+**Note:** Do not forget to `git commit` `git push` regularly during development!
+
 ## System components
 
 | Main metapackages     | Contents               | Repository                                                  | Package                          |
