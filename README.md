@@ -174,6 +174,9 @@ git push --set-upstream origin master                                           
 
 ## Build status ([Buildfarm](https://github.com/ctu-mrs/buildfarm))
 
+We utilize acceptance tests to determine the releasaiblity of the system and to release the system automatically.
+The **stable** version of our system should be installable and working allways regardless of the state of the tests and _red flags_ below.
+
 ### PPAs
 
 | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                         | Testing                                                                                                                                                                       | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                           |
