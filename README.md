@@ -151,6 +151,7 @@ git push --set-upstream origin master                                           
 | UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `ros-noetic-mrs-uav-modules`              |
 | Octomap Mapping+Planning | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `ros-noetic-mrs-octomap-mapping-planning` |
 | ALOAM Core               | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_aloam_core)                             | `ros-noetic-mrs-aloam-core`               |
+| LIO-SAM Core             | [mrs_liosam_core](https://github.com/ctu-mrs/mrs_liosam_core)                           | `ros-noetic-mrs-liosam-core`              |
 | Hector Core              | [mrs_hector_core](https://github.com/ctu-mrs/mrs_hector_core)                           | `ros-noetic-mrs-hector-core`              |
 | OpenVINS Core            | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core)                     | `ros-noetic-mrs-open-vins-core`           |
 
