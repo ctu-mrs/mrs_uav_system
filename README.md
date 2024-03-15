@@ -160,6 +160,7 @@ git push --set-upstream origin master                                           
 | Gazebo Simulation   | [mrs_uav_gazebo_simulation](https://github.com/ctu-mrs/mrs_uav_gazebo_simulation)     | `ros-noetic-mrs-uav-gazebo-simulation`   |
 | MRS Simulation      | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)       | `ros-noetic-mrs-multirotor-simulator`    |
 | Coppelia Simulation | [mrs_uav_coppelia_simulation](https://github.com/ctu-mrs/mrs_uav_coppelia_simulation) | `ros-noetic-mrs-uav-coppelia-simulation` |
+| Unreal Simulation   | [mrs_uav_unreal_simulation](https://github.com/ctu-mrs/mrs_uav_unreal_simulation)     | `ros-noetic-mrs-uav-unreal-simulation`   |
 
 | Hardware API plugins | Repository                                                                | Package                            |
 |----------------------|---------------------------------------------------------------------------|------------------------------------|
