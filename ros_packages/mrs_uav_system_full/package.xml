@@ -19,11 +19,16 @@
 
   <exec_depend>mrs_uav_gazebo_simulation</exec_depend>
   <exec_depend>mrs_uav_coppelia_simulation</exec_depend>
+  <exec_depend>mrs_uav_unreal_simulation</exec_depend>
 
   <exec_depend>mrs_octomap_mapping_planning</exec_depend>
   <exec_depend>mrs_aloam_core</exec_depend>
+  <exec_depend>mrs_liosam_core</exec_depend>
   <exec_depend>mrs_hector_core</exec_depend>
   <exec_depend>mrs_open_vins_core</exec_depend>
+  <exec_depend>mrs_mins_core</exec_depend>
+  <exec_depend>mrs_precise_landing</exec_depend>
+  <exec_depend>mrs_precise_landing_gazebo</exec_depend>
 
   <exec_depend>mrs_uav_px4_api</exec_depend>
   <exec_depend>mrs_uav_dji_tello_api</exec_depend>
