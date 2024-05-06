@@ -145,15 +145,16 @@ git push --set-upstream origin master                                           
 | MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `ros-noetic-mrs-uav-system`      |
 | MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system) | `ros-noetic-mrs-uav-system-full` |
 
-| Metapackages             | Repository                                                                              | Package                                   |
-|--------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------|
-| UAV Core                 | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                                 | `ros-noetic-mrs-uav-core`                 |
-| UAV Modules              | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `ros-noetic-mrs-uav-modules`              |
-| Octomap Mapping+Planning | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `ros-noetic-mrs-octomap-mapping-planning` |
-| ALOAM Core               | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_aloam_core)                             | `ros-noetic-mrs-aloam-core`               |
-| LIO-SAM Core             | [mrs_liosam_core](https://github.com/ctu-mrs/mrs_liosam_core)                           | `ros-noetic-mrs-liosam-core`              |
-| Hector Core              | [mrs_hector_core](https://github.com/ctu-mrs/mrs_hector_core)                           | `ros-noetic-mrs-hector-core`              |
-| OpenVINS Core            | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core)                     | `ros-noetic-mrs-open-vins-core`           |
+| Optional Modules & metapackages | Repository                                                                              | Package                                   |
+|---------------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------|
+| UAV Core                        | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                                 | `ros-noetic-mrs-uav-core`                 |
+| UAV Modules                     | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules)                           | `ros-noetic-mrs-uav-modules`              |
+| Octomap Mapping+Planning        | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning) | `ros-noetic-mrs-octomap-mapping-planning` |
+| ALOAM Core                      | [mrs_aloam_core](https://github.com/ctu-mrs/mrs_aloam_core)                             | `ros-noetic-mrs-aloam-core`               |
+| LIO-SAM Core                    | [mrs_liosam_core](https://github.com/ctu-mrs/mrs_liosam_core)                           | `ros-noetic-mrs-liosam-core`              |
+| Hector Core                     | [mrs_hector_core](https://github.com/ctu-mrs/mrs_hector_core)                           | `ros-noetic-mrs-hector-core`              |
+| OpenVINS Core                   | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core)                     | `ros-noetic-mrs-open-vins-core`           |
+| Precise Landing                 | [mrs_precise_landing](https://github.com/ctu-mrs/mrs_precise_landing)                   | `ros-noetic-mrs-precise-landing`          |
 
 | Simulators          | Repository                                                                            | Package                                  |
 |---------------------|---------------------------------------------------------------------------------------|------------------------------------------|
