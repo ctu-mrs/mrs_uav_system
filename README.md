@@ -88,9 +88,15 @@ Please follow this link to learn how to run our system using Singularity.
 
 * [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
 
+### Docker Containers
+
+Please follow this link to learn how to run our system using Singularity.
+
+* [MRS Docker](https://github.com/ctu-mrs/mrs_docker)
+
 ### Start developing your own package
 
-This tutorial assumes you've installed the MRS UAV System using the commands above.
+This tutorial assumes you've installed the MRS UAV System natively or are running a singularity container.
 
 1. Setup a catkin workspace:
 ```
@@ -180,6 +186,13 @@ git push --set-upstream origin master                                           
 
 We utilize acceptance tests to determine the releasaiblity of the system and to release the system automatically.
 The **stable** version of our system should be installable and working allways regardless of the state of the tests and _red flags_ below.
+
+## Docker
+
+[![docker](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker.yml)
+
+The multiarch docker image contains the `ros-noetic-mrs-uav-system-full`.
+See the [MRS Docker](http://github.com/ctu-mrs/mrs_docker) repository for information on how to run the MRS UAV System using docker.
 
 ### PPAs
 
