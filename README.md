@@ -82,21 +82,21 @@ roscd mrs_uav_gazebo_simulation/tmux/one_drone
 ./start.sh
 ```
 
-### Singularity Containers
+### Apptainer Containers
 
-Please follow this link to learn how to run our system using Singularity.
+Please follow this link to learn how to run our system using Apptainer.
 
-* [MRS Singularity](https://github.com/ctu-mrs/mrs_singularity)
+* [MRS Apptainer](https://github.com/ctu-mrs/mrs_apptainer)
 
 ### Docker Containers
 
-Please follow this link to learn how to run our system using Singularity.
+Please follow this link to learn how to run our system using Apptainer.
 
 * [MRS Docker](https://github.com/ctu-mrs/mrs_docker)
 
 ### Start developing your own package
 
-This tutorial assumes you've installed the MRS UAV System natively or are running a singularity container.
+This tutorial assumes you've installed the MRS UAV System natively or are running a Apptainer container.
 
 1. Setup a catkin workspace:
 ```
