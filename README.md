@@ -65,7 +65,7 @@ sudo apt install ros-noetic-desktop-full
 curl https://ctu-mrs.github.io/ppa-stable/add_ppa.sh | bash
 ```
   * <details>
-    <summary>>>> Special instructions for developers <<<</summary>
+    <summary>>>> Special instructions for the MRS System developers <<<</summary>
 
       * Instead of the stable PPA, you can add the **[unstable](https://github.com/ctu-mrs/ppa-unstable)** PPA, for which the packages are build immediatelly after being pushed to **master**.
       * If you have both PPAs, the **unstable** has a priority.
