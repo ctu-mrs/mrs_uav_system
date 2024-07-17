@@ -69,7 +69,7 @@ curl https://ctu-mrs.github.io/ppa-stable/add_ppa.sh | bash
 
       * Instead of the stable PPA, you can add the **[unstable](https://github.com/ctu-mrs/ppa-unstable)** PPA, for which the packages are build immediatelly after being pushed to **master**.
       * If you have both PPAs, the **unstable** has a priority.
-      * Beware! The **unstable** PPA might be internally inconsistent, buggy and dangeros!
+      * Beware! The **unstable** PPA might be internally inconsistent, buggy and dangerous!
 
     </details>
 
