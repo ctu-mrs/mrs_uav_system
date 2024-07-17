@@ -54,22 +54,23 @@ Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26
 
 1. Install the Robot Operating System (Noetic):
 ```bash
-curl https://ctu-mrs.github.io/ppa-unstable/add_ros_ppa.sh | bash
+curl https://ctu-mrs.github.io/ppa-stable/add_ros_ppa.sh | bash
 sudo apt install ros-noetic-desktop-full
 ```
 
 2. Configure your ROS environment according to [http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
 
-3. Select which version of the MRS UAV System you want to install.
-
-For **[stable](https://github.com/ctu-mrs/ppa-stable)** version, add the stable PPA:
+3. Add the **[stable](https://github.com/ctu-mrs/ppa-stable)** PPA into your apt-get repository:
 ```bash
 curl https://ctu-mrs.github.io/ppa-stable/add_ppa.sh | bash
 ```
-For **[unstable](https://github.com/ctu-mrs/ppa-unstable)** (nightly-build) of the system, add the unstable PPA:
-```bash
-curl https://ctu-mrs.github.io/ppa-unstable/add_ppa.sh | bash
-```
+  * <details>
+    <summary>>>> Special instructions for developers <<<</summary>
+
+      * Instead of the stable PPA, you can add the **[unstable](https://github.com/ctu-mrs/ppa-unstable)** PPA, for which the packages are build immediatelly after being pushed to **master**.
+      * If you have both PPAs, the **unstable** has a priority.
+
+    </details>
 
 4. Install the MRS UAV System:
 ```bash
