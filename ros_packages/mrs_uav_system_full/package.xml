@@ -30,6 +30,8 @@
   <exec_depend>mrs_precise_landing</exec_depend>
   <exec_depend>mrs_precise_landing_gazebo</exec_depend>
 
+  <exec_depend>mrs_robofly_core</exec_depend>
+
   <exec_depend>mrs_uav_px4_api</exec_depend>
   <exec_depend>mrs_uav_dji_tello_api</exec_depend>
 
