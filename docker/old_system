@@ -1,0 +1,39 @@
+FROM ros:noetic
+
+ARG DOCKER=true
+ARG mrs_path=/opt/mrs
+
+# fixes prompts during apt installations
+RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+RUN sudo apt-get install -y -q
+
+RUN sudo apt-get -y update && sudo apt-get -y install git
+
+# clone and install MRS UAV System
+RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/ctu-mrs/mrs_uav_system && cd mrs_uav_system && git checkout 4747cc2
+
+RUN cd $mrs_path/git/mrs_uav_system && ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false
+RUN cd $mrs_path/mrs_workspace/ && catkin config --install
+RUN cd $mrs_path/mrs_workspace/ && catkin build --limit-status-rate 0.2 --summarize
+
+# RUN rm -rf $mrs_path/mrs_workspace/build
+# RUN rm -rf $mrs_path/mrs_workspace/devel
+# RUN rm -rf $mrs_path/git/uav_core/.gitman
+# RUN rm -rf $mrs_path/git/simulation/.gitman
+# rm -rf /var/lib/apt/lists/*
+
+# clone and install UAV Modules
+RUN mkdir -p $mrs_path/git
+RUN cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules
+RUN cd $mrs_path/git/uav_modules && gitman install
+RUN cd $mrs_path/git/uav_modules && $mrs_path/git/uav_modules/installation/install.sh --unattended
+RUN cd $mrs_path/git/uav_modules && $mrs_path/git/uav_modules/installation/set_modules_workspace.sh -g $mrs_path/git -l $mrs_path -n
+RUN cd $mrs_path/modules_workspace && catkin config --install
+RUN cd $mrs_path/modules_workspace && catkin build --limit-status-rate 0.2 --summarize
+
+# rm -rf $mrs_path/modules_workspace/build && \
+# rm -rf $mrs_path/modules_workspace/devel && \
+# rm -rf $mrs_path/git/uav_modules/.gitman && \
+# rm -rf /var/lib/apt/lists/*
+
+CMD ["bash"]
