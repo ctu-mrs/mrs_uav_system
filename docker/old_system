@@ -3,7 +3,7 @@ FROM ros:noetic
 ARG DOCKER=true
 ARG mrs_path=/opt/mrs
 
-RUN apt-get update
+RUN apt-get -y update
 RUN apt-get -y install sudo
 
 # fixes prompts during apt installations
