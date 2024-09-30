@@ -17,6 +17,10 @@ RUN mkdir -p $mrs_path/git && cd $mrs_path/git && git clone https://github.com/c
 
 RUN cd $mrs_path/git/mrs_uav_system && ./install.sh -g $mrs_path/git -l $mrs_path --no-build --my-workspace=false
 RUN cd $mrs_path/mrs_workspace/ && catkin config --install
+RUN cd $mrs_path/mrs_workspace/src/uav_core/ros_packages/thirdparty/nlopt_ros/ && touch CATKIN_IGNORE
+RUN curl https://ctu-mrs.github.io/ppa-stable/add_ppa.sh | bash
+RUN sudo apt-get -y install ros-noetic-nlopt
+RUN cd $mrs_path/mrs_workspace/src/uav_core/ros_packages/mrs_uav_trajectory_generation && git fetch && git checkout old_system_fix
 RUN cd $mrs_path/mrs_workspace/ && catkin build --limit-status-rate 0.2 --summarize
 
 # RUN rm -rf $mrs_path/mrs_workspace/build
