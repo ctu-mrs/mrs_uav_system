@@ -3,6 +3,9 @@ FROM ros:noetic
 ARG DOCKER=true
 ARG mrs_path=/opt/mrs
 
+RUN apt-get update
+RUN apt-get -y install sudo
+
 # fixes prompts during apt installations
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 RUN sudo apt-get install -y -q
