@@ -35,6 +35,9 @@
   <exec_depend>mrs_uav_px4_api</exec_depend>
   <exec_depend>mrs_uav_dji_tello_api</exec_depend>
 
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>image_transport_plugins</exec_depend>
+
   <exec_depend>python-is-python3</exec_depend>
 
   <export>
