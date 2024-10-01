@@ -10,4 +10,4 @@ REGISTRY=ctumrs
 docker buildx create --name container --driver=docker-container
 docker buildx build . --file ./old_system -t "$REGISTRY/$LOCAL_TAG" --platform=linux/arm64 --progress=plain
 
-docker push "$REGISTRY/$LOCAL_TAG"
+# docker push "$REGISTRY/$LOCAL_TAG"

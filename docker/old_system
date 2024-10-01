@@ -36,16 +36,16 @@ RUN mkdir -p $mrs_path/git
 RUN echo kocka
 RUN cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules
 RUN cd $mrs_path/git/uav_modules && gitman install
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/bluefox2 && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/nimbro_network && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/realsense_d435 && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/rplidar_ros && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/tersus_gps_driver && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/usb_cam && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/camera_base && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/forest_flier && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/hector_slam && touch CATKIN_IGNORE
-RUN cd $mrs_path/modules_workspace/src/uav_modules/ros_packages/uvdar_meta && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/bluefox2 && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/nimbro_network && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/realsense_d435 && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/rplidar_ros && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/tersus_gps_driver && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/usb_cam && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/camera_base && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/forest_flier && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/hector_slam && touch CATKIN_IGNORE
+RUN cd $mrs_path/git/uav_modules/ros_packages/uvdar_meta && touch CATKIN_IGNORE
 RUN cd $mrs_path/git/uav_modules && $mrs_path/git/uav_modules/installation/install.sh --unattended
 RUN cd $mrs_path/git/uav_modules && $mrs_path/git/uav_modules/installation/set_modules_workspace.sh -g $mrs_path/git -l $mrs_path -n
 RUN cd $mrs_path/modules_workspace && catkin config --install
