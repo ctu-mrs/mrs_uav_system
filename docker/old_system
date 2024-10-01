@@ -33,6 +33,7 @@ RUN cd $mrs_path/mrs_workspace/ && catkin build --limit-status-rate 0.2 --summar
 
 # clone and install UAV Modules
 RUN mkdir -p $mrs_path/git
+RUN echo kocka
 RUN cd $mrs_path/git && git clone https://github.com/ctu-mrs/uav_modules
 RUN cd $mrs_path/git/uav_modules && gitman install
 RUN cd $mrs_path/git/uav_modules && $mrs_path/git/uav_modules/installation/install.sh --unattended
