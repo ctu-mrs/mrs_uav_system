@@ -40,6 +40,8 @@
   <exec_depend>image_transport</exec_depend>
   <exec_depend>image_transport_plugins</exec_depend>
 
+  <exec_depend>joy</exec_depend>
+
   <exec_depend>python-is-python3</exec_depend>
 
   <export>
