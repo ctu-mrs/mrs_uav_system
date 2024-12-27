@@ -42,6 +42,8 @@
 
   <exec_depend>joy</exec_depend>
 
+  <exec_depend>vision_msgs</exec_depend>
+
   <exec_depend>python-is-python3</exec_depend>
 
   <export>
