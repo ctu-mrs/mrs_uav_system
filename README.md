@@ -189,11 +189,11 @@ git push --set-upstream origin master                                           
 We utilize acceptance tests to determine the releasaiblity of the system and to release the system automatically.
 The **stable** version of our system should be installable and working allways regardless of the state of the tests and _red flags_ below.
 
-## Docker
+## Docker - stable rolling release ([![docker_stable_release](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker_stable_release.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker_stable_release.yml))
 
-[![docker](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker.yml)
+Download from Dockerhub: [ctumrs/mrs_uav_system:latest](https://hub.docker.com/r/ctumrs/mrs_uav_system/tags)
 
-The multiarch docker image contains the `ros-noetic-mrs-uav-system-full`.
+The multiarch (AMD and ARM64) docker image contains the `ros-noetic-mrs-uav-system-full` ROS package and, with that, all the MRS dependencies.
 See the [MRS Docker](http://github.com/ctu-mrs/mrs_docker) repository for information on how to run the MRS UAV System using docker.
 
 ### PPAs
