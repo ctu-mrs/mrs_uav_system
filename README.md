@@ -48,6 +48,13 @@ Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M
 Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26 (2021).
 ```
 
+## Are we going to move to ROS2?
+
+Yes! The transition has already begun. It will take time, so please, be patient.
+In the meantime, you can follow the process in the following diagram:
+
+[![](./.fig/ros2_transition.png)](https://ctu-mrs.github.io/ros2_obsidian_knowledgebase/main_canvas.html)
+
 ## Installation
 
 ### Native installation
