@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
 
   <name>mrs_uav_system_full</name>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   <description>The MRS UAV System Full metapackage</description>
 
   <author email="tomas.baca@fel.cvut.cz">Tomas Baca</author>
@@ -10,44 +11,43 @@
 
   <license>BSD 3-Clause</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>mrs_uav_core</exec_depend>
-  <exec_depend>mrs_uav_modules</exec_depend>
 
-  <exec_depend>mrs_uav_deployment</exec_depend>
+  <!-- <exec_depend>mrs_uav_modules</exec_depend> -->
 
-  <exec_depend>mrs_uav_gazebo_simulation</exec_depend>
-  <exec_depend>mrs_uav_coppelia_simulation</exec_depend>
-  <exec_depend>mrs_uav_unreal_simulation</exec_depend>
+  <!-- <exec_depend>mrs_uav_deployment</exec_depend> -->
 
-  <exec_depend>mrs_octomap_mapping_planning</exec_depend>
-  <exec_depend>mrs_aloam_core</exec_depend>
-  <exec_depend>mrs_liosam_core</exec_depend>
-  <exec_depend>mrs_hector_core</exec_depend>
-  <exec_depend>mrs_open_vins_core</exec_depend>
-  <exec_depend>mrs_mins_core</exec_depend>
-  <exec_depend>mrs_precise_landing</exec_depend>
-  <exec_depend>mrs_precise_landing_gazebo</exec_depend>
+  <!-- <exec_depend>mrs_uav_gazebo_simulation</exec_depend> -->
+  <!-- <exec_depend>mrs_uav_coppelia_simulation</exec_depend> -->
+  <!-- <exec_depend>mrs_uav_unreal_simulation</exec_depend> -->
 
-  <exec_depend>mrs_robofly_core</exec_depend>
+  <!-- <exec_depend>mrs_octomap_mapping_planning</exec_depend> -->
+  <!-- <exec_depend>mrs_aloam_core</exec_depend> -->
+  <!-- <exec_depend>mrs_liosam_core</exec_depend> -->
+  <!-- <exec_depend>mrs_hector_core</exec_depend> -->
+  <!-- <exec_depend>mrs_open_vins_core</exec_depend> -->
+  <!-- <exec_depend>mrs_mins_core</exec_depend> -->
+  <!-- <exec_depend>mrs_precise_landing</exec_depend> -->
+  <!-- <exec_depend>mrs_precise_landing_gazebo</exec_depend> -->
 
-  <exec_depend>rosbridge_suite</exec_depend>
+  <!-- <exec_depend>mrs_robofly_core</exec_depend> -->
 
-  <exec_depend>mrs_uav_px4_api</exec_depend>
-  <exec_depend>mrs_uav_dji_tello_api</exec_depend>
+  <!-- <exec_depend>rosbridge_suite</exec_depend> -->
 
-  <exec_depend>image_transport</exec_depend>
-  <exec_depend>image_transport_plugins</exec_depend>
+  <!-- <exec_depend>mrs_uav_px4_api</exec_depend> -->
+  <!-- <exec_depend>mrs_uav_dji_tello_api</exec_depend> -->
 
-  <exec_depend>joy</exec_depend>
+  <!-- <exec_depend>image_transport</exec_depend> -->
+  <!-- <exec_depend>image_transport_plugins</exec_depend> -->
 
-  <exec_depend>vision_msgs</exec_depend>
+  <!-- <exec_depend>joy</exec_depend> -->
 
-  <exec_depend>python-is-python3</exec_depend>
+  <!-- <exec_depend>vision_msgs</exec_depend> -->
 
   <export>
-    <metapackage/>
+    <build_type>ament_cmake</build_type>
   </export>
 
 </package>
