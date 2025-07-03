@@ -18,9 +18,9 @@
 
   <exec_depend>mrs_uav_deployment</exec_depend>
 
+  <exec_depend>mrs_uav_flightforge_simulation</exec_depend>
   <!-- <exec_depend>mrs_uav_gazebo_simulation</exec_depend> -->
   <!-- <exec_depend>mrs_uav_coppelia_simulation</exec_depend> -->
-  <!-- <exec_depend>mrs_uav_unreal_simulation</exec_depend> -->
 
   <!-- <exec_depend>mrs_octomap_mapping_planning</exec_depend> -->
   <!-- <exec_depend>mrs_aloam_core</exec_depend> -->
@@ -35,7 +35,7 @@
 
   <!-- <exec_depend>rosbridge_suite</exec_depend> -->
 
-  <!-- <exec_depend>mrs_uav_px4_api</exec_depend> -->
+  <exec_depend>mrs_uav_px4_api</exec_depend>
   <!-- <exec_depend>mrs_uav_dji_tello_api</exec_depend> -->
 
   <!-- <exec_depend>image_transport</exec_depend> -->
