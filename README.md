@@ -25,9 +25,9 @@ The system is
 
 ![](https://github.com/ctu-mrs/mrs_uav_system/raw/gifs/gazebo_circle.gif)
 
-## [Documentation](https://ctu-mrs.github.io/)
+## [Documentation](https://ctu-mrs.github.io/docs/1.5.0/introduction/)
 
-The primary documentation source is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/).
+The primary documentation source is here: [https://ctu-mrs.github.io/](https://ctu-mrs.github.io/docs/1.5.0/introduction/).
 However, the website only scratches the surface of what it should contain (and we know it).
 Our system is a research-oriented platform, and it evolves rapidly.
 Most of our users are either researchers (who already know the platform) or freshmen students (who might not know ROS).
