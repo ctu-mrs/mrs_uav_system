@@ -8,9 +8,11 @@ We specialize in multi-rotor helicopters, and for them specifically, we develop 
 We think real-world and replicable experiments should support excellent research and science in robotics.
 Thus, our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
 
+## ROS2
+
 > :warning: **Attention please: This README concerns the _old_ ROS1 version of the system.**
 >
-> Please, follow to the [README](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2?tab=readme-ov-file#multi-robot-systems-group-uav-system) regarding the upcoming ROS2 version of the system.
+> Please, visit the _ros2_ branch ([README](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2?tab=readme-ov-file#multi-robot-systems-group-uav-system)) regarding the upcoming ROS2 version of the system.
 
 ## System properties
 
