@@ -8,16 +8,9 @@ We specialize in multi-rotor helicopters, and for them specifically, we develop 
 We think real-world and replicable experiments should support excellent research and science in robotics.
 Thus, our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
 
-> :warning: **Attention please: This README needs work.**
+> :warning: **Attention please: This README concerns the _old_ ROS1 version of the system.**
 >
-> The MRS UAV System 1.5 is being released, and this page needs updating. Please remember that the information on this page might not be valid.
-> Check this [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing) for the latest news and changes.
-
-## TL;DR What has changed from the old system
-
-**Note:** The MRS UAV system v1.5 is still a Work-In-Progress and the documentation is undergoing maintanance ([Issue#169](https://github.com/ctu-mrs/mrs_uav_system/issues/169)).
-You can find the changes and new instructions in here [WIP Google Document](https://docs.google.com/document/d/1NibHqNdyzzAYE7DNIMMq1HmzyFrBnISbzV17dP-waYw/edit?usp=sharing).
-Any feedback is welcome (you can use the issues in this repo or comment on the Google Doc)!
+> Please, follow to the [README](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2?tab=readme-ov-file#multi-robot-systems-group-uav-system) regarding the upcoming ROS2 version of the system.
 
 ## System properties
 
@@ -48,14 +41,9 @@ Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M
 Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26 (2021).
 ```
 
-## Are we going to move to ROS2?
-
-Yes! The transition has already begun. It will take time, so please, be patient.
-In the meantime, you can follow the process in the following diagram:
-
-[![](./.fig/ros2_transition.png)](https://ctu-mrs.github.io/ros2_obsidian_knowledgebase/main_canvas.html)
-
 ## Installation
+
+For ROS2 installation instructions, follow [here](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2?tab=readme-ov-file#multi-robot-systems-group-uav-system).
 
 ### Native installation
 
