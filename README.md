@@ -69,7 +69,7 @@ sudo apt install ros-jazzy-mrs-uav-system-full
 
 5. Start the example MRS simulation session:
 ```bash
-roscd mrs_multirotor_simulator/tmux/mrs_one_drone
+cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 ./start.sh
 ```
 
