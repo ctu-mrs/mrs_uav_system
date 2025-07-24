@@ -116,12 +116,11 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 We utilize acceptance tests to determine the releasaiblity of the system and to release the system automatically.
 The **stable** version of our system should be installable and working allways regardless of the state of the tests and _red flags_ below.
 
-## Docker - stable rolling release ([![docker_stable_release](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker_stable_release.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/docker_stable_release.yml))
+## Docker - stable/unstable rolling release
 
-Download from Dockerhub: [ctumrs/mrs_uav_system:latest](https://hub.docker.com/r/ctumrs/mrs_uav_system/tags)
+Download from Dockerhub: [ctumrs/mrs_uav_system](https://hub.docker.com/r/ctumrs/mrs_uav_system/tags)
 
 The multiarch (AMD and ARM64) docker image contains the `ros-jazzy-mrs-uav-system-full` ROS package and, with that, all the MRS dependencies.
-See the [MRS Docker](http://github.com/ctu-mrs/mrs_docker) repository for information on how to run the MRS UAV System using docker.
 
 ## ROS2 Build status (in development)([Buildfarm2](https://github.com/ctu-mrs/buildfarm2))
 
@@ -130,6 +129,17 @@ See the [MRS Docker](http://github.com/ctu-mrs/mrs_docker) repository for inform
 | [Stable](https://github.com/ctu-mrs/ppa2-stable)                                                                                                                           | Testing                                                                                                                                                                | [Unstable](https://github.com/ctu-mrs/ppa2-unstable)                                                                                                                               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [![stable-ppa2-build](https://github.com/ctu-mrs/ppa2-stable/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa2-stable/actions/workflows/deploy.yml) | [![Deploy](https://github.com/ctu-mrs/ppa2-testing/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa2-testing/actions/workflows/deploy.yml)      | [![unstable-ppa2-build](https://github.com/ctu-mrs/ppa2-unstable/actions/workflows/deploy.yml/badge.svg)](https://github.com/ctu-mrs/ppa2-unstable/actions/workflows/deploy.yml) |
+
+## Docker pipelines
+
+Any package within the system have the option to generate a docker image.
+These are typically thirdparty package with complex dependencies that can not be easily satisfied through the `apt` installation system.
+Additionally, the `mrs-uav-system` package generates a full docker imaage with the system.
+
+|                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                        | Release Candidate                                                                                                                                                                                                            | [Unstable](https://github.com/ctu-mrs/ppa-unstable)                                                                                                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MRS ROS Packages        | [![stable_mrs_dockers](https://github.com/ctu-mrs/buildfarm2/actions/workflows/stable_mrs_dockers.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm2/actions/workflows/stable_mrs_dockers.yml)                      | [![unstable_mrs_dockers](https://github.com/ctu-mrs/buildfarm2/actions/workflows/unstable_mrs_dockers.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm2/actions/workflows/unstable_mrs_dockers.yml)                      | [![unstable_mrs_dockers](https://github.com/ctu-mrs/buildfarm2/actions/workflows/unstable_mrs_dockers.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm2/actions/workflows/unstable_mrs_dockers.yml)              |
+| Thirdparty ROS packages | [![stable_thirdparty_dockers](https://github.com/ctu-mrs/buildfarm2/actions/workflows/stable_thirdparty_dockers.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm2/actions/workflows/stable_thirdparty_dockers.yml) | [![unstable_thirdparty_dockers](https://github.com/ctu-mrs/buildfarm2/actions/workflows/unstable_thirdparty_dockers.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm2/actions/workflows/unstable_thirdparty_dockers.yml) | [![unstable-thirdparty-amd64](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_amd64.yml/badge.svg)](https://github.com/ctu-mrs/buildfarm/actions/workflows/unstable_thirdparty_amd64.yml) |
 
 ### Testing
 
