@@ -18,7 +18,7 @@
 
   <exec_depend>mrs_uav_deployment</exec_depend>
 
-  <exec_depend>mrs_uav_flightforge_simulation</exec_depend>
+  <exec_depend>mrs_uav_flightforge_simulator</exec_depend>
   <!-- <exec_depend>mrs_uav_gazebo_simulation</exec_depend> -->
   <!-- <exec_depend>mrs_uav_coppelia_simulation</exec_depend> -->
 
