@@ -45,6 +45,9 @@
 
   <!-- <exec_depend>vision_msgs</exec_depend> -->
 
+  <!-- needed when compiling Eigen together with PCL -->
+  <depend>libomp-dev</depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
