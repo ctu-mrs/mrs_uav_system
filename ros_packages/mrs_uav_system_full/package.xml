@@ -45,6 +45,10 @@
 
   <!-- <exec_depend>vision_msgs</exec_depend> -->
 
+  <!-- Sensor drivers -->
+  <exec_depend>ouster_ros</exec_depend>
+  <exec_depend>mrs_realsense</exec_depend>
+
   <!-- needed when compiling Eigen together with PCL -->
   <depend>libomp-dev</depend>
 
