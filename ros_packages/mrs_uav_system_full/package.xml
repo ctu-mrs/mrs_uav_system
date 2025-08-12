@@ -47,6 +47,7 @@
 
   <!-- Sensor drivers -->
   <exec_depend>ouster_ros</exec_depend>
+  <exec_depend>depthai-ros</exec_depend>
   <exec_depend>mrs_realsense</exec_depend>
 
   <!-- needed when compiling Eigen together with PCL -->
