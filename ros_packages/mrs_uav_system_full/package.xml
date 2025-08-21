@@ -26,7 +26,7 @@
   <!-- <exec_depend>mrs_aloam_core</exec_depend> -->
   <!-- <exec_depend>mrs_liosam_core</exec_depend> -->
   <!-- <exec_depend>mrs_hector_core</exec_depend> -->
-  <!-- <exec_depend>mrs_open_vins_core</exec_depend> -->
+  <exec_depend>mrs_open_vins_core</exec_depend>
   <!-- <exec_depend>mrs_mins_core</exec_depend> -->
   <!-- <exec_depend>mrs_precise_landing</exec_depend> -->
   <!-- <exec_depend>mrs_precise_landing_gazebo</exec_depend> -->
