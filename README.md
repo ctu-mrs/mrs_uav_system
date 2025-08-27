@@ -56,7 +56,7 @@ curl https://ctu-mrs.github.io/ppa2-stable/add_ppa.sh | bash
   * <details>
     <summary>>>> Special instructions for the MRS System developers <<<</summary>
 
-      * Instead of the stable PPA, you can add the **[unstable](https://github.com/ctu-mrs/ppa2-unstable)** PPA, for which the packages are build immediatelly after being pushed to **master**.
+      * Instead of the stable PPA, you can add the **[unstable](https://github.com/ctu-mrs/ppa2-unstable)** PPA, for which the packages are build immediatelly after being pushed to **ros2**.
       * If you have both PPAs, the **unstable** has a priority.
       * Beware! The **unstable** PPA might be internally inconsistent, buggy and dangerous!
 
