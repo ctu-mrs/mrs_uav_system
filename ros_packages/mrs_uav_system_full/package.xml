@@ -19,7 +19,7 @@
   <exec_depend>mrs_uav_deployment</exec_depend>
 
   <exec_depend>mrs_uav_flightforge_simulator</exec_depend>
-  <exec_depend>mrs_uav_gazebo_simulation</exec_depend>
+  <exec_depend>mrs_uav_gazebo_simulator</exec_depend>
   <!-- <exec_depend>mrs_uav_coppelia_simulation</exec_depend> -->
 
   <!-- <exec_depend>mrs_octomap_mapping_planning</exec_depend> -->

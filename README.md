@@ -91,12 +91,12 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 | OpenVINS Core                   | WIP                                                           | WIP                         |
 | Precise Landing                 | TODO                                                          | TODO                        |
 
-| Simulators             | Repository                                                                             | Package                                    |
-|------------------------|----------------------------------------------------------------------------------------|--------------------------------------------|
-| MRS Simulation         | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)        | `ros-jazzy-mrs-multirotor-simulator`       |
-| FlightForge Simulation | [mrs_uav_flightforge_simulation](https://github.com/ctu-mrs/mrs_uav_unreal_simulation) | `ros-jazzy-mrs-uav-flightforge-simulation` |
-| Coppelia Simulation    | TODO                                                                                   | TODO                                       |
-| Gazebo Simulation      | WIP                                                                                    | WIP                                        |
+| Simulators               | Repository                                                                                | Package                                   |
+|--------------------------|-------------------------------------------------------------------------------------------|-------------------------------------------|
+| MRS Multirotor Simulator | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)           | `ros-jazzy-mrs-multirotor-simulator`      |
+| FlightForge Simulator    | [mrs_uav_flightforge_simulator](https://github.com/ctu-mrs/mrs_uav_flightforge_simulator) | `ros-jazzy-mrs-uav-flightforge-simulator` |
+| Gazebo Simulator         | [mrs_uav_gazebo_simulation](https://github.com/ctu-mrs/mrs_uav_gazebo_simulation)         | `ros-jazzy-mrs-uav-gazebo-simulator`      |
+| Coppelia Simulator       | TODO                                                                                      | TODO                                      |
 
 | Hardware API plugins | Repository                                                    | Package                     |
 |----------------------|---------------------------------------------------------------|-----------------------------|
