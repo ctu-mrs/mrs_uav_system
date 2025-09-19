@@ -84,11 +84,11 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 |---------------------------------|---------------------------------------------------------------|-----------------------------|
 | UAV Core                        | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)       | `ros-jazzy-mrs-uav-core`    |
 | UAV Modules                     | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules) | `ros-jazzy-mrs-uav-modules` |
-| Octomap Mapping+Planning        | TODO                                                          | TODO                        |
+| Octomap Mapping+Planning        | WIP                                                           | WIP                         |
 | ALOAM Core                      | TODO                                                          | TODO                        |
 | LIO-SAM Core                    | TODO                                                          | TODO                        |
 | Hector Core                     | TODO                                                          | TODO                        |
-| OpenVINS Core                   | TODO                                                          | TODO                        |
+| OpenVINS Core                   | WIP                                                           | WIP                         |
 | Precise Landing                 | TODO                                                          | TODO                        |
 
 | Simulators             | Repository                                                                             | Package                                    |
@@ -96,7 +96,7 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 | MRS Simulation         | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)        | `ros-jazzy-mrs-multirotor-simulator`       |
 | FlightForge Simulation | [mrs_uav_flightforge_simulation](https://github.com/ctu-mrs/mrs_uav_unreal_simulation) | `ros-jazzy-mrs-uav-flightforge-simulation` |
 | Coppelia Simulation    | TODO                                                                                   | TODO                                       |
-| Gazebo Simulation      | TODO                                                                                   | TODO                                       |
+| Gazebo Simulation      | WIP                                                                                    | WIP                                        |
 
 | Hardware API plugins | Repository                                                    | Package                     |
 |----------------------|---------------------------------------------------------------|-----------------------------|
@@ -105,11 +105,11 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 
 ## Example packages
 
-| Examples                    | Repository                                                                                    | Build status                                                                                                                                                                                                                    |
-|-----------------------------|-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Core examples               | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples)                             | [![ros_build_test](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_core_examples/actions/workflows/ros_build_test.yml)                             |
-| Computer Vision examples    | [mrs_computer_vision_examples](https://github.com/ctu-mrs/mrs_computer_vision_examples)       | [![ros_build_test](https://github.com/ctu-mrs/mrs_computer_vision_examples/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_computer_vision_examples/actions/workflows/ros_build_test.yml)       |
-| Gazebo Custom Drone example | [mrs_gazebo_custom_drone_example](https://github.com/ctu-mrs/mrs_gazebo_custom_drone_example) | [![ros_build_test](https://github.com/ctu-mrs/mrs_gazebo_custom_drone_example/actions/workflows/ros_build_test.yml/badge.svg)](https://github.com/ctu-mrs/mrs_gazebo_custom_drone_example/actions/workflows/ros_build_test.yml) |
+| Examples                    | Repository | Build status |
+|-----------------------------|------------|--------------|
+| Core examples               | WIP        | TODO         |
+| Computer Vision examples    | TODO       | TODO         |
+| Gazebo Custom Drone example | TODO       | TODO         |
 
 ## Build status ([Buildfarm](https://github.com/ctu-mrs/buildfarm))
 
