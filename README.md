@@ -134,7 +134,7 @@ The multiarch (AMD and ARM64) docker image contains the `ros-jazzy-mrs-uav-syste
 
 Any package within the system have the option to generate a docker image.
 These are typically thirdparty package with complex dependencies that can not be easily satisfied through the `apt` installation system.
-Additionally, the `mrs-uav-system` package generates a full docker imaage with the system.
+Additionally, the `mrs-uav-system` package generates a docker image with the full system.
 
 |                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                        | Unstable                                                                                                                                                                                                                     |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
