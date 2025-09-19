@@ -233,7 +233,7 @@ See the [MRS Docker](http://github.com/ctu-mrs/mrs_docker) repository for inform
 
 Any package within the system have the option to generate a docker image.
 These are typically thirdparty package with complex dependencies that can not be easily satisfied through the `apt` installation system.
-Additionally, the `mrs-uav-system` package generates a full docker imaage with the system.
+Additionally, the `mrs-uav-system` package generates a docker image with full the system.
 
 |                         | [Stable](https://github.com/ctu-mrs/ppa-stable)                                                                                                                                                                        | Unstable                                                                                                                                                                                                                     |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
