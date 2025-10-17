@@ -14,6 +14,11 @@ Thus, our platform is built to allow safe real-world experimental validation of 
 >
 > Please, visit the _ros2_ branch ([README](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2?tab=readme-ov-file#multi-robot-systems-group-uav-system)) regarding the upcoming ROS2 version of the system.
 
+Do you want to monitor the state of transition to ROS2 in real time?
+Check the following diagram:
+
+[![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/ros2_transition_diagram.png)](https://ctu-mrs.github.io/ros2_obsidian_knowledgebase/main_canvas.html)
+
 ## System properties
 
 The system is
