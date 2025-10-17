@@ -8,6 +8,13 @@ We specialize in multi-rotor helicopters, and for them specifically, we develop 
 We think real-world and replicable experiments should support excellent research and science in robotics.
 Thus, our platform is built to allow safe real-world experimental validation of approaches in planning, control, estimation, computer vision, tracking, and more.
 
+## ROS2
+
+Do you want to monitor the state of transition to ROS2 in real time?
+Check the following diagram:
+
+[![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/ros2_transition_diagram.png)](https://ctu-mrs.github.io/ros2_obsidian_knowledgebase/main_canvas.html)
+
 ## System properties
 
 The system is
@@ -78,7 +85,7 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 | Main metapackages     | Contents               | Repository                                                            | Package                          |
 |-----------------------|------------------------|-----------------------------------------------------------------------|----------------------------------|
 | MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system`       |
-| MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy--mrs-uav-system-full` |
+| MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system-full` |
 
 | Optional Modules & metapackages | Repository                                                                    | Package                        |
 |---------------------------------|-------------------------------------------------------------------------------|--------------------------------|
