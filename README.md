@@ -1,4 +1,4 @@
-# Multi-robot Systems Group UAV system
+# ROS2 MRS UAV system
 ![logos](.fig/logos.png)
 
 ![thumbnail](.fig/drone_collage.jpg)
