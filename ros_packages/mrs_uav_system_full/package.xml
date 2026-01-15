@@ -27,6 +27,7 @@
   <!-- <exec_depend>mrs_liosam_core</exec_depend> -->
   <!-- <exec_depend>mrs_hector_core</exec_depend> -->
   <exec_depend>mrs_open_vins_core</exec_depend>
+  <exec_depend>mrs_point_lio_core</exec_depend>
   <!-- <exec_depend>mrs_mins_core</exec_depend> -->
   <!-- <exec_depend>mrs_precise_landing</exec_depend> -->
   <!-- <exec_depend>mrs_precise_landing_gazebo</exec_depend> -->
@@ -36,7 +37,7 @@
   <!-- <exec_depend>rosbridge_suite</exec_depend> -->
 
   <exec_depend>mrs_uav_px4_api</exec_depend>
-  <!-- <exec_depend>mrs_uav_dji_tello_api</exec_depend> -->
+  <exec_depend>mrs_uav_dji_tello_api</exec_depend>
 
   <!-- <exec_depend>image_transport</exec_depend> -->
   <!-- <exec_depend>image_transport_plugins</exec_depend> -->
@@ -49,6 +50,8 @@
   <exec_depend>ouster_ros</exec_depend>
   <exec_depend>depthai-ros</exec_depend>
   <exec_depend>mrs_realsense</exec_depend>
+  <exec_depend>mrs_icm_imu_driver</exec_depend>
+  <exec_depend>libcamera_ros_driver</exec_depend>
 
   <!-- needed when compiling Eigen together with PCL -->
   <depend>libomp-dev</depend>
