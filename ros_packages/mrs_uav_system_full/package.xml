@@ -22,7 +22,7 @@
   <exec_depend>mrs_uav_gazebo_simulator</exec_depend>
   <!-- <exec_depend>mrs_uav_coppelia_simulation</exec_depend> -->
 
-  <!-- <exec_depend>mrs_octomap_mapping_planning</exec_depend> -->
+  <exec_depend>mrs_octomap_mapping_planning</exec_depend>
   <!-- <exec_depend>mrs_aloam_core</exec_depend> -->
   <!-- <exec_depend>mrs_liosam_core</exec_depend> -->
   <!-- <exec_depend>mrs_hector_core</exec_depend> -->
