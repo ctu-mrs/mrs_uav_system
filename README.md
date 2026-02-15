@@ -87,16 +87,17 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 | MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system`       |
 | MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system-full` |
 
-| Optional Modules & metapackages | Repository                                                                    | Package                        |
-|---------------------------------|-------------------------------------------------------------------------------|--------------------------------|
-| UAV Core                        | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core/tree/ros2)             | `ros-jazzy-mrs-uav-core`       |
-| UAV Modules                     | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules/tree/ros2)       | `ros-jazzy-mrs-uav-modules`    |
-| Octomap Mapping+Planning        | WIP                                                                           | WIP                            |
-| ALOAM Core                      | TODO                                                                          | TODO                           |
-| LIO-SAM Core                    | TODO                                                                          | TODO                           |
-| Hector Core                     | TODO                                                                          | TODO                           |
-| OpenVINS Core                   | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core/tree/ros2) | `ros-jazzy-mrs-open-vins-core` |
-| Precise Landing                 | TODO                                                                          | TODO                           |
+| Optional Modules & metapackages | Repository                                                                                               | Package                                  |
+|---------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------|
+| UAV Core                        | [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core/tree/ros2)                                        | `ros-jazzy-mrs-uav-core`                 |
+| UAV Modules                     | [mrs_uav_modules](https://github.com/ctu-mrs/mrs_uav_modules/tree/ros2)                                  | `ros-jazzy-mrs-uav-modules`              |
+| Octomap Mapping+Planning        | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning/tree/ros2)        | `ros-jazzy-mrs-octomap-mapping-planning` |
+| OpenVINS Core                   | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core/tree/ros2)                            | `ros-jazzy-mrs-open-vins-core`           |
+| PointLIO Core                   | [mrs_point_lio_core](https://github.com/ctu-mrs/mrs_point_lio_core/tree/ros2)                            | `ros-jazzy-mrs-point-lio-core`           |
+| Precise Landing                 | TODO                                                                                                     | TODO                                     |
+| ALOAM Core                      | TODO (?, probably not)                                                                                   | TODO                                     |
+| LIO-SAM Core                    | TODO (?, probably not)                                                                                   | TODO                                     |
+| Hector Core                     | TODO (?, probably not)                                                                                   | TODO                                     |
 
 | Simulators               | Repository                                                                                          | Package                                   |
 |--------------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------|
