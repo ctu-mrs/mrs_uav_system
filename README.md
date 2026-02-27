@@ -51,7 +51,7 @@ Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26
 1. Install the Robot Operating System (Jazzy):
 ```bash
 curl https://ctu-mrs.github.io/ppa2-stable/add_ros_ppa.sh | bash
-sudo apt install ros-jazzy-desktop-full
+sudo apt install ros-jazzy-desktop-full ros-dev-tools
 ```
 
 2. Configure your ROS environment according to [https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#setup-environment](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#setup-environment)
