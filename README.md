@@ -38,6 +38,7 @@ So, instead, we aim at educating our students to look around the packages (each 
 [![](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.png)](https://github.com/ctu-mrs/mrs_uav_system/raw/diagram/mrs_uav_system_diagram.png)
 
 The control and estimation system are described in the article [doi.org/10.1007/s10846-021-01383-5](https://doi.org/10.1007/s10846-021-01383-5), [pdf](https://link.springer.com/content/pdf/10.1007/s10846-021-01383-5.pdf):
+
 ```
 Baca, T., Petrlik, M., Vrba, M., Spurny, V., Penicka, R., Hert, D., and Saska, M.,
 "The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and
@@ -49,6 +50,7 @@ Education with Autonomous Unmanned Aerial Vehicles", J Intell Robot Syst 102, 26
 ### Native installation
 
 1. Install the Robot Operating System (Jazzy):
+
 ```bash
 curl https://ctu-mrs.github.io/ppa2-stable/add_ros_ppa.sh | bash
 sudo apt install ros-jazzy-desktop-full ros-dev-tools
@@ -57,9 +59,11 @@ sudo apt install ros-jazzy-desktop-full ros-dev-tools
 2. Configure your ROS environment according to [https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#setup-environment](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#setup-environment)
 
 3. Add the **[stable](https://github.com/ctu-mrs/ppa2-stable)** PPA into your apt-get repository:
+
 ```bash
 curl https://ctu-mrs.github.io/ppa2-stable/add_ppa.sh | bash
 ```
+
   * <details>
     <summary>>>> Special instructions for the MRS System developers <<<</summary>
 
@@ -67,14 +71,21 @@ curl https://ctu-mrs.github.io/ppa2-stable/add_ppa.sh | bash
       * If you have both PPAs, the **unstable** has a priority.
       * Beware! The **unstable** PPA might be internally inconsistent, buggy and dangerous!
 
+      <br>
+
+      * If you use the shell additions described [here](https://ctu-mrs.github.io/docs/prerequisites/ros2/workspace-build/#3-get-aliases-that-make-common-ros2-commands-usable), you should **not** manually source ROS or your workspaces.
+      * You should normally use [zenoh](https://ctu-mrs.github.io/docs/installation/native-installation#4-set-zenoh-to-be-the-used-rmw-implementation) as the RMW implementation. 
+
     </details>
 
 4. Install the MRS UAV System:
+
 ```bash
 sudo apt install ros-jazzy-mrs-uav-system-full
 ```
 
 5. Start the example MRS simulation session:
+
 ```bash
 cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 ./start.sh
