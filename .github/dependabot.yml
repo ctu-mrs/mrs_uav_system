@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/Prague"
+
+    # Bundles all action updates into ONE single PR
+    groups:
+      action-updates:
+        patterns:
+          - "*"
