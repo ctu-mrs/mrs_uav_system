@@ -1,7 +1,7 @@
 # Input variables with default values
 variable "PPA_VARIANT" { default = "unstable" }
 variable "BASE_IMAGE" { default = "ctumrs/ros_jazzy:latest" }
-variable "STABLE_TAG" { default = "" }
+variable "STABLE_TAG" { default = formatdate("YY_MM_DD", timestamp()) }
 variable "PLATFORM" { default = "linux/amd64" }
 
 # Grouping targets allows you to trigger both with a single command
