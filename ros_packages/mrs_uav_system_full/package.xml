@@ -52,6 +52,7 @@
   <exec_depend>mrs_realsense</exec_depend>
   <exec_depend>mrs_icm_imu_driver</exec_depend>
   <!-- <exec_depend>libcamera_ros_driver</exec_depend> -->
+  <exec_depend>odin_ros_driver</exec_depend>
 
   <!-- needed when compiling Eigen together with PCL -->
   <depend>libomp-dev</depend>
