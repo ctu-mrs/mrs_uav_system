@@ -6,14 +6,14 @@ variable "PLATFORM" { default = "linux/amd64" }
 
 # Grouping targets allows you to trigger both with a single command
 group "default" {
-  targets = ["mrs_uav_system", "mrs_uav_system_full"]
+  targets = ["mrs_uav_system_core", "mrs_uav_system"]
 }
 
 # ==========================================
 # TARGET 1: Core System
 # ==========================================
-target "mrs_uav_system" {
-  context    = "./mrs_uav_system"
+target "mrs_uav_system_core" {
+  context    = "./mrs_uav_system_core"
   dockerfile = "Dockerfile"
   platforms  = ["${PLATFORM}"]
 
@@ -24,18 +24,18 @@ target "mrs_uav_system" {
 
   # Conditional Tagging for Core
   tags = PPA_VARIANT == "stable" ? [
-    "ctumrs/mrs_uav_system:${PPA_VARIANT}",
-    "ctumrs/mrs_uav_system:${PPA_VARIANT}_${STABLE_TAG}"
+    "ctumrs/mrs_uav_system_core:${PPA_VARIANT}",
+    "ctumrs/mrs_uav_system_core:${PPA_VARIANT}_${STABLE_TAG}"
   ] : [
-    "ctumrs/mrs_uav_system:${PPA_VARIANT}"
+    "ctumrs/mrs_uav_system_core:${PPA_VARIANT}"
   ]
 }
 
 # ==========================================
 # TARGET 2: Full System
 # ==========================================
-target "mrs_uav_system_full" {
-  context    = "./mrs_uav_system_full"
+target "mrs_uav_system" {
+  context    = "./mrs_uav_system"
   dockerfile = "Dockerfile"
   platforms  = ["${PLATFORM}"]
 
@@ -45,14 +45,14 @@ target "mrs_uav_system_full" {
 
   # Conditional Tagging for Full
   tags = PPA_VARIANT == "stable" ? [
-    "ctumrs/mrs_uav_system_full:${PPA_VARIANT}",
-    "ctumrs/mrs_uav_system_full:${PPA_VARIANT}_${STABLE_TAG}"
+    "ctumrs/mrs_uav_system:${PPA_VARIANT}",
+    "ctumrs/mrs_uav_system:${PPA_VARIANT}_${STABLE_TAG}"
   ] : [
-    "ctumrs/mrs_uav_system_full:${PPA_VARIANT}"
+    "ctumrs/mrs_uav_system:${PPA_VARIANT}"
   ]
 
-  # Makes the Dockerfile use the local build result of target "mrs_uav_system"
+  # Makes the Dockerfile use the build result of target "mrs_uav_system_core"
   contexts = {
-    "ctumrs/mrs_uav_system:${PPA_VARIANT}" = "target:mrs_uav_system"
+    "ctumrs/mrs_uav_system_core:${PPA_VARIANT}" = "target:mrs_uav_system_core"
   }
 }
