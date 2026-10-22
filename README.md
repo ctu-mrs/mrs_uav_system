@@ -93,9 +93,9 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 
 ## System components
 
-| Main metapackages     | Contents               | Repository                                                            | Package                          |
-|-----------------------|------------------------|-----------------------------------------------------------------------|----------------------------------|
-| MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system`       |
+| Main metapackages     | Contents               | Repository                                                            | Package                         |
+|-----------------------|------------------------|-----------------------------------------------------------------------|---------------------------------|
+| MRS UAV System        | UAV Core & UAV Modules | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system`      |
 | MRS UAV System - Full | All of the bellow      | [mrs_uav_system](https://github.com/ctu-mrs/mrs_uav_system/tree/ros2) | `ros-jazzy-mrs-uav-system-full` |
 
 | Optional Modules & metapackages | Repository                                                                                               | Package                                  |
@@ -105,7 +105,7 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 | Octomap Mapping+Planning        | [mrs_octomap_mapping_planning](https://github.com/ctu-mrs/mrs_octomap_mapping_planning/tree/ros2)        | `ros-jazzy-mrs-octomap-mapping-planning` |
 | OpenVINS Core                   | [mrs_open_vins_core](https://github.com/ctu-mrs/mrs_open_vins_core/tree/ros2)                            | `ros-jazzy-mrs-open-vins-core`           |
 | PointLIO Core                   | [mrs_point_lio_core](https://github.com/ctu-mrs/mrs_point_lio_core/tree/ros2)                            | `ros-jazzy-mrs-point-lio-core`           |
-| Precise Landing                 | TODO                                                                                                     | TODO                                     |
+| Precise Landing                 | [mrs_precise_landing](https://github.com/ctu-mrs/mrs_precise_landing/tree/ros2)                          | `ros-jazzy-mrs-precise-landing`          |
 | ALOAM Core                      | TODO (?, probably not)                                                                                   | TODO                                     |
 | LIO-SAM Core                    | TODO (?, probably not)                                                                                   | TODO                                     |
 | Hector Core                     | TODO (?, probably not)                                                                                   | TODO                                     |
@@ -124,11 +124,11 @@ cd /opt/ros/jazzy/share/mrs_multirotor_simulator/tmux/mrs_one_drone
 
 ## Example packages
 
-| Examples                    | Repository                                                                                        |
-|-----------------------------|---------------------------------------------------------------------------------------------------|
-| Core examples               | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples/tree/ros2)                       |
-| Computer Vision examples    | [mrs_computer_vision_examples](https://github.com/ctu-mrs/mrs_computer_vision_examples/tree/ros2) |
-| Gazebo Custom Drone example | TODO                                                                                              |
+| Examples                    | Repository                                                                                              |
+|-----------------------------|---------------------------------------------------------------------------------------------------------|
+| Core examples               | [mrs_core_examples](https://github.com/ctu-mrs/mrs_core_examples/tree/ros2)                             |
+| Computer Vision examples    | [mrs_computer_vision_examples](https://github.com/ctu-mrs/mrs_computer_vision_examples/tree/ros2)       |
+| Gazebo Custom Drone example | [mrs_gazebo_custom_drone_example](https://github.com/ctu-mrs/mrs_gazebo_custom_drone_example/tree/ros2) |
 
 ## Build status ([Buildfarm](https://github.com/ctu-mrs/buildfarm))
 
