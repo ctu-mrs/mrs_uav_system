@@ -29,10 +29,10 @@
   <exec_depend>mrs_open_vins_core</exec_depend>
   <exec_depend>mrs_point_lio_core</exec_depend>
   <!-- <exec_depend>mrs_mins_core</exec_depend> -->
-  <!-- <exec_depend>mrs_precise_landing</exec_depend> -->
-  <!-- <exec_depend>mrs_precise_landing_gazebo</exec_depend> -->
+  <exec_depend>mrs_precise_landing</exec_depend>
+  <exec_depend>mrs_precise_landing_gazebo</exec_depend>
 
-  <!-- <exec_depend>mrs_robofly_core</exec_depend> -->
+  <exec_depend>mrs_robofly_core</exec_depend>
 
   <!-- <exec_depend>rosbridge_suite</exec_depend> -->
 
